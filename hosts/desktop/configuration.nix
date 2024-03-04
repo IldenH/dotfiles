@@ -11,6 +11,7 @@
 			../../modules/japanese.nix
 			../../modules/nvidia.nix
 			../../modules/kde.nix
+			# ../../modules/steam.nix # uses alot of space
     ];
 
   # Bootloader.
