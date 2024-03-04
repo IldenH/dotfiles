@@ -22,6 +22,11 @@
 	# 	kwalletmanager
 	# ];
 
+	environment.systemPackages = with pkgs.kdePackages; [
+	  kcmutils
+		sddm-kcm
+	];
+
 	qt = {
 	  enable = true;
 	  platformTheme = "kde";
