@@ -5,7 +5,10 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm = {
+		enable = true;
+		# theme = "sugar-dark";
+	};
   services.xserver.desktopManager.plasma6.enable = true;
 
 	# This doesn't work for some reason, doesn't break anything though
@@ -19,11 +22,11 @@
 	# 	kwalletmanager
 	# ];
 
-	# qt = {
-	#   enable = true;
-	#   platformTheme = "gnome";
-	#   style = "adwaita-dark";
-	# };
+	qt = {
+	  enable = true;
+	  platformTheme = "kde";
+	  style = "breeze";
+	};
 
 	# programs.dconf.enable = true;
 }
