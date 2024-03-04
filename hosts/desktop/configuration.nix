@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
 			../../modules/japanese.nix
 			../../modules/nvidia.nix
+			../../modules/kde.nix
     ];
 
   # Bootloader.
@@ -53,13 +54,6 @@
     LC_TIME = "nb_NO.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "no";
@@ -100,10 +94,7 @@
     packages = with pkgs; [ ];
   };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
@@ -123,8 +114,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
