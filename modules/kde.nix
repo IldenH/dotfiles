@@ -27,11 +27,11 @@
 		sddm-kcm
 	];
 
-	qt = {
-	  enable = true;
-	  platformTheme = "kde";
-	  style = "breeze";
-	};
+	# qt = {
+	#   enable = true;
+	#   platformTheme = "kde";
+	#   style = "breeze";
+	# };
 
 	# programs.dconf.enable = true;
 }
