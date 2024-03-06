@@ -2,13 +2,20 @@
 
 {
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver = {
+		enable = true;
+		displayManager = {
+			sddm.enable = true;
+			# sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+		};
+	};
+  # sddm-theme
+	# environment.systemPackages = with pkgs.libsForQt5.qt5; [
+	# 	qtquickcontrols2
+	# 	qtgraphicaleffects
+	# ];
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm = {
-		enable = true;
-		# theme = "sugar-dark";
-	};
   services.xserver.desktopManager.plasma6.enable = true;
 
 	# This doesn't work for some reason, doesn't break anything though
@@ -22,16 +29,10 @@
 	# 	kwalletmanager
 	# ];
 
-	environment.systemPackages = with pkgs.kdePackages; [
-	  kcmutils
-		sddm-kcm
-	];
-
-	# qt = {
-	#   enable = true;
-	#   platformTheme = "kde";
-	#   style = "breeze";
-	# };
+	# environment.systemPackages = with pkgs.kdePackages; [
+	#   kcmutils
+	# 	sddm-kcm
+	# ];
 
 	# programs.dconf.enable = true;
 }
