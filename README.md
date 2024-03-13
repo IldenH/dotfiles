@@ -4,4 +4,4 @@ My NixOS System configuration. Also check out [My NixOS Home-Manager Config](htt
 
 ## Inspiration / Sources
 - [LilleAila/nixos-system](https://github.com/LilleAila/nixos-system)
-- [Vimjoyer](https://www.youtube.com/@vimjoyer/featured
+- [Vimjoyer](https://www.youtube.com/@vimjoyer/featured)
