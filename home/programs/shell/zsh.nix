@@ -44,11 +44,10 @@
 			kladding = "cd ~/Desktop/T1/kladding";
 			backup = "cd ~/Desktop/Macros/bash-scripts/backup";
 
-			nix = "cd ~/Nixos";
-			hm = "cd ~/.config/home-manager";
+			nix = "cd ~/dotfiles";
+			hm = "cd ~/dotfiles/home";
 
-			nixbuild = "sudo nixos-rebuild switch --flake ~/Nixos/#desktop";
-			hmbuild = "home-manager switch";
+			nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 		};
 		initExtra = ''
 			neofetch
