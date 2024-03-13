@@ -39,5 +39,7 @@
 		NIXOS_OZONE_WL = "1";
 	};
 
+	programs.dconf.enable = true;
+
   system.stateVersion = "23.11";
 }
