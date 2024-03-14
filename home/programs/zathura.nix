@@ -4,10 +4,12 @@
   programs.zathura = with config.colorScheme.palette; {
 		enable = true;
 		options = {
+			selection-clipboard = "clipboard";
+			recolor = true;
 			default-bg = "#${base00}";
     	default-fg = "#${base01}";
-    	statusbar-fg = "#${base04}";
     	statusbar-bg = "#${base02}";
+    	statusbar-fg = "#${base04}";
     	inputbar-bg = "#${base00}";
     	inputbar-fg = "#${base07}";
     	notification-bg = "#${base00}";
