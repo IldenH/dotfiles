@@ -13,6 +13,6 @@
 		thunderbird
 		unclutter # doesn't work on wayland
 		xorg.xmodmap
+		gimp
   ];
-
 }
