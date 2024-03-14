@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+	imports = [
+		./neofetch.nix
+	];
 	home.packages = with pkgs; [
 		bat-extras.batgrep
 		tldr
