@@ -3,6 +3,7 @@
 {
 	imports = [
 		./neofetch.nix
+		./fzf.nix
 	];
 	home.packages = with pkgs; [
 		bat-extras.batgrep
@@ -80,10 +81,6 @@
 		}
 		'';
 	};
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 	programs.bat.enable = true;
 	programs.ripgrep.enable = true;
 	programs.eza = {
