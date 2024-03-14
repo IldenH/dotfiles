@@ -9,3 +9,4 @@ My NixOS System configuration.
 - [TLATER/dotfiles](https://github.com/TLATER/dotfiles)
 - [Sigmanificent/dotfiles](https://github.com/Sigmanificient/dotfiles)
 - [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
+- [danth/stylix](https://github.com/danth/stylix)
