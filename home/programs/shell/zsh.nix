@@ -2,12 +2,7 @@
 
 {
 	imports = [
-		./neofetch.nix
-		./fzf.nix
-	];
-	home.packages = with pkgs; [
-		bat-extras.batgrep
-		tldr
+		./cli.nix
 	];
   programs.zsh = {
     enable = true;
@@ -25,7 +20,7 @@
 
 			cls = "clear && neofetch && ls";
 
-			makkergruppe = "~/Desktop/T1/makkergruppe.sh";
+			makkergruppe = "nvim ~/Desktop/T1/makkergruppe-nr2";
 
 			# cd aliases
 			conf = "cd ~/.config";
@@ -46,7 +41,7 @@
 			backup = "cd ~/Desktop/Macros/bash-scripts/backup";
 
 			nix = "cd ~/dotfiles";
-			hm = "cd ~/dotfiles/home";
+			hm = "cd ~/dotfiles/home/programs";
 
 			nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 		};
@@ -80,28 +75,5 @@
 				fi
 		}
 		'';
-	};
-	programs.bat.enable = true;
-	programs.ripgrep.enable = true;
-	programs.eza = {
-		enable = true;
-		git = true;
-		icons = true;
-		extraOptions = [
-			"--color=always"
-			"--group-directories-first"
-			"--header"
-			"--no-quotes"
-			"--hyperlink"
-			# "--total-size" # takes awhile to run
-		];
-	};
-	programs.thefuck = {
-		enable = true;
-		enableZshIntegration = true;
-	};
-	programs.zoxide = {
-		enable = true;
-		enableZshIntegration = true;
 	};
 }
