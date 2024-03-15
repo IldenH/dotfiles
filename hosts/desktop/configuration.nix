@@ -18,6 +18,12 @@
 		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 	};
 
+	services.xserver = {
+		enable = true;
+		displayManager.sddm.enable = true;
+  	desktopManager.plasma6.enable = true;
+	};
+
 	services.printing.enable = true;
 
   environment.shells = [ pkgs.zsh ];

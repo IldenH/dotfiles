@@ -4,9 +4,9 @@
 	imports = [
 	  ./grub.nix
 		./japanese.nix
-		./kde.nix
 		./locale.nix
 		./nvidia.nix
+		./sddm.nix
 		./sound.nix
 		./steam.nix
 		./user.nix
