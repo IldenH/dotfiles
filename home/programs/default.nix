@@ -8,6 +8,7 @@
 		# ./japanese.nix # broken, don't know why
 		./other.nix
 		./shell
+		./steam.nix
 		./texlive.nix
 	];
 }
