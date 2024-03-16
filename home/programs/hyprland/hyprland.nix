@@ -4,7 +4,6 @@
 	home.packages = with pkgs; [
 		# swww
 		swaybg
-		dolphin
 		rofi-wayland
 		kitty
 		waybar
@@ -28,7 +27,7 @@
 			# exec-once = waybar & hyprpaper & firefox
 			
 			"$terminal" = "kitty";
-			"$fileManager" = "dolphin";
+			"$fileManager" = "thunar";
 			"$webBrowser" = "firefox";
 			"$discord" = "vesktop";
 			"$launcher" = "rofi -show drun -show-icons";
