@@ -7,9 +7,12 @@
 			../../system
     ];
 
-  networking.hostName = "nixos";
-  # networking.wireless.enable = true;
-  networking.networkmanager.enable = true;
+
+	networking = {
+		hostName = "nixos";
+  	# wireless.enable = true;
+  	networkmanager.enable = true;
+	};
 
 	xdg.portal = {
 		enable = true;
@@ -18,16 +21,22 @@
 		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 	};
 
-	services.xserver = {
-		enable = true;
-		displayManager.sddm.enable = true;
-  	desktopManager.plasma6.enable = true;
+	services = {
+		printing.enable = true;
+		fstrim.enable = true;
+		xserver = {
+			enable = true;
+			displayManager.sddm.enable = true;
+  		desktopManager.plasma6.enable = true;
+		};
 	};
 
-	services.printing.enable = true;
+	programs = {
+		zsh.enable = true;
+		dconf.enable = true;
+	};
 
   environment.shells = [ pkgs.zsh ];
-  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     curl
@@ -41,8 +50,6 @@
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";
 	};
-
-	programs.dconf.enable = true;
 
   system.stateVersion = "23.11";
 }
