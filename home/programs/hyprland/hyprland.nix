@@ -3,9 +3,10 @@
 {
 	home.packages = with pkgs; [
 		# swww
-		swaybg
+		seatd
+		# swaybg
 		rofi-wayland
-		kitty
+		# kitty
 		waybar
 		dunst
 		libnotify

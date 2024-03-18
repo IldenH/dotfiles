@@ -4,7 +4,7 @@
 	imports = [
 		# ./browser.nix
 		./discord.nix
-		# ./hyprland
+		./hyprland
 		# ./japanese.nix # broken, don't know why
 		./other.nix
 		./shell
