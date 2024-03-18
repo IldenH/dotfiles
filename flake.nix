@@ -15,9 +15,14 @@
 			url = "github:hyprwm/hyprpaper";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+    darkmatter = {
+      url = gitlab:VandalByte/darkmatter-grub-theme;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, darkmatter, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -27,6 +32,7 @@
 				desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
+						darkmatter.nixosModule
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {
 							home-manager = {

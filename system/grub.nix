@@ -9,5 +9,10 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
+		darkmatter-theme = {
+			enable = true;
+			style = "nixos";
+			icon = "color";
+		};
   };
 }
