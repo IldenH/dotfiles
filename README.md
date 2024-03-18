@@ -2,9 +2,9 @@
 
 # IldenH's Dotfiles
 
-My personal configuration files for GNU/Linux, using NixOS with Home-Manager.
+My personal configuration files for GNU/Linux, using [NixOS](https://nixos.org/) with [Home-Manager](https://github.com/nix-community/home-manager).
 
-Riced with Nix-Colors, Gruvbox.
+Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](https://github.com/morhetz/gruvbox).
 
 </div>
 
@@ -14,13 +14,21 @@ Riced with Nix-Colors, Gruvbox.
 - Shell: [Zsh](https://www.zsh.org/) with [Oh my Zsh](https://ohmyz.sh/)
 - Editor: [Neovim](https://neovim.io/)
 - Discord: [Vesktop](https://github.com/Vencord/Vesktop)
+- Wallpaper: [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
+
+## Hardware
+| Type                   | Name      | Architecture | Note                  |
+| ---------------------- | --------- | ------------ | --------------------- |
+| Lenovo Legion Y520T    | `desktop` | `x86_64`     |                       |
+| Lenovo ThinkPad T420   | `laptop`  | `x86_64`     | Not configured        |
 
 ## Inspiration / Sources
-- [LilleAila/nixos-system](https://github.com/LilleAila/nixos-system)
 - [Vimjoyer](https://www.youtube.com/@vimjoyer/featured)
+- [danth/stylix](https://github.com/danth/stylix)
+
+### Other dotfiles
+- [LilleAila/nixos-system](https://github.com/LilleAila/nixos-system)
 - [bddvlpr/nix-dotfiles](https://github.com/bddvlpr/nix-dotfiles)
 - [TLATER/dotfiles](https://github.com/TLATER/dotfiles)
 - [Sigmanificent/dotfiles](https://github.com/Sigmanificient/dotfiles)
-- [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
-- [danth/stylix](https://github.com/danth/stylix)
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config)
