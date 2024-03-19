@@ -24,8 +24,7 @@
 				"DP-2,preferred,auto,auto"
 			];
 			
-			# Execute your favorite apps at launch
-			# exec-once = waybar & hyprpaper & firefox
+			exec-once = "waybar";
 			
 			"$terminal" = "kitty";
 			"$fileManager" = "thunar";
@@ -106,7 +105,7 @@
 			};
 			
 			misc = {
-			    force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
+			    force_default_wallpaper = 1; # Set to 0 or 1 to disable the anime mascot wallpapers
 			};
 			
 			# Example windowrule v1
