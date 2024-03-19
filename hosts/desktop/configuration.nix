@@ -34,6 +34,7 @@
 	programs = {
 		zsh.enable = true;
 		dconf.enable = true;
+		hyprland.enable = true;
 	};
 
   environment.shells = [ pkgs.zsh ];

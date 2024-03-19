@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 
 # let
 #   imgLink = "https://github.com/zhichaoh/catppuccin-wallpapers/blob/main/landscapes/Rainnight.jpg";

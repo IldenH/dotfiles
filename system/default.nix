@@ -7,7 +7,7 @@
 		./locale.nix
 		./nix.nix
 		./nvidia.nix
-		# ./sddm.nix
+		./sddm.nix
 		./sound.nix
 		./steam.nix
 		./thunar.nix
