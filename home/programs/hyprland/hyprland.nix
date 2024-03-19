@@ -44,16 +44,16 @@
 						# "shift:both_capslock" # doesn't work with multiple options set?
 					];
 			
-			    follow_mouse = 1;
+			    follow_mouse = 0;
 			
 			    sensitivity = 0; 
 			};
 			
 			general = {
 			    gaps_in = 5;
-			    gaps_out = 20;
+			    gaps_out = 5;
 			    border_size = 2;
-					"col.active_border" = "rgba(${config.colorScheme.palette.base04}ee) rgba(${config.colorScheme.palette.base05}ee) 45deg";
+					"col.active_border" = "rgba(${config.colorScheme.palette.base02}ee) rgba(${config.colorScheme.palette.base03}ee) 45deg";
 			    "col.inactive_border" = "rgba(${config.colorScheme.palette.base00}aa)";
 			    layout = "dwindle";
 			    allow_tearing = false;
@@ -147,16 +147,16 @@
 				"CTRL, F9, workspace, 9"
 				"CTRL, F0, workspace, 10"
 
-				"$mainMod CTRL, 1, movetoworkspace, 1"
-				"$mainMod CTRL, 2, movetoworkspace, 2"
-				"$mainMod CTRL, 3, movetoworkspace, 3"
-				"$mainMod CTRL, 4, movetoworkspace, 4"
-				"$mainMod CTRL, 5, movetoworkspace, 5"
-				"$mainMod CTRL, 6, movetoworkspace, 6"
-				"$mainMod CTRL, 7, movetoworkspace, 7"
-				"$mainMod CTRL, 8, movetoworkspace, 8"
-				"$mainMod CTRL, 9, movetoworkspace, 9"
-				"$mainMod CTRL, 0, movetoworkspace, 10"
+				"$mainMod CTRL, F1, movetoworkspace, 1"
+				"$mainMod CTRL, F2, movetoworkspace, 2"
+				"$mainMod CTRL, F3, movetoworkspace, 3"
+				"$mainMod CTRL, F4, movetoworkspace, 4"
+				"$mainMod CTRL, F5, movetoworkspace, 5"
+				"$mainMod CTRL, F6, movetoworkspace, 6"
+				"$mainMod CTRL, F7, movetoworkspace, 7"
+				"$mainMod CTRL, F8, movetoworkspace, 8"
+				"$mainMod CTRL, F9, movetoworkspace, 9"
+				"$mainMod CTRL, F0, movetoworkspace, 10"
 
 				# Example special workspace (scratchpad)
 				"$mainMod, S, togglespecialworkspace, magic"
