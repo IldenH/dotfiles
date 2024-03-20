@@ -1,20 +1,33 @@
 {
-  description = "Nixos config flake";
+  description = "NixOS config flake";
 
   inputs = {
+		### CORE ###
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
 		home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-		nix-colors.url = "github:misterio77/nix-colors";
 
 		### HYPRLAND ###
-		hyprland.url = "github:hyprwm/Hyprland";
+		hyprland = {
+			url = "github:hyprwm/Hyprland";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		hyprlock = {
+			url = "github:hyprwm/hyprlock";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		hyprpaper = {
 			url = "github:hyprwm/hyprpaper";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		### OTHER ###
+		nix-colors.url = "github:misterio77/nix-colors";
 
     darkmatter = {
       url = gitlab:VandalByte/darkmatter-grub-theme;
@@ -22,7 +35,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, darkmatter, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -32,7 +45,6 @@
 				desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-						darkmatter.nixosModule
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {
 							home-manager = {
