@@ -2,16 +2,11 @@
 
 {
 	home.packages = with pkgs; [
-		# swww
 		seatd
-		# swaybg
 		rofi-wayland
-		# kitty
 		waybar
 		dunst
 		libnotify
-		grim
-		slurp
 	];
 	wayland.windowManager.hyprland = {
 		enable = true;
