@@ -14,5 +14,8 @@
 		unclutter # doesn't work on wayland
 		xorg.xmodmap
 		gimp
+		loupe
   ];
+
+	programs.mpv.enable = true;
 }
