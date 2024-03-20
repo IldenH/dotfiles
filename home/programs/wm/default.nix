@@ -3,9 +3,8 @@
 {
 	imports = [
 		./gammastep.nix
-		./hyprland.nix
+		./hyprland
 		./hyprpaper.nix
-		./screenshots.nix
 		./themes.nix
 		./waybar.nix
 	];
