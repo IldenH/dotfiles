@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, darkmatter, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -32,7 +32,7 @@
 				desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-						darkmatter.nixosModule
+						inputs.darkmatter.nixosModule
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {
 							home-manager = {
