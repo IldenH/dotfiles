@@ -7,5 +7,6 @@
 		./hyprpaper.nix
 		./themes.nix
 		./waybar.nix
+		./wlogout.nix
 	];
 }
