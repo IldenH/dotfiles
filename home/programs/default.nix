@@ -4,6 +4,7 @@
 	imports = [
 		# ./browser.nix
 		./discord.nix
+		./files.nix
 		# ./japanese.nix # broken, don't know why
 		./mimeapps.nix
 		./shell

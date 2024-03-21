@@ -10,7 +10,6 @@
 		./sddm.nix
 		./sound.nix
 		./steam.nix
-		./thunar.nix
 		./user.nix
 	];
 }

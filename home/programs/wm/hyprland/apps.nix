@@ -3,7 +3,7 @@
 {
 	wayland.windowManager.hyprland.settings = {
 		"$terminal" = "kitty";
-		"$fileManager" = "thunar";
+		"$fileManager" = "nemo";
 		"$webBrowser" = "firefox";
 		"$discord" = "vesktop";
 		"$launcher" = "rofi -show drun -show-icons";
