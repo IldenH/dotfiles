@@ -29,11 +29,11 @@ in
 				margin-top = 0;
 				margin-bottom = 0;
 				spacing = 5;
-				height = 26;
+				height = 24;
 
 				modules-left = [ "hyprland/workspaces" ];
 				modules-center = [ "clock" ];
-				modules-right = [ "battery" "tray" "custom/wlogout" ];
+				modules-right = [ "tray" "custom/wlogout" ];
 
 				"hyprland/workspaces" = {
 					on-scroll-up = "hyprctl dispatch workspace e+1";
@@ -60,49 +60,31 @@ in
 					};
 				};
 
-				"backlight/slider" = { # The slider is very slow and jumps around
-					min = 0;
-					max = 100;
-					orientation = "horizontal";
-					device = "intel_backlight";
-				};
-
-				"battery" = {
-					interval = 60;
-					states = {
-						warning = 30;
-						critical = 15;
-					};
-					format = "{capacity}% {icon}";
-					format-icons = [ " " " " " " " " " " ];
-				};
-
 				"clock" = {
-					# max-length = 25;
 					timezone = "Europe/Oslo";
-					interval = 60;
-					format = "{:%H:%M}";
-					format-alt = "{:%A, %d %B, %Y (%H:%M)}";
-					tooltip-format = "<tt><small>{calendar}</small></tt>";
-					calendar = {
-						mode = "month";
-						mode-mon-col = 3;
-						weeks-pos = "right";
-						on-scroll = 1;
-						on-click-right = "mode";
-						format = {
-							months = "<span color='#${foreground}'><b>{}</b></span>";
-							days = "<span color='#${purple}'><b>{}</b></span>";
-							weeks = "<span color='#${orange}'><b>{}</b></span>";
-							weekdays = "<span color='#${blue}'><b>{}</b></span>";
-							today = "<span color='#${red}'><b><u>{}</u></b></span>";
-						};
-					};
-					actions = {
-						on-click-right = "mode";
-						on-scroll-up = "shift_up";
-						on-scroll-down = "shift-down";
-					};
+					interval = 1;
+					format = "{:%d.%m.%Y %H:%M}";
+					format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
+					# tooltip-format = "<tt><small>{calendar}</small></tt>";
+					# calendar = {
+					# 	mode = "month";
+					# 	mode-mon-col = 3;
+					# 	weeks-pos = "left";
+					# 	# on-scroll = 1;
+					# 	# on-click-right = "mode";
+					# 	format = {
+					# 		months = "<span color='#${foreground}'><b>{}</b></span>";
+					# 		days = "<span color='#${purple}'><b>{}</b></span>";
+					# 		weeks = "<span color='#${dark_foreground}'><b>{}</b></span>";
+					# 		weekdays = "<span color='#${blue}'><b>{}</b></span>";
+					# 		today = "<span color='#${red}'><b><u>{}</u></b></span>";
+					# 	};
+					# };
+					# actions = {
+					# 	on-click-right = "mode";
+					# 	on-scroll-up = "shift_up";
+					# 	on-scroll-down = "shift-down";
+					# };
 				};
 
 				"tray" = {
@@ -175,24 +157,8 @@ window#waybar {
 	color: @red;
 }
 
-#backlight-slider {
-	min-width: 60px;
-}
-
 #tray menu {
 	background-color: @background;
-}
-
-#battery.charging {
-	color: @green;
-}
-
-#battery.warning {
-	color: @yellow;
-}
-
-#battery.critical {
-	color: @red;
 }
 		'';
 
