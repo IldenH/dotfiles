@@ -36,12 +36,13 @@
 
 			pymacros = "cd ~/Desktop/Macros/python-macros";
 			bashsh = "cd ~/Desktop/Macros/bash-scripts";
-			digilr = "cd ~/Desktop/T1/digilær-innleveringer";
+			"digilær" = "cd ~/Desktop/T1/digilær-innleveringer";
 			kladding = "cd ~/Desktop/T1/kladding";
 			backup = "cd ~/Desktop/Macros/bash-scripts/backup";
 
-			nix = "cd ~/dotfiles";
+			dot = "cd ~/dotfiles";
 			hm = "cd ~/dotfiles/home/programs";
+			hypr = "cd ~/dotfiles/home/programs/wm/hyprland";
 
 			nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 		};
