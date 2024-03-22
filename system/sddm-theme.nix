@@ -1,13 +1,8 @@
 { pkgs, ... }:
 
-# let
-#   imgLink = "https://github.com/zhichaoh/catppuccin-wallpapers/blob/main/landscapes/Rainnight.jpg";
-#
-#   image = pkgs.fetchurl {
-#     url = imgLink;
-#     sha256 = "sha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
-#   };
-# in
+let
+	image = ./sddm.jpg;
+in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
   src = pkgs.fetchFromGitHub {
@@ -19,12 +14,8 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
+    cd $out/
+    rm Background.jpg
+    cp -r ${image} $out/Background.jpg
    '';
-  # installPhase = ''
-  #   mkdir -p $out
-  #   cp -R ./* $out/
-  #   cd $out/
-  #   rm Background.jpg
-  #   cp -r ${image} $out/Background.jpg
-  #  '';
 }
