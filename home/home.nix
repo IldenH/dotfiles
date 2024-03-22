@@ -1,9 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, global, ... }:
 
 {
   home = {
-    username = "ildenhnix";
-    homeDirectory = "/home/ildenhnix";
+    username = "${global.username}";
+    homeDirectory = "/home/${global.username}";
     stateVersion = "23.11";
   };
 

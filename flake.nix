@@ -30,28 +30,31 @@
 		nix-colors.url = "github:misterio77/nix-colors";
 
     darkmatter = {
-      url = gitlab:VandalByte/darkmatter-grub-theme;
+      url = "gitlab:VandalByte/darkmatter-grub-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
+			global = {
+				username = "ildenhnix";
+			};
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       nixosConfigurations = {
 				desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          specialArgs = { inherit inputs; inherit global; };
           modules = [ 
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {
 							home-manager = {
-								extraSpecialArgs = { inherit inputs; };
+								extraSpecialArgs = { inherit inputs; inherit global; };
 								useUserPackages = true;
 								useGlobalPkgs = true;
-								users.ildenhnix = ./home/home.nix;
+								users."${global.username}" = ./home/home.nix;
 							};
 						}
           ];

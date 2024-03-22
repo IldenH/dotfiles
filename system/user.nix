@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, global, ... }:
 
 {
   # Don't forget to set a password with ‘passwd’.
-  users.users.ildenhnix = {
+  users.users.${global.username} = {
     isNormalUser = true;
     description = "IldenH";
 		initialPassword = "";
