@@ -8,7 +8,6 @@
 
 	config = lib.mkIf (config.terminal.cli.enable) {
 		home.packages = with pkgs; [
-			bat-extras.batgrep
 			tldr
 		];
 

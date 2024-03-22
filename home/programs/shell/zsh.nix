@@ -23,7 +23,6 @@
   	  };
 			shellAliases = {
 				cat = "bat";
-				rg = "batgrep";
 				cd = "z";
 
 				cls = "clear && neofetch && ls";
