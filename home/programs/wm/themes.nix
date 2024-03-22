@@ -12,9 +12,8 @@ in
 	};
 	gtk = {
 		enable = true;
-		# cursorTheme.name is problably wrong, doesn't work
-		# cursorTheme.package = pkgs.catppuccin-cursors.macchiatoDark;
-		# cursorTheme.name = "catppuccin-cursors";
+		cursorTheme.package = pkgs.catppuccin-cursors.macchiatoDark;
+		cursorTheme.name = "Catppuccin-Macchiato-Dark-Cursors";
 		theme.package = nix-colors-lib.gtkThemeFromScheme {
 			scheme = config.colorScheme;
 		};

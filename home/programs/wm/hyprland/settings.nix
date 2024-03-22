@@ -7,7 +7,7 @@
 			"DP-2,preferred,auto,auto"
 		];
 		
-		exec-once = "waybar";
+		exec-once = "waybar & hyprctl setcursor Catppuccin-Macchiato-Dark-Cursors 24";
 		
 		env = [
 			"XCURSOR_SIZE,24"
