@@ -28,4 +28,8 @@
     	recolor-darkcolor = "#${base06}";
 		};
 	};
+
+	xdg.mimeApps.defaultApplications = {
+		"application/pdf" = [ "zathura.desktop" ];
+	};
 }
