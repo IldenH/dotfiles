@@ -1,23 +1,28 @@
-{ inputs, ... }:
+{ config, inputs, lib, ... }:
 
-let
-	wallpaper = ./wallpaper.jpg;
-in
 {
+	options = {
+		wallpaper = lib.mkOption {
+			type = lib.types.path;
+		};
+	};
+
 	imports = [
 		inputs.hyprpaper.homeManagerModules.hyprpaper
 	];
 
-	# Not needed in hyprland startup because this creates a service
-	services.hyprpaper = {
-		enable = true;
-		ipc = true;
+	config = lib.mkIf (config.wallpaper != null) {
+		services.hyprpaper = {
+			enable = true;
+			splash = false;
+			ipc = true;
 
-		preloads = [
-			"${wallpaper}"
-		];
-		wallpapers = [
-			", ${wallpaper}"
-		];
+			preloads = [
+				"${config.wallpaper}"
+			];
+			wallpapers = [
+				", ${config.wallpaper}"
+			];
+		};
 	};
 }

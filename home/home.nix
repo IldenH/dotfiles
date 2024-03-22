@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, global, ... }:
+{ config, pkgs, inputs, global, lib, ... }:
 
 {
   home = {
@@ -13,6 +13,18 @@
   ];
 
 	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+
+	wallpaper = ./wallpaper.jpg;
+	discord.enable = true;
+	terminal = {
+		enable = true;
+		neovim.enable = true;
+		cli.enable = true;
+		zsh = {
+			enable = true;
+			theme = "simple";
+		};
+	};
 
   nixpkgs.config.allowUnfree = true;
 
