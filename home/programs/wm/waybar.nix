@@ -21,6 +21,7 @@ let
 	brown = config.colorScheme.palette.base0F;
 in
 {
+	home.packages = [ pkgs.waybar ];
 	programs.waybar = {
 		enable = true;
 		settings = {

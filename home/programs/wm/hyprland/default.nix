@@ -10,7 +10,6 @@
 	home.packages = with pkgs; [
 		seatd
 		rofi-wayland
-		waybar
 		dunst
 		libnotify
 	];

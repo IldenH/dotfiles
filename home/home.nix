@@ -8,6 +8,7 @@
 	settings = {
 		wallpaper = ./wallpaper.jpg;
 	
+		zathura.enable = true;
 		discord.enable = true;
 	
 		terminal = {
