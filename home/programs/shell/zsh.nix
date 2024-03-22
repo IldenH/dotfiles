@@ -30,27 +30,8 @@
 
 				makkergruppe = "nvim ~/Desktop/T1/makkergruppe-nr2";
 
-				# cd aliases
-				conf = "cd ~/.config";
-				desk = "cd ~/Desktop";
-				docs = "cd ~/Documents";
-				downs = "cd ~/Downloads";
-				music = "cd ~/Music";
-				pics = "cd ~/Pictures";
-				vids = "cd ~/Videos";
-
 				".." = "cd ..";
 				"..." = "cd ../..";
-
-				pymacros = "cd ~/Desktop/Macros/python-macros";
-				bashsh = "cd ~/Desktop/Macros/bash-scripts";
-				"digilær" = "cd ~/Desktop/T1/digilær-innleveringer";
-				kladding = "cd ~/Desktop/T1/kladding";
-				backup = "cd ~/Desktop/Macros/bash-scripts/backup";
-
-				dot = "cd ~/dotfiles";
-				hm = "cd ~/dotfiles/home/programs";
-				hypr = "cd ~/dotfiles/home/programs/wm/hyprland";
 
 				nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 			};
