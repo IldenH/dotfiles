@@ -5,17 +5,19 @@
 
 	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
-	wallpaper = ./wallpaper.jpg;
-
-	discord.enable = true;
-
-	terminal = {
-		enable = true;
-		neovim.enable = true;
-		cli.enable = true;
-		zsh = {
+	settings = {
+		wallpaper = ./wallpaper.jpg;
+	
+		discord.enable = true;
+	
+		terminal = {
 			enable = true;
-			theme = "simple";
+			neovim.enable = true;
+			cli.enable = true;
+			zsh = {
+				enable = true;
+				theme = "simple";
+			};
 		};
 	};
 }

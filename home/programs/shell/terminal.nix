@@ -1,12 +1,12 @@
 { lib, config, pkgs, ... }:
 
 {
-	options.terminal.enable = lib.mkOption {
+	options.settings.terminal.enable = lib.mkOption {
 		type = lib.types.bool;
 		default = false;
 	};
 
-	config = lib.mkIf (config.terminal.enable) {
+	config = lib.mkIf (config.settings.terminal.enable) {
 		home.packages = [ pkgs.nerdfonts ];
 		programs.kitty = {
 			enable = true;

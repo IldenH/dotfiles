@@ -1,12 +1,12 @@
 { config, pkgs, inputs, lib, ... }:
 
 {
-	options.discord.enable = lib.mkOption {
+	options.settings.discord.enable = lib.mkOption {
 		type = lib.types.bool;
 		default = false;
 	};
 
-	config = lib.mkIf (config.discord.enable) {
+	config = lib.mkIf (config.settings.discord.enable) {
 		home.packages = with pkgs; [
 			vesktop
 		];

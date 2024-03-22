@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 
 {
-	options.terminal.neovim.enable = lib.mkOption {
+	options.settings.terminal.neovim.enable = lib.mkOption {
 		type = lib.types.bool;
 		default = false;
 	};
 
-	config = lib.mkIf (config.terminal.neovim.enable) {
+	config = lib.mkIf (config.settings.terminal.neovim.enable) {
 		programs.neovim = {
   	  enable = true;
   	  defaultEditor = true;

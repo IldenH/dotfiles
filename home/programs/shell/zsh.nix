@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 
 {
-	options.terminal.zsh = {
+	options.settings.terminal.zsh = {
 		enable = lib.mkOption {
 			type = lib.types.bool;
 			default = false;
@@ -11,7 +11,7 @@
 			default = "simple";
 		};
 	};
-	config = lib.mkIf (config.terminal.zsh.enable) {
+	config = lib.mkIf (config.settings.terminal.zsh.enable) {
 		programs.zsh = {
   	  enable = true;
   	  enableCompletion = true;
@@ -19,7 +19,7 @@
   	  syntaxHighlighting.enable = true;
   	  oh-my-zsh = {
   	    enable = true;
-  	    theme = config.terminal.zsh.theme;
+  	    theme = config.settings.terminal.zsh.theme;
   	  };
 			shellAliases = {
 				cat = "bat";

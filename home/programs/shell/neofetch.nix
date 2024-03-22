@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 
 {
-	config = lib.mkIf (config.terminal.cli.enable) {
+	config = lib.mkIf (config.settings.terminal.cli.enable) {
 		home.packages = [ pkgs.neofetch ];
 		home.file.".config/neofetch/config.conf".text = ''
 		print_info() {
