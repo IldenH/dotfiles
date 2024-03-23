@@ -9,7 +9,8 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 </div>
 
 ## Using
-- Desktop Environment: [KDE Plasma](https://kde.org) trying to switch to [Hyprland](https://hyprland.org)
+- Window Manager: [Hyprland](https://hyprland.org)
+- Bar: [Waybar](https://github.com/Alexays/Waybar) should switch to [AGS](https://github.com/Aylur/ags)
 - Terminal Emulator: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Shell: [Zsh](https://www.zsh.org) with [Oh my Zsh](https://ohmyz.sh)
 - Editor: [Neovim](https://neovim.io)
@@ -25,9 +26,11 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 ## Inspiration / Sources
 - [Vimjoyer](https://www.youtube.com/@vimjoyer/featured)
 - [danth/stylix](https://github.com/danth/stylix)
+- [sopa0/hyprsome](https://github.com/sopa0/hyprsome)
+- [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland)
 
 ### Other dotfiles
-- [LilleAila/nixos-system](https://github.com/LilleAila/nixos-system)
+- [LilleAila/dotfiles](https://github.com/LilleAila/dotfiles)
 - [bddvlpr/nix-dotfiles](https://github.com/bddvlpr/nix-dotfiles)
 - [TLATER/dotfiles](https://github.com/TLATER/dotfiles)
 - [Sigmanificent/dotfiles](https://github.com/Sigmanificient/dotfiles)
