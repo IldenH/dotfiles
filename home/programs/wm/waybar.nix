@@ -22,7 +22,6 @@ let
 in
 {
 	# TODO: Make this config way less messy
-	home.packages = [ pkgs.waybar ];
 	programs.waybar = {
 		enable = true;
 		settings = {
