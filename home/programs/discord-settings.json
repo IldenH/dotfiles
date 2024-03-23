@@ -1,7 +1,7 @@
 {
-    "notifyAboutUpdates": true,
+    "notifyAboutUpdates": false,
     "autoUpdate": false,
-    "autoUpdateNotification": true,
+    "autoUpdateNotification": false,
     "useQuickCss": false,
     "themeLinks": [],
     "enabledThemes": [
