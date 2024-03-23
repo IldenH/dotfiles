@@ -4,6 +4,7 @@
 	imports = [
 		./apps.nix
 		./binds.nix
+		./rules.nix
 		./settings.nix
 		./screenshots.nix
 	];
