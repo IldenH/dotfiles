@@ -22,19 +22,27 @@
   home.packages = with pkgs; [
 		anki
 		authenticator
-		calc
+		cinnamon.pix
 		firefox
 		geogebra6
+		gimp
 		heroic
 		python311
+		qalculate-gtk
 		thunderbird
-		gimp
-		cinnamon.pix
   ];
 
+	# setting /* only sometimes works
 	xdg.mimeApps.defaultApplications = {
-		"image/*" = [ "pix.desktop" ];
-		"video/*" = [ "mpv.desktop" ];
+		"image/*" = "pix.desktop";
+		"image/png" = "pix.desktop";
+		"image/jpg" = "pix.desktop";
+		"image/jpeg" = "pix.desktop";
+		"video/*" = "mpv.desktop";
+		"video/mp4" = "mpv.desktop";
+		"video/mov" = "mpv.desktop";
+		"video/webm" = "mpv.desktop";
+		"video/ogg" = "mpv.desktop";
 	};
 
   nixpkgs.config.allowUnfree = true;
