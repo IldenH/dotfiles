@@ -21,12 +21,14 @@ let
 	brown = config.colorScheme.palette.base0F;
 in
 {
+	# TODO: Make this config way less messy
 	home.packages = [ pkgs.waybar ];
 	programs.waybar = {
 		enable = true;
 		settings = {
-			mainBar = {
+			primaryBar = {
 				layer = "top";
+				output = "HDMI-A-2";
 				margin-top = 0;
 				margin-bottom = 0;
 				spacing = 5;
@@ -37,12 +39,8 @@ in
 				modules-right = [ "tray" "custom/wlogout" ];
 
 				"hyprland/workspaces" = {
-					on-scroll-up = "hyprctl dispatch workspace e+1";
-					on-scroll-down = "hyprctl dispatch workspace e-1";
 					format = "{icon}";
 					format-icons = {
-						# "1" = "";
-						# "2" = "󰈹";
 						urgent = "󰀨";
 						focused = "";
 						active = "";
@@ -54,10 +52,6 @@ in
 						"3" = [];
 						"4" = [];
 						"5" = [];
-						# "6" = [];
-						# "7" = [];
-						# "8" = [];
-						# "9" = [];
 					};
 				};
 
@@ -66,26 +60,6 @@ in
 					interval = 1;
 					format = "{:%d.%m.%Y %H:%M}";
 					format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
-					# tooltip-format = "<tt><small>{calendar}</small></tt>";
-					# calendar = {
-					# 	mode = "month";
-					# 	mode-mon-col = 3;
-					# 	weeks-pos = "left";
-					# 	# on-scroll = 1;
-					# 	# on-click-right = "mode";
-					# 	format = {
-					# 		months = "<span color='#${foreground}'><b>{}</b></span>";
-					# 		days = "<span color='#${purple}'><b>{}</b></span>";
-					# 		weeks = "<span color='#${dark_foreground}'><b>{}</b></span>";
-					# 		weekdays = "<span color='#${blue}'><b>{}</b></span>";
-					# 		today = "<span color='#${red}'><b><u>{}</u></b></span>";
-					# 	};
-					# };
-					# actions = {
-					# 	on-click-right = "mode";
-					# 	on-scroll-up = "shift_up";
-					# 	on-scroll-down = "shift-down";
-					# };
 				};
 
 				"tray" = {
@@ -97,10 +71,54 @@ in
 					format = " ";
 					on-click = "wlogout";
 				};
+			};
+			secondaryBar = {
+				layer = "top";
+				output = "DP-2";
+				margin-top = 0;
+				margin-bottom = 0;
+				spacing = 5;
+				height = 24;
 
+				modules-left = [ "hyprland/workspaces" ];
+				modules-center = [ "clock" ];
+				modules-right = [ "tray" "custom/wlogout" ];
+
+				"hyprland/workspaces" = {
+					format = "{icon}";
+					format-icons = {
+						urgent = "󰀨";
+						focused = "";
+						active = "";
+						default = "";
+					};
+					persistent-workspaces = {
+						"11" = [];
+						"12" = [];
+						"13" = [];
+						"14" = [];
+						"15" = [];
+					};
+				};
+
+				"clock" = {
+					timezone = "Europe/Oslo";
+					interval = 1;
+					format = "{:%d.%m.%Y %H:%M}";
+					format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
+				};
+
+				"tray" = {
+					icon-size = 20;
+					spacing = 10;
+				};
+
+				"custom/wlogout" = {
+					format = " ";
+					on-click = "wlogout";
+				};
 			};
 		};
-
 		style = with config.colorScheme.palette; /*css*/ ''
 @define-color background #${base00};
 @define-color alt_background #${base01};

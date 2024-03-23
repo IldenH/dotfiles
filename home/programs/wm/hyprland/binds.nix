@@ -9,35 +9,36 @@
 				"$mainMod, M, exit,"
 				"$mainMod, V, togglefloating,"
 				"$mainMod, P, pseudo," # dwindle
-				"$mainMod, J, togglesplit," # dwindle
+				"$mainMod, I, togglesplit," # dwindle
 
-				# Move focus with mainMod + arrow keys
-				"$mainMod, left, movefocus, l"
-				"$mainMod, right, movefocus, r"
-				"$mainMod, up, movefocus, u"
-				"$mainMod, down, movefocus, d"
+				"$mainMod, h, movefocus, l"
+				"$mainMod, j, movefocus, d"
+				"$mainMod, k, movefocus, u"
+				"$mainMod, l, movefocus, r"
 
 				"CTRL, F1, workspace, 1"
 				"CTRL, F2, workspace, 2"
 				"CTRL, F3, workspace, 3"
 				"CTRL, F4, workspace, 4"
 				"CTRL, F5, workspace, 5"
-				"CTRL, F6, workspace, 6"
-				"CTRL, F7, workspace, 7"
-				"CTRL, F8, workspace, 8"
-				"CTRL, F9, workspace, 9"
-				"CTRL, F0, workspace, 10"
+
+				"CTRL SHIFT, F1, workspace, 11"
+				"CTRL SHIFT, F2, workspace, 12"
+				"CTRL SHIFT, F3, workspace, 13"
+				"CTRL SHIFT, F4, workspace, 14"
+				"CTRL SHIFT, F5, workspace, 15"
 
 				"$mainMod CTRL, F1, movetoworkspace, 1"
 				"$mainMod CTRL, F2, movetoworkspace, 2"
 				"$mainMod CTRL, F3, movetoworkspace, 3"
 				"$mainMod CTRL, F4, movetoworkspace, 4"
 				"$mainMod CTRL, F5, movetoworkspace, 5"
-				"$mainMod CTRL, F6, movetoworkspace, 6"
-				"$mainMod CTRL, F7, movetoworkspace, 7"
-				"$mainMod CTRL, F8, movetoworkspace, 8"
-				"$mainMod CTRL, F9, movetoworkspace, 9"
-				"$mainMod CTRL, F0, movetoworkspace, 10"
+
+				"$mainMod CTRL SHIFT, F1, movetoworkspace, 11"
+				"$mainMod CTRL SHIFT, F2, movetoworkspace, 12"
+				"$mainMod CTRL SHIFT, F3, movetoworkspace, 13"
+				"$mainMod CTRL SHIFT, F4, movetoworkspace, 14"
+				"$mainMod CTRL SHIFT, F5, movetoworkspace, 15"
 
 				# Example special workspace (scratchpad)
 				# "$mainMod, S, togglespecialworkspace, magic"
