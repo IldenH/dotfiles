@@ -2,6 +2,7 @@
 
 {
 	wayland.windowManager.hyprland.settings.windowrulev2 = [
-		"workspace 13, class:(vesktop)"
+		# TODO: either make more window rules here, or just remove this
+		# "workspace 13, class:(vesktop)"
 	];
 }

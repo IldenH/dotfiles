@@ -5,14 +5,12 @@
 		"$terminal" = "kitty";
 		"$fileManager" = "nemo";
 		"$webBrowser" = "firefox";
-		"$discord" = "vesktop";
 		"$launcher" = "rofi -show drun -show-icons";
 
 		bind = [
 			"$mainMod, SPACE, exec, $launcher"
 			"$mainMod, E, exec, $fileManager"
 			"$mainMod, T, exec, $terminal"
-			"SHIFT_ALT, M, exec, $discord"
 			
 			# Browser profiles and stuff
 			"SHIFT_ALT, N, exec, $webBrowser -P Main"

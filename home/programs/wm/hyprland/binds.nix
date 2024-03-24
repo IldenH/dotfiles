@@ -6,7 +6,6 @@
 		
 		bind = [
 			"$mainMod, W, killactive,"
-			"$mainMod, M, exit,"
 			"$mainMod, V, togglefloating,"
 			"$mainMod, P, pseudo," # dwindle
 			"$mainMod, I, togglesplit," # dwindle

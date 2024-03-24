@@ -29,5 +29,9 @@
 				theme = "simple";
 			};
 		};
+
+		hyprland = {
+			enable = true;
+		};
 	};
 }
