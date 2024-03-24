@@ -1,11 +1,11 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, global, ... }:
 
 {
 	config = lib.mkIf (config.settings.terminal.cli.enable) {
 		home.packages = [ pkgs.neofetch ];
 		home.file.".config/neofetch/config.conf".text = ''
 		print_info() {
-			prin "$(color 5)- ~ Hello $(color 1)IldenH ~ -"
+			prin "$(color 5)- ~ Hello $(color 1)${global.user.description} ~ -"
 			prin ""
 
   	  info "You are using" distro

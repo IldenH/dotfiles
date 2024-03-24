@@ -2,9 +2,9 @@
 
 {
   # Don't forget to set a password with ‘passwd’.
-  users.users.${global.username} = {
+  users.users.${global.user.name} = {
     isNormalUser = true;
-    description = "IldenH";
+    description = "${global.user.description}";
 		initialPassword = "";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];

@@ -38,7 +38,10 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
 			global = {
-				username = "ildenhnix";
+				user = {
+					name = "ildenhnix";
+					description = "IldenH";
+				};
 			};
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -54,7 +57,7 @@
 								extraSpecialArgs = { inherit inputs; inherit global; };
 								useUserPackages = true;
 								useGlobalPkgs = true;
-								users."${global.username}" = ./home/home.nix;
+								users."${global.user.name}" = ./home/home.nix;
 							};
 						}
           ];

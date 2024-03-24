@@ -30,7 +30,7 @@
 			home.file.".config/vesktop/themes/base16.theme.css".source = with config.colorScheme.palette; pkgs.writeText "base16.theme.css" /* css */ ''
 				/**
 				* @name ${config.colorScheme.slug}
-				* @author ${global.username}
+				* @author ${global.user.description}
 				* @version 1.0.0
 				* @description Base16 color scheme generated from https://github.com/Misterio77/nix-colors
 				**/
