@@ -10,6 +10,15 @@
 	
 		zathura.enable = true;
 		discord.enable = true;
+
+		screenshots = {
+			enable = true;
+			format = "%Y-%m-%d_%H-%M-%S.png";
+			path = {
+				raw = "$HOME/Pictures/Screenshots/Raw";
+				edited = "$HOME/Pictures/Screenshots/Edited";
+			};
+		};
 	
 		terminal = {
 			enable = true;
