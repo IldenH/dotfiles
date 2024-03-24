@@ -7,6 +7,7 @@
 		./rules.nix
 		./settings.nix
 		./screenshots.nix
+		./workspaces.nix
 	];
 	home.packages = with pkgs; [
 		seatd

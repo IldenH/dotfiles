@@ -6,23 +6,6 @@
 			"HDMI-A-2, preferred, auto, auto"
 			"DP-2, preferred, auto, auto"
 		];
-
-		workspace = [
-			"HDMI-A-2, 1"
-			"DP-2, 11"
-
-			"1, monitor:HDMI-A-2"
-			"2, monitor:HDMI-A-2"
-			"3, monitor:HDMI-A-2"
-			"4, monitor:HDMI-A-2"
-			"5, monitor:HDMI-A-2"
-
-			"11, monitor:DP-2"
-			"12, monitor:DP-2"
-			"13, monitor:DP-2"
-			"14, monitor:DP-2"
-			"15, monitor:DP-2"
-		];
 		
 		exec-once = "waybar & hyprctl setcursor Catppuccin-Macchiato-Dark-Cursors 24";
 		
