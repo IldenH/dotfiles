@@ -21,4 +21,9 @@ in
 		iconTheme.package = pkgs.tela-circle-icon-theme;
 		iconTheme.name = "Tela-circle";
 	};
+	home.pointerCursor = {
+		package = pkgs.catppuccin-cursors.macchiatoDark;
+		name = "Catppuccin-Macchiato-Dark-Cursors";
+		size = 24;
+	};
 }

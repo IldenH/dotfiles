@@ -35,3 +35,4 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - [TLATER/dotfiles](https://github.com/TLATER/dotfiles)
 - [Sigmanificent/dotfiles](https://github.com/Sigmanificient/dotfiles)
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config)
+- [rice-cracker-dev/nixos-config](https://github.com/rice-cracker-dev/nixos-config)
