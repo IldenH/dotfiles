@@ -22,11 +22,6 @@
   	    theme = config.settings.terminal.zsh.theme;
   	  };
 			shellAliases = {
-				cat = "bat";
-				cd = "z";
-
-				cls = "clear && neofetch && ls";
-
 				makkergruppe = "nvim ~/Desktop/T1/makkergruppe-nr2";
 
 				".." = "cd ..";
@@ -35,7 +30,6 @@
 				nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 			};
 			initExtra = ''
-				neofetch
 				mkcdir = () {
 					mkdir -p -- "$1" &&
 					cd -P -- "$1"

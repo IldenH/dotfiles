@@ -3,6 +3,8 @@
 {
 	config = lib.mkIf (config.settings.terminal.cli.enable) {
 		home.packages = [ pkgs.neofetch ];
+		programs.zsh.initExtra = ''neofetch'';
+
 		home.file.".config/neofetch/config.conf".text = ''
 		print_info() {
 			prin "$(color 5)- ~ Hello $(color 1)${global.user.description} ~ -"

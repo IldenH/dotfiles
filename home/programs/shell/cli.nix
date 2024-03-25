@@ -49,5 +49,12 @@
 			thefuck.enable = true;
 			zoxide.enable = true;
 		};
+
+		programs.zsh.shellAliases = {
+			cat = "bat";
+			cd = "z";
+			cdi = "zi";
+			cls = "clear && neofetch && ls";
+		};
 	};
 }
