@@ -10,6 +10,7 @@
 	
 		zathura.enable = true;
 		discord.enable = true;
+		# browser.enable = true; # WIP
 
 		screenshots = {
 			enable = true;
