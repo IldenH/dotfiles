@@ -1,184 +1,138 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
-let
-	background = config.colorScheme.palette.base00;
-	alt_background = config.colorScheme.palette.base01;
-	alt2_background = config.colorScheme.palette.base02;
-	alt3_background = config.colorScheme.palette.base03;
-	
-	dark_foreground = config.colorScheme.palette.base04;
-	foreground = config.colorScheme.palette.base05;
-	alt_foreground = config.colorScheme.palette.base06;
-	alt2_foreground = config.colorScheme.palette.base07;
-
-	red = config.colorScheme.palette.base08;
-	orange = config.colorScheme.palette.base09;
-	yellow = config.colorScheme.palette.base0A;
-	green = config.colorScheme.palette.base0B;
-	cyan = config.colorScheme.palette.base0C;
-	blue = config.colorScheme.palette.base0D;
-	purple = config.colorScheme.palette.base0E;
-	brown = config.colorScheme.palette.base0F;
-in
 {
-	# TODO: Make this config way less messy
-	programs.waybar = {
-		enable = true;
-		settings = {
-			primaryBar = {
-				layer = "top";
-				output = "HDMI-A-2";
-				margin-top = 0;
-				margin-bottom = 0;
-				spacing = 5;
-				height = 24;
+	options.settings.waybar.enable = lib.mkOption {
+		type = lib.types.bool;
+		default = false;
+	};
 
-				modules-left = [ "hyprland/workspaces" ];
-				modules-center = [ "clock" ];
-				modules-right = [ "tray" "custom/wlogout" ];
+	config = let
+		layer = "top";
+		margin-top = 0;
+		margin-bottom = 0;
+		spacing = 5;
+		height = 24;
 
-				"hyprland/workspaces" = {
-					format = "{icon}";
-					format-icons = {
-						urgent = "󰀨";
-						focused = "";
-						active = "";
-						default = "";
-					};
-					persistent-workspaces = {
-						"1" = [];
-						"2" = [];
-						"3" = [];
-						"4" = [];
-						"5" = [];
-					};
-				};
+		modules-left = [ "hyprland/workspaces" ];
+		modules-center = [ "clock" ];
+		modules-right = [ "tray" ];
 
-				"clock" = {
-					timezone = "Europe/Oslo";
-					interval = 1;
-					format = "{:%d.%m.%Y %H:%M}";
-					format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
-				};
-
-				"tray" = {
-					icon-size = 20;
-					spacing = 10;
-				};
-
-				"custom/wlogout" = {
-					format = " ";
-					on-click = "wlogout";
-				};
-			};
-			secondaryBar = {
-				layer = "top";
-				output = "DP-2";
-				margin-top = 0;
-				margin-bottom = 0;
-				spacing = 5;
-				height = 24;
-
-				modules-left = [ "hyprland/workspaces" ];
-				modules-center = [ "clock" ];
-				modules-right = [ "tray" "custom/wlogout" ];
-
-				"hyprland/workspaces" = {
-					format = "{icon}";
-					format-icons = {
-						urgent = "󰀨";
-						focused = "";
-						active = "";
-						default = "";
-					};
-					persistent-workspaces = {
-						"11" = [];
-						"12" = [];
-						"13" = [];
-						"14" = [];
-						"15" = [];
-					};
-				};
-
-				"clock" = {
-					timezone = "Europe/Oslo";
-					interval = 1;
-					format = "{:%d.%m.%Y %H:%M}";
-					format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
-				};
-
-				"tray" = {
-					icon-size = 20;
-					spacing = 10;
-				};
-
-				"custom/wlogout" = {
-					format = " ";
-					on-click = "wlogout";
-				};
-			};
+		format = "{icon}";
+		format-icons = {
+			urgent = "󰀨";
+			focused = "";
+			active = "";
+			default = "";
 		};
-		style = with config.colorScheme.palette; /*css*/ ''
-@define-color background #${base00};
-@define-color alt_background #${base01};
-@define-color alt2_background #${base02};
-@define-color alt3_background #${base03};
 
-@define-color dark_foreground #${base04};
-@define-color foreground #${base05};
-@define-color alt_foreground #${base06};
-@define-color alt2_foreground #${base07};
+		clock = {
+			timezone = "Europe/Oslo";
+			interval = 1;
+			format = "{:%d.%m.%Y %H:%M}";
+			format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
+		};
 
-@define-color red #${base08};
-@define-color orange #${base09};
-@define-color yellow #${base0A};
-@define-color green #${base0B};
-@define-color cyan #${base0C};
-@define-color blue #${base0D};
-@define-color purple #${base0E};
-@define-color brown #${base0F};
+		tray = {
+			icon-size = 20;
+			spacing = 10;
+		};
+	in lib.mkIf (config.settings.waybar.enable) {
+		programs.waybar = {
+			enable = true;
+			settings = {
+				primaryBar = {
+					output = "HDMI-A-2";
+					inherit layer;
+					inherit margin-top;
+					inherit margin-bottom;
+					inherit spacing;
+					inherit height;
 
-@define-color bar_background alpha(@background, 0.6);
+					inherit modules-left;
+					inherit modules-center;
+					inherit modules-right;
 
-* {
-	font-family: JetBrainsMono Nerd Font;
-	font-size: 16px;
-	/*color: @foreground*/
-	border: none;
-	border-radius: 0;
-}
+					"hyprland/workspaces" = {
+						inherit format;
+						inherit format-icons;
+						persistent-workspaces = {
+							"1" = [];
+							"2" = [];
+							"3" = [];
+							"4" = [];
+							"5" = [];
+						};
+					};
+					inherit clock;
+					inherit tray;
+				};
+				secondaryBar = {
+					output = "DP-2";
+					inherit layer;
+					inherit margin-top;
+					inherit margin-bottom;
+					inherit spacing;
+					inherit height;
 
-window#waybar {
-	background-color: @bar_background;
-	color: @foreground;
-	transition-property: background-color;
-	transition-duration: .5s;
-}
+					inherit modules-left;
+					inherit modules-center;
+					inherit modules-right;
 
-#workspaces button {
-	padding: 0 5px;
-	background-color: transparent;
-	color: @foreground;
-	transition-property: background-color;
-	transition-duration: .5s;
-}
-
-#workspaces button:hover {
-	color: mix(@foreground, @background, 0.3);
-}
-
-#workspaces button.active {
-	color: @alt2_foreground;
-}
-
-#workspaces button.urgent {
-	color: @red;
-}
-
-#tray menu {
-	background-color: @background;
-}
-		'';
-
+					"hyprland/workspaces" = {
+						inherit format;
+						inherit format-icons;
+						persistent-workspaces = {
+							"11" = [];
+							"12" = [];
+							"13" = [];
+							"14" = [];
+							"15" = [];
+						};
+					};
+					inherit clock;
+					inherit tray;
+				};
+			};
+			style = with config.colorScheme.palette; /*css*/ ''
+				* {
+					font-family: JetBrainsMono Nerd Font;
+					font-size: 16px;
+					/*color: #${base05}*/
+					border: none;
+					border-radius: 0;
+				}
+				
+				window#waybar {
+					background-color: alpha(#${base00}, 0.6);
+					color: #${base05};
+					transition-property: background-color;
+					transition-duration: .5s;
+				}
+				
+				#workspaces button {
+					padding: 0 5px;
+					background-color: transparent;
+					color: #${base05};
+					transition-property: background-color;
+					transition-duration: .5s;
+				}
+				
+				#workspaces button:hover {
+					color: mix(#${base05}, #${base00}, 0.3);
+				}
+				
+				#workspaces button.active {
+					color: #${base07};
+				}
+				
+				#workspaces button.urgent {
+					color: #${base08};
+				}
+				
+				#tray menu {
+					background-color: #${base00};
+				}
+			'';
+		};
 	};
 }
