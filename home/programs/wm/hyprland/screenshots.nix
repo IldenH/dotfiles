@@ -2,10 +2,7 @@
 
 {
 	options.settings.screenshots = {
-		enable = lib.mkOption {
-			type = lib.types.bool;
-			default = false;
-		};
+		enable = lib.mkEnableOption "screenshots";
 		format = lib.mkOption {
 			type = lib.types.str;
 			default = "%Y-%m-%d_%H-%M-%S.png";

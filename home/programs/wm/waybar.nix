@@ -1,10 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-	options.settings.waybar.enable = lib.mkOption {
-		type = lib.types.bool;
-		default = false;
-	};
+	options.settings.waybar.enable = lib.mkEnableOption "waybar";
 
 	config = let
 		layer = "top";

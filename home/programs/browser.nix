@@ -1,10 +1,7 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
-	options.settings.browser.enable = lib.mkOption {
-		type = lib.types.bool;
-		default = false;
-	};
+	options.settings.browser.enable = lib.mkEnableOption "browser";
 
 	config = let
 		search = {

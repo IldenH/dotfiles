@@ -1,10 +1,7 @@
 { lib, config, pkgs, ... }:
 
 {
-	options.settings.terminal.cli.enable = lib.mkOption {
-		type = lib.types.bool;
-		default = false;
-	};
+	options.settings.terminal.cli.enable = lib.mkEnableOption "cli";
 
 	config = lib.mkIf (config.settings.terminal.cli.enable) {
 		home.packages = with pkgs; [

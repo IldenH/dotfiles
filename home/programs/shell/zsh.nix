@@ -2,10 +2,7 @@
 
 {
 	options.settings.terminal.zsh = {
-		enable = lib.mkOption {
-			type = lib.types.bool;
-			default = false;
-		};
+		enable = lib.mkEnableOption "zsh";
 		theme = lib.mkOption {
 			type = lib.types.str;
 			default = "simple";

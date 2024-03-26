@@ -1,10 +1,7 @@
 { config, pkgs, inputs, lib, global, ... }:
 
 {
-	options.settings.discord.enable = lib.mkOption {
-		type = lib.types.bool;
-		default = false;
-	};
+	options.settings.discord.enable = lib.mkEnableOption "discord";
 
 	config = lib.mkMerge [
 		(lib.mkIf (config.settings.discord.enable) {

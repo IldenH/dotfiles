@@ -2,10 +2,7 @@
 
 {
 	options.settings = {
-		hyprland.enable = lib.mkOption {
-			type = lib.types.bool;
-			default = false;
-		};
+		hyprland.enable = lib.mkEnableOption "hyprland";
 		wallpaper = lib.mkOption {
 			type = lib.types.path;
 		};
