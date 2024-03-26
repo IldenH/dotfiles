@@ -12,17 +12,18 @@
 				vesktop
 			];
 
-			home.file.".config/vesktop/settings.json".source = pkgs.writeText "settings.json" /* json */ ''
-			{
-				"discordBranch": "stable",
-				"minimizeToTray": false,
-				"arRPC": false,
-				"disableMinSize": true,
-				"staticTitle": true,
-				"splashTheming": true,
-				"checkUpdates": false
-			}
-			'';
+			# crahses vesktop
+			# home.file.".config/vesktop/settings.json".source = pkgs.writeText "settings.json" /* json */ ''
+			# {
+			# 	"discordBranch": "stable",
+			# 	"minimizeToTray": false,
+			# 	"arRPC": false,
+			# 	"disableMinSize": true,
+			# 	"staticTitle": true,
+			# 	"splashTheming": true,
+			# 	"checkUpdates": false
+			# }
+			# '';
 
 			home.file.".config/vesktop/settings/settings.json".source = ./discord-settings.json;
 
