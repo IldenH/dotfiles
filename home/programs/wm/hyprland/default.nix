@@ -1,12 +1,16 @@
 { config, inputs, pkgs, lib, ... }:
 
 {
-	options.settings.hyprland.enable = lib.mkOption {
-		type = lib.types.bool;
-		default = false;
+	options.settings = {
+		hyprland.enable = lib.mkOption {
+			type = lib.types.bool;
+			default = false;
+		};
+		wallpaper = lib.mkOption {
+			type = lib.types.path;
+		};
 	};
 
-	# TODO: make it so these don't get imported if hyprland.enable = false
 	imports = [
 		./apps.nix
 		./binds.nix
@@ -17,10 +21,11 @@
 	];
 	config = lib.mkIf (config.settings.hyprland.enable) {
 		home.packages = with pkgs; [
-			seatd
-			rofi-wayland
 			dunst
 			libnotify
+			rofi-wayland
+			seatd
+			swaybg
 		];
 		wayland.windowManager.hyprland = {
 			enable = true;

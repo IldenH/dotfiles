@@ -7,7 +7,10 @@
 			"DP-2, preferred, auto, auto"
 		];
 		
-		exec-once = "waybar";
+		exec-once = [
+			"swaybg -i ${config.settings.wallpaper}"
+			"waybar"
+		];
 		
 		env = [
 			"XCURSOR_SIZE, 24"
