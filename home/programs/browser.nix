@@ -108,19 +108,10 @@
 			stylus
 			# tampermonkey # unfree might change to grease monkey
 			ublock-origin
+			yomitan
 			youtube-shorts-block
 
 			# firefox-color # nix-colors?
-			
-			# buildFirefoxXpiAddon not found, i don't know how to fix
-			# (buildFirefoxXpiAddon {
-			# 	pname = "yomitan";
-			# 	version = "23.12.29.0";
-			# 	addonId = "{6b733b82-9261-47ee-a595-2dda294a4d08}"; # use sha256 to find this in .mozilla/firefox/<profile>/extensions
-			# 	url = "https://addons.mozilla.org/firefox/downloads/file/4217782/yomitan-23.12.29.0.xpi"; # "Add to Firefox" button link
-			# 	sha256 = "6cff708019bd5c53879b3c50ddb6b1f49e842d1c47272c10569041a2d3dbcd60";
-			# 	meta = {};
-			# })
 		];
 
 		# lilleaila/dotfiles
