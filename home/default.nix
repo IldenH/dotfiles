@@ -9,7 +9,7 @@
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
 
-		# ./programs/browser.nix # WIP
+		# ./programs/browser # WIP
 		./programs/discord.nix
 		./programs/files.nix
 		# ./programs/japanese.nix # broken, don't know why

@@ -69,6 +69,7 @@
 			"general.autoScroll" = true;
 			"browser.aboutConfig.showWarning" = false;
 			"browser.disableResetPrompt" = true;
+			"extensions.autoDisableScopes" = 0; # might make it so extensions aren't disabled
 
 			# drm
 			"browser.eme.ui.enabled" = true;
