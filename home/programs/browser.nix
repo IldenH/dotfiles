@@ -70,6 +70,10 @@
 			"browser.aboutConfig.showWarning" = false;
 			"browser.disableResetPrompt" = true;
 
+			# drm
+			"browser.eme.ui.enabled" = true;
+			"media.eme.enabled" = true;
+
 			# ui
 			"browser.tabs.firefox-view" = false;
 			"browser.tabs.tabmanager.enabled" = false;
