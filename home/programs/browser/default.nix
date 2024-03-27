@@ -19,6 +19,7 @@
 			# first run
 			"app.normandy.first_run" = false;
 			"doh-rollout.doneFirstRun" = true;
+			"toolkit.telemetry.reportingpolicy.firstRun" = false;
 
 			# privacy
 			"dom.security.https_only_mode" = true;
@@ -40,12 +41,12 @@
 			"browser.contentblocking.report.show_mobile_app" = false;
 			"extensions.pocket.enabled" = false;
 			"datareporting.policy.firstRunURL" = ""; # skips "at mozilla we believe..."
+			"datareporting.healthreport.uploadEnabled" = false;
 			"datareporting.policy.dataSubmissionEnabled" = false; # https://bugzilla.mozilla.org/show_bug.cgi?id=1195552#c4
 
 			# i don't know what is but probably good
 			"browser.shell.checkDefaultBrowser" = false;
 			"browser.shell.defaultBrowserCheckCount" = 1;
-			"toolkit.legacyUserProfileCustomizations.stylesheets" = true; # makes userchrome work
 			"browser.startup.homepage_override.mstone" = "ignore";
 
 			"media.hardware-video-decoding.force-enabled" = true;
@@ -69,7 +70,9 @@
 			"general.autoScroll" = true;
 			"browser.aboutConfig.showWarning" = false;
 			"browser.disableResetPrompt" = true;
-			"extensions.autoDisableScopes" = 0; # might make it so extensions aren't disabled
+			"extensions.autoDisableScopes" = 0; # enables all extensions
+			"media.videocontrols.picture-in-picture.enabled" = false;
+			"toolkit.legacyUserProfileCustomizations.stylesheets" = true; # makes userchrome work
 
 			# drm
 			"browser.eme.ui.enabled" = true;
