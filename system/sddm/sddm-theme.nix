@@ -1,5 +1,6 @@
 { pkgs, ... }:
 
+# TODO: make option for this
 let
 	image = ./sddm.jpg;
 in

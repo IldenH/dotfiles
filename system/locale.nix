@@ -1,26 +1,47 @@
-{ ... }:
+{ config, lib, ... }:
 
 {
-  time.timeZone = "Europe/Oslo";
+	options.settings.locale = {
+		main = lib.mkOption {
+			type = lib.types.str;
+			default = "en_US.UTF-8";
+		};
+		extra = lib.mkOption {
+			type = lib.types.str;
+			default = config.settings.locale.main;
+		};
+		timeZone = lib.mkOption {
+			type = lib.types.str;
+			default = "Europe/Oslo";
+		};
+		keyMap = lib.mkOption {
+			type = lib.types.str;
+			default = "no";
+		};
+	};
 
-  i18n.defaultLocale = "en_US.UTF-8";
+	config = with config.settings.locale; {
+		time.timeZone = timeZone;
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "nb_NO.UTF-8";
-    LC_IDENTIFICATION = "nb_NO.UTF-8";
-    LC_MEASUREMENT = "nb_NO.UTF-8";
-    LC_MONETARY = "nb_NO.UTF-8";
-    LC_NAME = "nb_NO.UTF-8";
-    LC_NUMERIC = "nb_NO.UTF-8";
-    LC_PAPER = "nb_NO.UTF-8";
-    LC_TELEPHONE = "nb_NO.UTF-8";
-    LC_TIME = "nb_NO.UTF-8";
-  };
+  	i18n.defaultLocale = main;
 
-  services.xserver.xkb = {
-    layout = "no";
-    variant = "";
-  };
+  	i18n.extraLocaleSettings = {
+  	  LC_ADDRESS = extra;
+  	  LC_IDENTIFICATION = extra;
+  	  LC_MEASUREMENT = extra;
+  	  LC_MONETARY = extra;
+  	  LC_NAME = extra;
+  	  LC_NUMERIC = extra;
+  	  LC_PAPER = extra;
+  	  LC_TELEPHONE = extra;
+  	  LC_TIME = extra;
+  	};
 
-  console.keyMap = "no";
+  	services.xserver.xkb = {
+  	  layout = keyMap;
+  	  variant = "";
+  	};
+
+  	console.keyMap = keyMap;
+	};
 }

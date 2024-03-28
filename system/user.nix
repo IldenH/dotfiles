@@ -1,13 +1,13 @@
-{ pkgs, global, ... }:
+{ pkgs, global, config, ... }:
 
 {
   # Don't forget to set a password with ‘passwd’.
   users.users.${global.user.name} = {
     isNormalUser = true;
-    description = "${global.user.description}";
+    description = global.user.description;
 		initialPassword = "";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [ ];
-		shell = pkgs.zsh;
+		shell = config.settings.shell;
   };
 }

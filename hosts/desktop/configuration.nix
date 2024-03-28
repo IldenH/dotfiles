@@ -1,55 +1,37 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-			../../system
-    ];
-
-
-	networking = {
-		hostName = "nixos";
-  	# wireless.enable = true;
-  	networkmanager.enable = true;
-	};
-
-	xdg.portal = {
-		enable = true;
-		wlr.enable = true;
-		configPackages = [ pkgs.xdg-desktop-portal-gtk ];
-		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	};
-
-	services = {
-		printing.enable = true;
-		fstrim.enable = true;
-		# xserver = {
-		# 	enable = true;
-		#		displayManager.sddm.enable = true;
-  	# 	desktopManager.plasma6.enable = true;
-		# };
-	};
-
-	programs = {
-		zsh.enable = true;
-		dconf.enable = true;
-		hyprland.enable = true;
-	};
-
-  environment.shells = [ pkgs.zsh ];
-
-  environment.systemPackages = with pkgs; [
-    curl
-    git
-    home-manager
-    neovim
-    wget
+  imports = [
+     ./hardware-configuration.nix
+		../../system
   ];
 
-	environment.sessionVariables = {
-		WLR_NO_HARDWARE_CURSORS = "1";
-		NIXOS_OZONE_WL = "1";
+	settings = {
+		hyprland.enable = true;
+		sddm.enable = true;
+
+		locale = {
+			main = "en_US.UTF-8";
+			extra = "nb_NO.UTF-8";
+			timeZone = "Europe/Oslo";
+			keyMap = "no";
+		};
+
+		networking = {
+			enable = true;
+			hostname = "nixos-desktop";
+			wifi.enable = false;
+			bluetooth.enable = false;
+		};
+
+		japanese.enable = true;
+		nvidia.enable = true;
+		optimization.enable = true;
+		sound.enable = true;
+		steam.enable = true;
+		utils.enable = true;
+
+		shell = pkgs.zsh;
 	};
 
   system.stateVersion = "23.11";
