@@ -15,7 +15,6 @@
 		# ./programs/japanese.nix # broken, don't know why
 		./programs/shell
 		./programs/steam.nix
-		./programs/texlive.nix
 		./programs/wm
 		./programs/zathura.nix
 	];
