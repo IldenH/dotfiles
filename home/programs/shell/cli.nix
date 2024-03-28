@@ -41,13 +41,18 @@
 			defaultOptions = [ "--color 16" ];
 		};
 
+		programs.direnv = {
+			enable = true;
+			nix-direnv.enable = true;
+		};
+
 		programs = {
 			ripgrep.enable = true;
 			thefuck.enable = true;
 			zoxide.enable = true;
 		};
 
-		programs.zsh.shellAliases = {
+		home.shellAliases = {
 			cat = "bat";
 			cd = "z";
 			cdi = "zi";
