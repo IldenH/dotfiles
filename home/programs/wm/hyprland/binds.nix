@@ -10,6 +10,11 @@
 			"$mainMod, P, pseudo," # dwindle
 			"$mainMod, I, togglesplit," # dwindle
 
+			# I am weird so i switch between left and right_handed
+			# TODO: make this a toggle
+			"CTRL SHIFT, L, exec, hyprctl keyword input:left_handed 1"
+			"CTRL SHIFT, O, exec, hyprctl keyword input:left_handed 0"
+
 			", F11, fullscreen, 0"
 			"SHIFT, F11, fullscreen, 1"
 			"$mainMod, F11, fullscreen, 2"
