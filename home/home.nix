@@ -7,6 +7,26 @@
 
 	settings = {
 		wallpaper = ./wallpaper.jpg;
+    monitors = [
+			{
+				name = "HDMI-A-2";
+				width = 1920;
+				height = 1080;
+				refreshRate = 60;
+				x = 0;
+				y = 0;
+				enable = true;
+			}
+      {
+        name = "DP-2";
+        width = 1920;
+        height = 1080;
+        refreshRate = 60;
+        x = 1920;
+        y = 0;
+        enable = true;
+      }
+    ];
 	
 		zathura.enable = true;
 		discord.enable = true;

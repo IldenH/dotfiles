@@ -11,6 +11,7 @@
 	imports = [
 		./apps.nix
 		./binds.nix
+		./monitors.nix
 		./rules.nix
 		./settings.nix
 		./screenshots.nix
