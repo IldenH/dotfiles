@@ -57,6 +57,14 @@
 			cd = "z";
 			cdi = "zi";
 			cls = "clear && neofetch && ls";
+
+			makkergruppe = ''
+			cat ~/Documents/T1/makkergruppe-nr2 | wl-copy && wl-paste && echo "Copied :)"'';
+
+			".." = "cd ..";
+			"..." = "cd ../..";
+
+			nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
 		};
 	};
 }

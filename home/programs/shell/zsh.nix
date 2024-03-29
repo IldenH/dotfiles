@@ -18,14 +18,6 @@
   	    enable = true;
   	    theme = config.settings.terminal.zsh.theme;
   	  };
-			shellAliases = {
-				makkergruppe = "nvim ~/Desktop/T1/makkergruppe-nr2";
-
-				".." = "cd ..";
-				"..." = "cd ../..";
-
-				nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop"; # TODO: make it figure out #...
-			};
 			initExtra = ''
 				mkcdir = () {
 					mkdir -p -- "$1" &&
