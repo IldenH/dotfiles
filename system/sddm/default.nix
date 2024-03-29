@@ -1,15 +1,18 @@
 { config, pkgs, lib, ... }:
 
 {
-	options.settings.sddm.enable = lib.mkEnableOption "sddm";
+	options.settings.sddm.image = lib.mkOption {
+		type = lib.types.path;
+		default = null;
+	};
 
-	config = lib.mkIf (config.settings.sddm.enable) {
+	config = lib.mkIf (config.settings.sddm.image != null) {
 		services.xserver = {
 			enable = true;
 			displayManager = {
 				sddm.enable = true;
 				sddm.wayland.enable = true;
-				sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+				sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; inherit config; }}";
 			};
 		};
   	# sddm-theme

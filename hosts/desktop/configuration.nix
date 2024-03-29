@@ -10,7 +10,7 @@
 
 	settings = {
 		hyprland.enable = true;
-		sddm.enable = true;
+		sddm.image = ../sddm.jpg;
 
 		locale = {
 			main = "en_US.UTF-8";

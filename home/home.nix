@@ -31,6 +31,10 @@
 		zathura.enable = true;
 		discord.enable = true;
 		# browser.enable = true; # WIP
+		files.enable = true;
+		nightlight.enable = true;
+		qt-gtk-themes.enable = true;
+		steam.enable = true;
 
 		screenshots = {
 			enable = true;

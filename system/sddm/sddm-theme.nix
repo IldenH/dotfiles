@@ -1,9 +1,5 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
-# TODO: make option for this
-let
-	image = ./sddm.jpg;
-in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
   src = pkgs.fetchFromGitHub {
@@ -17,6 +13,6 @@ pkgs.stdenv.mkDerivation {
     cp -R ./* $out/
     cd $out/
     rm Background.jpg
-    cp -r ${image} $out/Background.jpg
+    cp -r ${config.settings.sddm.image} $out/Background.jpg
    '';
 }
