@@ -6,6 +6,8 @@
 		../../system
   ];
 
+	boot.kernelPackages = pkgs.linuxPackages_latest;
+
 	settings = {
 		hyprland.enable = true;
 		sddm.enable = true;

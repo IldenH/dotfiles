@@ -37,7 +37,7 @@
 				"col.active_border" = "rgba(${config.colorScheme.palette.base02}ee) rgba(${config.colorScheme.palette.base03}ee) 45deg";
 		    "col.inactive_border" = "rgba(${config.colorScheme.palette.base00}aa)";
 		    layout = "dwindle";
-		    allow_tearing = false;
+		    allow_tearing = true;
 		};
 		
 		decoration = {
