@@ -32,7 +32,7 @@
 		discord.enable = true;
 		# browser.enable = true; # WIP
 		files.enable = true;
-		nightlight.enable = true;
+		nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
 		qt-gtk-themes.enable = true;
 		steam.enable = true;
 
