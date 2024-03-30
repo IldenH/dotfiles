@@ -22,6 +22,8 @@
 					"staticTitle": true,
 					"splashTheming": true,
 					"checkUpdates": false
+    			"tray": false,
+    			"hardwareAcceleration": false
 				}
 				'';
 				onChange = ''
