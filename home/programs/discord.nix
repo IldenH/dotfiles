@@ -3,31 +3,47 @@
 {
 	options.settings.discord.enable = lib.mkEnableOption "discord";
 
-	config = lib.mkMerge [
+	config = let
+		conf = ''$HOME/.config/vesktop/'';
+	in lib.mkMerge [
 		(lib.mkIf (config.settings.discord.enable) {
 			home.packages = with pkgs; [
 				vesktop
 			];
 
-			# crahses vesktop
-			# home.file.".config/vesktop/settings.json".source = pkgs.writeText "settings.json" /* json */ ''
-			# {
-			# 	"discordBranch": "stable",
-			# 	"minimizeToTray": false,
-			# 	"arRPC": false,
-			# 	"disableMinSize": true,
-			# 	"staticTitle": true,
-			# 	"splashTheming": true,
-			# 	"checkUpdates": false
-			# }
-			# '';
+			# I don't like this, but makes vesktop crash less frequently
+			home.file.".config/vesktop/init-settings.json" = {
+				text = ''
+				{
+					"discordBranch": "stable",
+					"minimizeToTray": false,
+					"arRPC": false,
+					"disableMinSize": true,
+					"staticTitle": true,
+					"splashTheming": true,
+					"checkUpdates": false
+				}
+				'';
+				onChange = ''
+					rm -f ${conf}settings.json
+					cp ${conf}init-settings.json ${conf}settings.json
+					chmod u+w ${conf}settings.json
+				'';
+			};
 
-			home.file.".config/vesktop/settings/settings.json".source = ./discord-settings.json;
+			home.file.".config/vesktop/settings/init-settings.json" = {
+				source = ./discord-settings.json;
+				onChange = ''
+					rm -f ${conf}settings/settings.json
+					cp ${conf}settings/init-settings.json ${conf}settings/settings.json
+					chmod u+w ${conf}settings/settings.json
+				'';
+			};
 
 			# Auto-generated color scheme, inspired by https://github.com/deathbeam/base16-discord
-			home.file.".config/vesktop/themes/base16.theme.css".source = with config.colorScheme.palette; pkgs.writeText "base16.theme.css" /* css */ ''
+			home.file.".config/vesktop/themes/base16.theme.css".text = with config.colorScheme.palette; ''
 				/**
-				* @name ${config.colorScheme.slug}
+				* @name ${config.colorScheme.name}
 				* @author ${global.user.description}
 				* @version 1.0.0
 				* @description Base16 color scheme generated from https://github.com/Misterio77/nix-colors
