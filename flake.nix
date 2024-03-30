@@ -4,6 +4,7 @@
   inputs = {
 		### CORE ###
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    staging-next.url = "github:nixos/nixpkgs/staging-next";
 
 		home-manager = {
       url = "github:nix-community/home-manager";
@@ -40,7 +41,7 @@
 		};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, staging-next, ... }@inputs:
     let
 			global = {
 				user = {
@@ -50,11 +51,12 @@
 			};
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+			pkgs-staging = staging-next.legacyPackages.${system};
     in
     {
       nixosConfigurations = {
 				desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; inherit global; };
+          specialArgs = { inherit inputs; inherit global; inherit pkgs-staging; };
           modules = [ 
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {

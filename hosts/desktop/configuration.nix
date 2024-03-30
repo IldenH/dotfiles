@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-staging, ... }:
 
 {
   imports = [
@@ -6,6 +6,12 @@
 		../../system
   ];
 
+	system.replaceRuntimeDependencies = [
+		{ 
+			original = pkgs.xz;
+			replacement = pkgs-staging.xz;
+  	}
+  ];
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	settings = {
