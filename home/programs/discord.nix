@@ -11,9 +11,7 @@
 				vesktop
 			];
 
-			# I don't like this, but makes vesktop crash less frequently
-			home.file.".config/vesktop/init-settings.json" = {
-				text = ''
+			home.file.".config/vesktop/settings.json".text = ''
 				{
 					"discordBranch": "stable",
 					"minimizeToTray": false,
@@ -21,26 +19,13 @@
 					"disableMinSize": true,
 					"staticTitle": true,
 					"splashTheming": true,
-					"checkUpdates": false
+					"checkUpdates": false,
     			"tray": false,
     			"hardwareAcceleration": false
 				}
-				'';
-				onChange = ''
-					rm -f ${conf}settings.json
-					cp ${conf}init-settings.json ${conf}settings.json
-					chmod u+w ${conf}settings.json
-				'';
-			};
+			'';
 
-			home.file.".config/vesktop/settings/init-settings.json" = {
-				source = ./discord-settings.json;
-				onChange = ''
-					rm -f ${conf}settings/settings.json
-					cp ${conf}settings/init-settings.json ${conf}settings/settings.json
-					chmod u+w ${conf}settings/settings.json
-				'';
-			};
+			home.file.".config/vesktop/settings/settings.json".source = ./discord-settings.json;
 
 			# Auto-generated color scheme, inspired by https://github.com/deathbeam/base16-discord
 			home.file.".config/vesktop/themes/base16.theme.css".text = with config.colorScheme.palette; ''
