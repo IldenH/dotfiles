@@ -31,9 +31,9 @@
 		};
 		
 		general = {
-		  gaps_in = 2;
-		  gaps_out = 2;
-		  border_size = 2;
+		  gaps_in = 0;
+		  gaps_out = 0;
+		  border_size = 1;
 			"col.active_border" = "rgba(${config.colorScheme.palette.base02}ee) rgba(${config.colorScheme.palette.base03}ee) 45deg";
 		  "col.inactive_border" = "rgba(${config.colorScheme.palette.base00}aa)";
 		  layout = "dwindle";
@@ -42,6 +42,8 @@
 		
 		decoration = {
 			rounding = 5;
+			# dim_inactive = 1;
+			# dim_strength = 0.05;
 			blur.enabled = false;
 			drop_shadow = false;
 		};
@@ -54,10 +56,6 @@
 		
 		master = {
 		  new_is_master = true;
-		};
-		
-		gestures = {
-		  workspace_swipe = false;
 		};
 		
 		misc = {
