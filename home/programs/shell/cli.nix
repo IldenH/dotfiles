@@ -63,9 +63,6 @@
 
 			".." = "cd ..";
 			"..." = "cd ../..";
-
-			# TODO: remove --impure when xz fixed
-			nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop --impure"; # TODO: make it figure out #...
 		};
 	};
 }

@@ -61,4 +61,9 @@
 			enable = true;
 		};
 	};
+
+	home.shellAliases = {
+		# TODO: remove --impure when xz fixed
+		nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop --impure";
+	};
 }
