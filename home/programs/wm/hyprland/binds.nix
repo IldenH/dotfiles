@@ -11,9 +11,7 @@
 			"$mainMod, I, togglesplit," # dwindle
 
 			# I am weird so i switch between left and right_handed
-			# TODO: make this a toggle
-			"CTRL SHIFT, L, exec, hyprctl keyword input:left_handed 1"
-			"CTRL SHIFT, O, exec, hyprctl keyword input:left_handed 0"
+			''CTRL SHIFT, L, exec, if [[ $(hyprctl getoption input:left_handed) == *"0"* ]]; then hyprctl keyword input:left_handed 1; else hyprctl keyword input:left_handed 0; fi''
 
 			", F11, fullscreen, 0"
 			"SHIFT, F11, fullscreen, 1"
