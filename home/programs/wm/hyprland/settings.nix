@@ -48,10 +48,11 @@
 			blur.enabled = false;
 			drop_shadow = false;
 		};
+
 		animations.enabled = false;
 		
 		dwindle = {
-		  pseudotile = true; # master switch for pseudotiling.
+		  pseudotile = true;
 		  preserve_split = true;
 		};
 		

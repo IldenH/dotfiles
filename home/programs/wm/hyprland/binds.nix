@@ -2,53 +2,42 @@
 
 {
 	wayland.windowManager.hyprland.settings = {
-		"$mainMod" = "SUPER";
-		
 		bind = [
-			"$mainMod, W, killactive,"
-			"$mainMod, V, togglefloating,"
-			"$mainMod, P, pseudo," # dwindle
-			"$mainMod, I, togglesplit," # dwindle
+			"SUPER, W, killactive,"
+			"SUPER, V, togglefloating,"
+			"SUPER, I, togglesplit,"
 
 			# I am weird so i switch between left and right_handed
 			''CTRL SHIFT, L, exec, if [[ $(hyprctl getoption input:left_handed) == *"0"* ]]; then hyprctl keyword input:left_handed 1; else hyprctl keyword input:left_handed 0; fi''
 
 			", F11, fullscreen, 0"
 			"SHIFT, F11, fullscreen, 1"
-			"$mainMod, F11, fullscreen, 2"
+			"SUPER, F11, fullscreen, 2"
 			", F12, fakefullscreen"
 
-			"$mainMod, h, movefocus, l"
-			"$mainMod, j, movefocus, d"
-			"$mainMod, k, movefocus, u"
-			"$mainMod, l, movefocus, r"
+			"SUPER, h, movefocus, l"
+			"SUPER, j, movefocus, d"
+			"SUPER, k, movefocus, u"
+			"SUPER, l, movefocus, r"
 
-			"$mainMod CONTROL, h, swapwindow, l"
-			"$mainMod CONTROL, j, swapwindow, d"
-			"$mainMod CONTROL, k, swapwindow, u"
-			"$mainMod CONTROL, l, swapwindow, r"
-
-			# Example special workspace (scratchpad)
-			# "$mainMod, S, togglespecialworkspace, magic"
-			# "$mainMod SHIFT, S, movetoworkspace, special:magic"
-
-			# Scroll through existing workspaces with mainMod + scroll
-			"$mainMod, mouse_down, workspace, e+1"
-			"$mainMod, mouse_up, workspace, e-1"
+			"SUPER CONTROL, h, swapwindow, l"
+			"SUPER CONTROL, j, swapwindow, d"
+			"SUPER CONTROL, k, swapwindow, u"
+			"SUPER CONTROL, l, swapwindow, r"
 		];
 
 		# l -> works even when locked
 		# e -> repeats when key is held 
 		binde = [
-			"$mainMod ALT, h, resizeactive, -10 0"
-			"$mainMod ALT, j, resizeactive, 0 -10"
-			"$mainMod ALT, k, resizeactive, 0 10"
-			"$mainMod ALT, l, resizeactive, 10 0"
+			"SUPER ALT, h, resizeactive, -10 0"
+			"SUPER ALT, j, resizeactive, 0 -10"
+			"SUPER ALT, k, resizeactive, 0 10"
+			"SUPER ALT, l, resizeactive, 10 0"
 		];
 		
 		bindm = [
-			"$mainMod, mouse:272, movewindow"
-			"$mainMod, mouse:273, resizewindow"
+			"SUPER, mouse:272, movewindow"
+			"SUPER, mouse:273, resizewindow"
 		];
 	};
 }
