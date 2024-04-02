@@ -12,7 +12,6 @@
 		# ./programs/browser # WIP
 		./programs/discord.nix
 		./programs/files.nix
-		# ./programs/japanese.nix # broken, don't know why
 		./programs/shell
 		./programs/steam.nix
 		./programs/wm
@@ -20,7 +19,6 @@
 	];
   home.packages = with pkgs; [
 		anki
-		authenticator
 		cinnamon.pix
 		firefox
 		geogebra6
@@ -28,7 +26,6 @@
 		heroic
 		python311
 		qalculate-gtk
-		thunderbird
   ];
 
 	# setting /* only sometimes works
