@@ -43,9 +43,9 @@
 		wayland.windowManager.hyprland.settings.bind = [
 			"ALT SHIFT, E, exec, wl-paste | swappy -f -"
 			"ALT SHIFT, S, exec, grimblast ${args} copysave area ${raw}"
-			# "$mainMod, S, exec, grimblast ${args} copysave active ${raw}"
-			"$mainMod ALT, S, exec, grimblast ${args} copysave output ${raw}"
-			"$mainMod SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
+			# "SUPER, S, exec, grimblast ${args} copysave active ${raw}"
+			"SUPER ALT, S, exec, grimblast ${args} copysave output ${raw}"
+			"SUPER SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
 		];
 	};
 }

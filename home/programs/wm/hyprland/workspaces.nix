@@ -33,17 +33,17 @@
 			"CTRL SHIFT, F4, workspace, 14"
 			"CTRL SHIFT, F5, workspace, 15"
 
-			"$mainMod CTRL, F1, movetoworkspace, 1"
-			"$mainMod CTRL, F2, movetoworkspace, 2"
-			"$mainMod CTRL, F3, movetoworkspace, 3"
-			"$mainMod CTRL, F4, movetoworkspace, 4"
-			"$mainMod CTRL, F5, movetoworkspace, 5"
+			"SUPER CTRL, F1, movetoworkspace, 1"
+			"SUPER CTRL, F2, movetoworkspace, 2"
+			"SUPER CTRL, F3, movetoworkspace, 3"
+			"SUPER CTRL, F4, movetoworkspace, 4"
+			"SUPER CTRL, F5, movetoworkspace, 5"
 
-			"$mainMod CTRL SHIFT, F1, movetoworkspace, 11"
-			"$mainMod CTRL SHIFT, F2, movetoworkspace, 12"
-			"$mainMod CTRL SHIFT, F3, movetoworkspace, 13"
-			"$mainMod CTRL SHIFT, F4, movetoworkspace, 14"
-			"$mainMod CTRL SHIFT, F5, movetoworkspace, 15"
+			"SUPER CTRL SHIFT, F1, movetoworkspace, 11"
+			"SUPER CTRL SHIFT, F2, movetoworkspace, 12"
+			"SUPER CTRL SHIFT, F3, movetoworkspace, 13"
+			"SUPER CTRL SHIFT, F4, movetoworkspace, 14"
+			"SUPER CTRL SHIFT, F5, movetoworkspace, 15"
 		];
 	};
 }
