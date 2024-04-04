@@ -38,20 +38,11 @@
 			enable = true;
 			settings = {
 				primaryBar = {
-					output = "HDMI-A-2";
-					inherit layer;
-					inherit margin-top;
-					inherit margin-bottom;
-					inherit spacing;
-					inherit height;
-
-					inherit modules-left;
-					inherit modules-center;
-					inherit modules-right;
+					output = "HDMI-A-2"; # TODO: base this on config.settings.monitors
+					inherit layer margin-top margin-bottom spacing height modules-left modules-center modules-right clock tray;
 
 					"hyprland/workspaces" = {
-						inherit format;
-						inherit format-icons;
+						inherit format format-icons;
 						persistent-workspaces = {
 							"1" = [];
 							"2" = [];
@@ -60,24 +51,13 @@
 							"5" = [];
 						};
 					};
-					inherit clock;
-					inherit tray;
 				};
 				secondaryBar = {
 					output = "DP-2";
-					inherit layer;
-					inherit margin-top;
-					inherit margin-bottom;
-					inherit spacing;
-					inherit height;
-
-					inherit modules-left;
-					inherit modules-center;
-					inherit modules-right;
+					inherit layer margin-top margin-bottom spacing height modules-left modules-center modules-right clock tray;
 
 					"hyprland/workspaces" = {
-						inherit format;
-						inherit format-icons;
+						inherit format format-icons;
 						persistent-workspaces = {
 							"11" = [];
 							"12" = [];
@@ -86,11 +66,9 @@
 							"15" = [];
 						};
 					};
-					inherit clock;
-					inherit tray;
 				};
 			};
-			style = with config.colorScheme.palette; /*css*/ ''
+			style = with config.colorScheme.palette; ''
 				* {
 					font-family: JetBrainsMono Nerd Font;
 					font-size: 16px;

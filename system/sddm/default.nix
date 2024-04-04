@@ -12,7 +12,7 @@
 			displayManager = {
 				sddm.enable = true;
 				sddm.wayland.enable = true;
-				sddm.theme = "${import ./theme.nix { inherit pkgs; inherit config; }}";
+				sddm.theme = "${import ./theme.nix { inherit pkgs config; }}";
 			};
 		};
   	# sddm-theme

@@ -41,7 +41,7 @@
 		};
   };
 
-  outputs = { self, nixpkgs, home-manager, staging-next, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
 			global = {
 				user = {
@@ -51,17 +51,16 @@
 			};
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-			pkgs-staging = staging-next.legacyPackages.${system};
     in
     {
       nixosConfigurations = {
 				desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; inherit global; inherit pkgs-staging; };
+          specialArgs = { inherit inputs global; };
           modules = [ 
             ./hosts/desktop/configuration.nix
 						home-manager.nixosModules.home-manager {
 							home-manager = {
-								extraSpecialArgs = { inherit inputs; inherit global; };
+								extraSpecialArgs = { inherit inputs global; };
 								useUserPackages = true;
 								useGlobalPkgs = true;
 								users."${global.user.name}" = ./home/home.nix;
