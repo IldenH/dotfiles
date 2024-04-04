@@ -30,7 +30,7 @@
 	
 		zathura.enable = true;
 		discord.enable = true;
-		# browser.enable = true; # WIP
+		browser.enable = false; # too lazy to move browser data TODO: do it anyway
 		files.enable = true;
 		nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
 		qt-gtk-themes.enable = true;

@@ -24,10 +24,12 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 | Lenovo ThinkPad T420s  | `laptop`  | `x86_64`     | Not configured        |
 
 ## Inspiration / Sources
-- [Vimjoyer](https://www.youtube.com/@vimjoyer/featured)
+- [Vimjoyer](https://www.youtube.com/@vimjoyer)
 - [danth/stylix](https://github.com/danth/stylix)
 - [sopa0/hyprsome](https://github.com/sopa0/hyprsome)
 - [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland)
+- [mozillazine - about:config entries](https://kb.mozillazine.org/About:config_entries)
+- [r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS)
 
 ### Other dotfiles
 - [LilleAila/dotfiles](https://github.com/LilleAila/dotfiles)

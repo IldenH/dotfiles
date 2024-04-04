@@ -9,7 +9,7 @@
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
 
-		# ./programs/browser # WIP
+		./programs/browser
 		./programs/discord.nix
 		# ./programs/espanso.nix # service doesn't run properly
 		./programs/files.nix
