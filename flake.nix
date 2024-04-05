@@ -4,7 +4,6 @@
   inputs = {
 		### CORE ###
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    staging-next.url = "github:nixos/nixpkgs/staging-next";
 
 		home-manager = {
       url = "github:nix-community/home-manager";
