@@ -19,7 +19,7 @@
 		./programs/zathura.nix
 	];
   home.packages = with pkgs; [
-		anki
+		anki-bin
 		cinnamon.pix
 		firefox
 		geogebra6
