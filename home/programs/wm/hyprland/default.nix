@@ -19,7 +19,6 @@
 	];
 	config = lib.mkIf (config.settings.hyprland.enable) {
 		home.packages = with pkgs; [
-			dunst
 			libnotify
 			rofi-wayland
 			seatd
