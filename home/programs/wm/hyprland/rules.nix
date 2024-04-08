@@ -3,9 +3,12 @@
 {
 	wayland.windowManager.hyprland.settings.windowrulev2 = [
 		"workspace 13, class:(vesktop)"
+		"workspace 2, class:(firefox)" # TODO: different workspaces for different profiles
+
+		# Games
 		"workspace 4, class:(steam)"
 		"workspace 4, class:(heroic)"
-		"workspace 2, class:(firefox)" # TODO: different workspaces for different profiles
+		"workspace 4, class:(org.prismlauncher.PrismLauncher)"
 
 		# Anki
 		"workspace 3, class:(Anki)"

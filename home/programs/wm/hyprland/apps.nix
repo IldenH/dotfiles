@@ -19,10 +19,11 @@
 			"SUPER, B, exec, anki"
 
 			"SUPER, X, exec, heroic"
-			"SUPER ALT, X, exec, gimp"
+			"SUPER ALT, X, exec, prismlauncher"
 
       "SUPER, G, exec, bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'"
 			"SUPER ALT, G, exec, geogebra"
+			"SUPER ALT CTRL, G, exec, gimp"
 
 			# Browser profiles and stuff
 			"SUPER, N, exec, $browser -P Main"

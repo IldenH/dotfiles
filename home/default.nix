@@ -13,6 +13,7 @@
 		./programs/discord.nix
 		# ./programs/espanso.nix # service doesn't run properly
 		./programs/files.nix
+		./programs/games.nix
 		./programs/shell
 		./programs/steam.nix
 		./programs/wm
@@ -24,7 +25,6 @@
 		firefox
 		geogebra6
 		gimp
-		heroic
 		python311
 		qalculate-gtk
   ];
