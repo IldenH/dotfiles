@@ -9,8 +9,9 @@
 
 		# Anki
 		"workspace 3, class:(Anki)"
-		"center 1, class:(Anki), title:(Statistics|Preferences)"
-		"float, class:(Anki), title:(Statistics|Preferences)"
+		"center 1, class:(Anki), title:(Statistics|Preferences|Options)"
+		"size 70% 80%, class:(Anki), title:(Statistics|Preferences|Options)"
+		"float, class:(Anki), title:(Statistics|Preferences|Options)"
 
 		# special workspaces
     "float, class:(qalculate-gtk)"
