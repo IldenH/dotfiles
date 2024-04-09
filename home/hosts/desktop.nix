@@ -1,12 +1,12 @@
 { config, inputs, lib, ... }:
 
 {
-  imports = [ ./. ];
+  imports = [ ../. ];
 
 	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 	settings = {
-		wallpaper = ./wallpaper.jpg;
+		wallpaper = ../wallpaper.jpg;
     monitors = [
 			{
 				name = "HDMI-A-2";

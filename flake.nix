@@ -62,7 +62,21 @@
 								extraSpecialArgs = { inherit inputs global; };
 								useUserPackages = true;
 								useGlobalPkgs = true;
-								users."${global.user.name}" = ./home/home.nix;
+								users."${global.user.name}" = ./home/hosts/desktop.nix;
+							};
+						}
+          ];
+        };
+				laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs global; };
+          modules = [ 
+            ./hosts/laptop/configuration.nix
+						home-manager.nixosModules.home-manager {
+							home-manager = {
+								extraSpecialArgs = { inherit inputs global; };
+								useUserPackages = true;
+								useGlobalPkgs = true;
+								users."${global.user.name}" = ./home/hosts/laptop.nix;
 							};
 						}
           ];
