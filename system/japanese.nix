@@ -28,18 +28,25 @@
   	  ];
   	};
 
-		# environment.systemPackages = with pkgs.libsForQt5; [
-		# 	fcitx5-with-addons
-		# 	fcitx5-configtool
-		# ];
-		#
   	# i18n.inputMethod = {
   	#   enabled = "fcitx5";
   	#   fcitx5.addons = with pkgs; [
-  	#     fcitx5-mozc
+  	#     fcitx5-mozc # isn't detected
   	#     fcitx5-gtk
   	#   ];
   	#   fcitx5.waylandFrontend = true;
+			# fcitx5.settings = {
+			# 	globalOptions = {
+			# 		"Hotkey/TriggerKeys.0" = "Alt+Shift+Z";
+			# 		"Behavior.ActiveByDefault" = "True";
+			# 		"Behavior.ShareInputState" = "All";
+			# 	};
+			# 	addons = {
+			# 		"classicui.TrayOutlineColor" = "#282828"; # if this was home-manager then nix-colors
+			# 		"classicui.TrayTextColor" = "#fbf1c7";
+			# 		"classicui.Theme" = "default-dark";
+			# 	};
+			# };
   	# };
 	};
 }
