@@ -9,12 +9,21 @@ in
 	config = lib.mkIf (config.settings.qt-gtk-themes.enable) {
 		qt = {
 			enable = true;
-			platformTheme = "gtk";
-			style = {
-				package = pkgs.adwaita-qt;
-				name = "adwaita-dark";
-			};
+			# platformTheme = "gtk";
+			# style = {
+			# 	package = pkgs.adwaita-qt;
+			# 	name = "adwaita-dark";
+			# };
+      platformTheme = "gtk";
+      style = {
+        name = "gtk2";
+        package = pkgs.qt6Packages.qt6gtk2;
+      };
 		};
+		home.packages = with pkgs; [
+			libsForQt5.qt5.qtwayland
+			kdePackages.qtwayland
+		];
 
 		gtk = {
 			enable = true;
@@ -24,9 +33,10 @@ in
 			};
 
 			theme = {
-				package = nix-colors-lib.gtkThemeFromScheme {
-					scheme = config.colorScheme;
-				};
+				# package = nix-colors-lib.gtkThemeFromScheme {
+				# 	scheme = config.colorScheme;
+				# };
+        package = import ./gtk.nix {inherit pkgs;} {scheme = config.colorScheme;};
 				name = "${config.colorScheme.slug}";
 			};
 
