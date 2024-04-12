@@ -6,13 +6,10 @@ with config.colorScheme.palette; ''
   --urlbarView-highlight-color: #${base07} !important;
   --urlbarView-hover-background: #${base01} !important;
   --urlbarView-separator-color: #${base00} !important;
-  --toolbar-field-color: #${base07} !important;
 }
 
-#titlebar, 
 #PersonalToolbar, 
 #nav-bar, 
-#tabbrowser-tabs, 
 #navigator-toolbox, 
 #urlbar-background {
   background-color: #${base00} !important;
@@ -23,24 +20,26 @@ with config.colorScheme.palette; ''
   margin: 0 !important;
 }
 
-/* TODO: fix this menu, and do the same for context menu and permissions menu */
-#appMenu-popup .PanelUI-subView, 
-#unified-extensions-panel .panel-header,
-#unified-extensions-panel .panel-subview-body,
-#unified-extensions-panel {
-  background-color: #${base00} !important;
-  color: #${base07} !important;
-}
-
-#tracking-protection-icon-container,
+/* remove contextmenu things */
+#context-inspect-a11y,
+#context-take-screenshot,
+#context-savelink,
+#context-print-selection,
+#context-viewpartialsource-selection,
+#context-stripOnShareLink,
+#context-searchselect,
+#context-sendimage,
+#context-savepage,
+/* seperators */
+#unified-extensions-view toolbarseparator,
+#contentAreaContextMenu menuseparator,
+.titlebar-spacer,
+/* other */
 #urlbar .search-one-offs, /* "this time search with ..." */
-.titlebar-spacer {
-	display: none !important;
-}
-
+#tracking-protection-icon-container,
 #identity-box[pageproxystate=invalid] > .identity-box-button,
-.searchbar-search-button  {
-  display: none !important;
+.searchbar-search-button {
+	display: none !important;
 }
 
 /* "search with ..." */
@@ -48,25 +47,16 @@ with config.colorScheme.palette; ''
   color: transparent !important;
 }
 
+/* stars are yellow */
 #star-button {
 	fill: #${base0A} !important;
 }
 
-#back-button, 
-#forward-button,
-#reload-button,
-#unified-extensions-button,
-#permissions-granted-icon,
-#PanelUI-button,
-#blocked-permissions-container {
-  color: #${base07} !important;
-}
-
+/* tabs */
 .tab-background[selected],
 .tab-background[multiselected="true"] {	
 	background: #${base01} !important;
 }
-
 .tabbrowser-tab {
   padding: 0 !important;
 }
@@ -78,5 +68,11 @@ with config.colorScheme.palette; ''
   height: auto !important;
   width: 1.1em !important;
   margin-right: 0.5em !important;
+}
+
+/* context menus */
+.menupopup-arrowscrollbox {
+  border: 2px solid #${base01} !important;
+  min-width: 200px !important;
 }
 ''
