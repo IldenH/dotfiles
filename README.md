@@ -21,7 +21,7 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 | Type                   | Name      | Architecture | Note                  |
 | ---------------------- | --------- | ------------ | --------------------- |
 | Lenovo Legion Y520T    | `desktop` | `x86_64`     |                       |
-| Lenovo ThinkPad T420s  | `laptop`  | `x86_64`     | Not configured        |
+| Lenovo ThinkPad T420s  | `laptop`  | `x86_64`     |                       |
 
 ## Inspiration / Sources
 - [Vimjoyer](https://www.youtube.com/@vimjoyer)

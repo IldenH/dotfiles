@@ -2,7 +2,7 @@
 
 {
   imports = [
-     # ./hardware-configuration.nix # TODO: generate hardware-configuration
+     ./hardware-configuration.nix
 		../../system
   ];
 
