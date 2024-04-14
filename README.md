@@ -13,7 +13,8 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - Bar: [Waybar](https://github.com/Alexays/Waybar) should switch to [AGS](https://github.com/Aylur/ags)
 - Terminal Emulator: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Shell: [Zsh](https://www.zsh.org) with [Oh my Zsh](https://ohmyz.sh)
-- Editor: [Neovim](https://neovim.io)
+- Editor: [Neovim](https://neovim.io) should switch to [Nixvim](https://github.com/nix-community/nixvim)
+- Browser: [Firefox](https://www.mozilla.org/firefox)
 - Discord: [Vesktop](https://github.com/Vencord/Vesktop)
 - Wallpaper: [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
 
@@ -22,6 +23,7 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 | ---------------------- | --------- | ------------ | --------------------- |
 | Lenovo Legion Y520T    | `desktop` | `x86_64`     |                       |
 | Lenovo ThinkPad T420s  | `laptop`  | `x86_64`     |                       |
+| Oracle Cloud           | `oci`     | `aarch64`    | Not configured        |
 
 ## Inspiration / Sources
 - [Vimjoyer](https://www.youtube.com/@vimjoyer)
@@ -30,6 +32,7 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland)
 - [mozillazine - about:config entries](https://kb.mozillazine.org/About:config_entries)
 - [r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS)
+- [fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)
 
 ### Other dotfiles
 - [LilleAila/dotfiles](https://github.com/LilleAila/dotfiles)
