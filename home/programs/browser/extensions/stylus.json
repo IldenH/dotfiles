@@ -110,7 +110,7 @@
         "code": ""
       }
     ],
-    "sourceCode": "/* ==UserStyle==\n@name           www.worldcubeassociation.org - 6/24/2023, 1:41:48 AM\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n@-moz-document url-prefix(\"https://www.worldcubeassociation.org\") {\n    .event-checkbox input[type=\"checkbox\"] + i.cubing-icon {\n        color: gray !important;\n    }\n    .event-checkbox input[type=\"checkbox\"]:checked + i.cubing-icon {\n        color: lightgray !important;\n    }\n}",
+    "sourceCode": "/* ==UserStyle==\n@name           www.worldcubeassociation.org - 6/24/2023, 1:41:48 AM\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n@-moz-document url-prefix(\"https://www.worldcubeassociation.org\") {\n    .event-checkbox input[type=\"checkbox\"] + i.cubing-icon {\n        color: gray !important;\n    }\n    .event-checkbox input[type=\"checkbox\"]:checked + i.cubing-icon {\n        color: lightgray !important;\n    }\n    .event-radio input[type=\"radio\"] + i.cubing-icon {\n        color: gray !important;\n    }\n    .event-radio input[type=\"radio\"]:checked + i.cubing-icon {\n        color: lightgray !important;\n    }\n}",
     "usercssData": {
       "name": "www.worldcubeassociation.org - 6/24/2023, 1:41:48 AM",
       "namespace": "github.com/openstyles/stylus",
@@ -121,9 +121,9 @@
     "author": "Me",
     "description": "A new userstyle",
     "name": "www.worldcubeassociation.org - 6/24/2023, 1:41:48 AM",
-    "updateDate": 1711488995408,
+    "updateDate": 1713108227108,
     "_id": "04307b59-c281-415e-a06d-65683b5143de",
-    "_rev": 1711488995408,
+    "_rev": 1713108227109,
     "id": 3,
     "customName": "Event Checkbox"
   },
@@ -152,7 +152,7 @@
     "name": "juejin-dark",
     "originalDigest": "5f68fcb5849f1a4ddf24cab7139c2267a391b9a4",
     "_id": "e9f63c95-514c-4d1f-8ec7-dc85c2fe9c18",
-    "_rev": 1711489157917,
+    "_rev": 1711808173890,
     "installationUrl": "https://userstyles.world/style/9317",
     "id": 24,
     "updateDate": 1688421015612
