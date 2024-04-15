@@ -13,6 +13,7 @@
 			userName = "IldenH";
 			userEmail = "IldenH.1" + "@" + "proton.me";
 			extraConfig = {
+				init.defaultBranch = "main";
 				credential.helper = "store"; # I should probably switch to ssh
 			};
 		};
