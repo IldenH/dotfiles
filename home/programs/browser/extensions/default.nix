@@ -12,7 +12,7 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
 	privacy-badger
 	# simplelogin # don't really use
 	sponsorblock
-	stylus
+	#	stylus # userContent works better
 	# tampermonkey # unfree might change to grease monkey
 	ublock-origin
 	yomitan

@@ -11,11 +11,12 @@
 		settings = import ./settings.nix;
 		extensions = import ./extensions { inherit inputs pkgs; };
 		userChrome = import ./userChrome.nix { inherit config; };
+		userContent = import ./userContent.nix;
 	in lib.mkIf (config.settings.browser.enable) {
 		programs.firefox = {
 			enable = true;
 			profiles.main = {
-				inherit search extensions settings userChrome;
+				inherit search extensions settings userChrome userContent;
 				isDefault = true;
 				id = 0;
 				bookmarks = [ ];
@@ -24,7 +25,7 @@
 				settings = settings // {
         	"browser.startup.homepage" = "https://classroom.google.com";
         };
-				inherit search extensions userChrome;
+				inherit search extensions userChrome userContent;
 				id = 1;
 				bookmarks = [{
 					name = "Toolbar";
@@ -62,7 +63,7 @@
 				settings = settings // {
         	"browser.startup.homepage" = "https://skole.digilaer.no/auth/saml/index.php?wantsurl=https%3A%2F%2Fskole.digilaer.no%2Fmy%2F";
         };
-				inherit search extensions userChrome;
+				inherit search extensions userChrome userContent;
 				id = 2;
 				bookmarks = [{
 					name = "Toolbar";
