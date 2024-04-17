@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
 		anki-bin
 		cinnamon.pix
-		firefox
 		geogebra6
 		gimp
 		python311

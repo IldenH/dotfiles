@@ -5,7 +5,7 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
 	bitwarden
 	clearurls
 	darkreader
-	df-youtube
+	# df-youtube # ublock filters work better
 	enhanced-h264ify
 	facebook-container
 	i-dont-care-about-cookies

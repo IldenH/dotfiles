@@ -25,11 +25,11 @@
 			"SUPER ALT, G, exec, geogebra"
 			"SUPER ALT CTRL, G, exec, gimp"
 
-			# Browser profiles and stuff
-			"SUPER, N, exec, $browser -P Main"
-			"SUPER ALT, N, exec, $browser -P Skole https://classroom.google.com/"
-			"SUPER, Y, exec, $browser -P Digilaer https://skole.digilaer.no/auth/saml/index.php?wantsurl=https%3A%2F%2Fskole.digilaer.no%2Fmy%2F"
-			"SUPER ALT, Y, exec, $browser -P Digilaer https://skole.digilaer.no/auth/saml/index.php?wantsurl=https%3A%2F%2Fskole.digilaer.no%2Fmod%2Fadobeconnect%2Fview.php%3Fid%3D13352"
+			# browser 
+			"SUPER, N, exec, $browser -P main"
+			"SUPER ALT, N, exec, $browser -P school"
+			"SUPER, Y, exec, $browser -P math"
+			"SUPER ALT, Y, exec, $browser -P math https://skole.digilaer.no/auth/saml/index.php?wantsurl=https%3A%2F%2Fskole.digilaer.no%2Fmod%2Fadobeconnect%2Fview.php%3Fid%3D13352"
 		];
 	};
 }

@@ -16,7 +16,10 @@
 		programs.firefox = {
 			enable = true;
 			profiles.main = {
-				inherit search extensions settings userChrome userContent;
+				inherit search extensions userChrome userContent;
+				settings = settings // {
+					"identity.fxaccounts.enabled" = true; # shouldn't be using, but it works
+				};
 				isDefault = true;
 				id = 0;
 				bookmarks = [ ];
@@ -25,7 +28,11 @@
 				settings = settings // {
         	"browser.startup.homepage" = "https://classroom.google.com";
         };
-				inherit search extensions userChrome userContent;
+				inherit search userChrome userContent;
+				extensions = with inputs.firefox-addons.packages."${pkgs.system}"; [
+					darkreader
+					ublock-origin
+				];
 				id = 1;
 				bookmarks = [{
 					name = "Toolbar";
@@ -63,7 +70,11 @@
 				settings = settings // {
         	"browser.startup.homepage" = "https://skole.digilaer.no/auth/saml/index.php?wantsurl=https%3A%2F%2Fskole.digilaer.no%2Fmy%2F";
         };
-				inherit search extensions userChrome userContent;
+				inherit search userChrome userContent;
+				extensions = with inputs.firefox-addons.packages."${pkgs.system}"; [
+					darkreader
+					ublock-origin
+				];
 				id = 2;
 				bookmarks = [{
 					name = "Toolbar";
