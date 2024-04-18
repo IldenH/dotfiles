@@ -21,7 +21,7 @@
 
 		networking = {
 			enable = true;
-			hostname = "nixos-desktop";
+			hostname = "desktop";
 			wifi.enable = false;
 			bluetooth.enable = false;
 		};

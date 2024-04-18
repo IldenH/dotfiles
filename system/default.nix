@@ -1,4 +1,4 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, global, inputs, ... }:
 
 {
 	imports = [
@@ -36,6 +36,14 @@
 				zsh.enable = true;
 				dconf.enable = true;
 			};
+			
+			programs.nh = {
+				enable = true;
+				package = inputs.nh.packages.${pkgs.system}.nh;
+				flake = "/home/${global.user.name}/dotfiles";
+				clean.enable = true;
+				clean.extraArgs = "--keep-since 4d --keep 5";
+			};
 
   		environment.shells = [ config.settings.shell ];
 
@@ -62,10 +70,10 @@
 		})
 		(lib.mkIf (config.settings.optimization.enable) {
 		  nix = {
-		    gc = {
-		      automatic = true;
-		      options = "--delete-older-than 30d";
-		    };
+		    # gc = {
+		    #   automatic = true;
+		    #   options = "--delete-older-than 30d";
+		    # };
 		    settings.auto-optimise-store = true;
 		    optimise.automatic = true;
 		  };

@@ -64,8 +64,4 @@
 			enable = true;
 		};
 	};
-
-	home.shellAliases = {
-		nixbuild = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop";
-	};
 }
