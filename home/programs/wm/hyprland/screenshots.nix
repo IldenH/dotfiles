@@ -9,11 +9,11 @@
 		};
 		path.raw = lib.mkOption {
 			type = lib.types.str;
-			default = "$HOME"; # set like this to make sure screenshots aren't lost
+			default = "$HOME/Pictures/Screenshots/Raw";
 		};
 		path.edited = lib.mkOption {
 			type = lib.types.str;
-			default = "$HOME"; # set like this to make sure screenshots aren't lost
+			default = "$HOME/Pictures/Screenshots/Edited";
 		};
 	};
 
@@ -47,5 +47,11 @@
 			"SUPER ALT, S, exec, grimblast ${args} copysave output ${raw}"
 			"SUPER SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
 		];
+
+		# Create directories
+		xdg.userDirs.extraConfig = {
+			XDG_SCREENSHOTSRAW_DIR = config.settings.screenshots.path.raw;
+			XDG_SCREENSHOTSEDITED_DIR= config.settings.screenshots.path.edited;
+		};
 	};
 }

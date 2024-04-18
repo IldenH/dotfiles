@@ -41,6 +41,14 @@
 		"video/ogg" = "mpv.desktop";
 	};
 
+	xdg.userDirs = {
+		enable = true;
+		createDirectories = true;
+		desktop = null;
+		publicShare = null;
+		templates = null;
+	};
+
   nixpkgs.config.allowUnfree = true;
 
 	programs = {
