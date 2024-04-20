@@ -4,16 +4,13 @@
 	# TODO: Make options for this and if multiple monitors, then many workspaces
 	wayland.windowManager.hyprland.settings =  {
 		workspace = [
-			"HDMI-A-2, 1"
-			"DP-2, 11"
-
-			"1, monitor:HDMI-A-2"
+			"1, monitor:HDMI-A-2, default:true"
 			"2, monitor:HDMI-A-2"
 			"3, monitor:HDMI-A-2"
 			"4, monitor:HDMI-A-2"
 			"5, monitor:HDMI-A-2"
 
-			"11, monitor:DP-2"
+			"11, monitor:DP-2, default:true"
 			"12, monitor:DP-2"
 			"13, monitor:DP-2"
 			"14, monitor:DP-2"
