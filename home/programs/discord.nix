@@ -63,6 +63,62 @@
 			--scrollbar-thin-track: transparent;
 			--scrollbar-auto-track: transparent;
 			}
+
+      /* code blocks */
+      code {
+        border-radius: 6px !important;
+      }
+
+      code.inline {
+        padding: 3px !important;
+      }
+
+			/* message input padding */
+			.scrollableContainer_ff917f {
+				padding-right: 10px !important;
+			}
+
+			/* hide stuff */
+			/* profile banner background color */
+			.banner__6d414, .panelBanner__7d7e2, .bannerPremium__69560 {
+				background-color: transparent !important;
+				background-image: none !important;
+			}
+
+			/* scrollbar */
+			.scroller_e412fe {
+				scrollbar-width: none !important;
+			}
+
+      /* message input buttons */
+			/* these are locale based */
+      button[aria-label="ギフトを贈る"],
+      button[aria-label="GIFピッカーを開く"],
+      button[aria-label="スタンプピッカーを開く"],
+      .channelTextArea-1FufC0 > .container-1ZA19X,
+
+      /* message input square */
+      .form_d8a4a1::after,
+
+      /* shop and nitro buttons */
+      a[data-list-item-id="private-channels-uid_18___nitro"],
+      a[data-list-item-id="private-channels-uid_18___shop"],
+      a[href="/shop"],
+      a[href="/store"],
+
+			/* nicknames text */
+      .divider_bdb894, .akaBadge__27cd4, .nicknames__12efb,
+
+      /* server list separator */
+      .guildSeparator__75928,
+
+      /* top-bar buttons */
+			/* also locale based */
+      a[href="https://support.discord.com"],
+      [aria-label="ビデオ通話を開始"],
+      [aria-label="受信ボックス"] {
+        display: none !important;
+      }
 		'';
 	};
 }
