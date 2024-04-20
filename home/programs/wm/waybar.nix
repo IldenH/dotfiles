@@ -21,8 +21,8 @@
 					default = "";
 				};
 				persistent-workspaces = {
-					"!DP-2" = [ 1 2 3 4 5 ]; # all monitors except secondary monitor on Desktop. Works fine as other hosts aren't multi-monitor.
-					"DP-2" = [ 11 12 13 14 15 ];
+					"*" = [ 1 2 3 4 5 ]; # works fine as other hosts aren't multi-monitor
+					"DP-2" = [ 11 12 13 14 15 ]; # secondary monitor for Desktop
 				};
 			};
 
