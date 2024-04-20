@@ -3,111 +3,68 @@
 {
 	options.settings.waybar.enable = lib.mkEnableOption "waybar";
 
-	config = let
-		layer = "top";
-		margin-top = 0;
-		margin-bottom = 0;
-		spacing = 5;
-		height = 24;
+	config.programs.waybar = lib.mkIf (config.settings.waybar.enable) {
+		enable = true;
+		settings.bar = {
+			layer = "top";
 
-		modules-left = [ "hyprland/workspaces" ];
-		modules-center = [ "clock" ];
-		modules-right = [ "tray" ];
+			modules-left = [ "hyprland/workspaces" ];
+			modules-center = [ "clock" ];
+			modules-right = [ "tray" ];
 
-		format = "{icon}";
-		format-icons = {
-			urgent = "󰀨";
-			focused = "";
-			active = "";
-			default = "";
-		};
-
-		clock = {
-			timezone = "Europe/Oslo";
-			interval = 1;
-			format = "{:%d.%m.%Y %H:%M}";
-			format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
-		};
-
-		tray = {
-			icon-size = 20;
-			spacing = 10;
-		};
-	in lib.mkIf (config.settings.waybar.enable) {
-		programs.waybar = {
-			enable = true;
-			settings = {
-				primaryBar = {
-					output = "HDMI-A-2"; # TODO: base this on config.settings.monitors
-					inherit layer margin-top margin-bottom spacing height modules-left modules-center modules-right clock tray;
-
-					"hyprland/workspaces" = {
-						inherit format format-icons;
-						persistent-workspaces = {
-							"1" = [];
-							"2" = [];
-							"3" = [];
-							"4" = [];
-							"5" = [];
-						};
-					};
+			"hyprland/workspaces" = {
+				format = "{icon}";
+				format-icons = {
+					urgent = "󰀨";
+					focused = "";
+					active = "";
+					default = "";
 				};
-				secondaryBar = {
-					output = "DP-2";
-					inherit layer margin-top margin-bottom spacing height modules-left modules-center modules-right clock tray;
-
-					"hyprland/workspaces" = {
-						inherit format format-icons;
-						persistent-workspaces = {
-							"11" = [];
-							"12" = [];
-							"13" = [];
-							"14" = [];
-							"15" = [];
-						};
-					};
+				persistent-workspaces = {
+					# TODO: base this on config.settings.monitors
+					"HDMI-A-2" = [ 1 2 3 4 5 ];
+					"DP-2" = [ 11 12 13 14 15 ];
 				};
 			};
-			style = with config.colorScheme.palette; ''
-				* {
-					font-family: JetBrainsMono Nerd Font;
-					font-size: 16px;
-					/*color: #${base05}*/
-					border: none;
-					border-radius: 0;
-				}
-				
-				window#waybar {
-					background-color: alpha(#${base00}, 0.6);
-					color: #${base05};
-					transition-property: background-color;
-					transition-duration: .5s;
-				}
-				
-				#workspaces button {
-					padding: 0 5px;
-					background-color: transparent;
-					color: #${base05};
-					transition-property: background-color;
-					transition-duration: .5s;
-				}
-				
-				#workspaces button:hover {
-					color: mix(#${base05}, #${base00}, 0.3);
-				}
-				
-				#workspaces button.active {
-					color: #${base07};
-				}
-				
-				#workspaces button.urgent {
-					color: #${base08};
-				}
-				
-				#tray menu {
-					background-color: #${base00};
-				}
-			'';
+
+			# TODO: make options for this
+			clock = {
+				timezone = "Europe/Oslo";
+				interval = 1;
+				format = "{:%d.%m.%Y %H:%M}";
+				format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
+			};
 		};
+		style = with config.colorScheme.palette; ''
+			* {
+				font-family: JetBrainsMono Nerd Font;
+				font-size: 16px;
+				border: none;
+				border-radius: 0;
+			}
+			
+			window#waybar {
+				background-color: alpha(#${base00}, 0.6);
+				color: #${base05};
+			}
+			
+			#workspaces button {
+				padding: 0 5px;
+				background-color: transparent;
+				color: #${base05};
+			}
+			
+			#workspaces button:hover {
+				color: mix(#${base05}, #${base00}, 0.3);
+			}
+			
+			#workspaces button.active {
+				color: #${base07};
+			}
+			
+			#workspaces button.urgent {
+				color: #${base08};
+			}
+		'';
 	};
 }
