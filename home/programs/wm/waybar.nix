@@ -21,8 +21,7 @@
 					default = "";
 				};
 				persistent-workspaces = {
-					# TODO: base this on config.settings.monitors
-					"HDMI-A-2" = [ 1 2 3 4 5 ];
+					"!DP-2" = [ 1 2 3 4 5 ]; # all monitors except secondary monitor on Desktop. Works fine as other hosts aren't multi-monitor.
 					"DP-2" = [ 11 12 13 14 15 ];
 				};
 			};
