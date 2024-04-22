@@ -43,6 +43,11 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		nix-cursors = {
+			url = "github:LilleAila/nix-cursors";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
