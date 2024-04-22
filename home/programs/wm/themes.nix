@@ -46,8 +46,8 @@ in
 			# name = "Catppuccin-Macchiato-Dark-Cursors";
 			package = inputs.nix-cursors.packages.${pkgs.system}.bibata-original-cursor.override {
     	  background_color = "#${config.colorScheme.palette.base00}";
-    	  outline_color = "#${config.colorScheme.palette.base06}";
-    	  accent_color = "#${config.colorScheme.palette.base06}";
+    	  outline_color = "#${config.colorScheme.palette.base07}";
+    	  accent_color = "#${config.colorScheme.palette.base01}";
     	};
     	name = "Bibata-Original-Custom";
 			size = 22;
