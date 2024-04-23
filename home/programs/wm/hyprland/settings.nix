@@ -10,6 +10,7 @@
 		exec-once = [
 			"swaybg -i ${config.settings.wallpaper}"
 			"waybar"
+			"fcitx5"
 		];
 		
 		env = [

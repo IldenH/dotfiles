@@ -28,13 +28,14 @@
   	  ];
   	};
 
-  	# i18n.inputMethod = {
-  	#   enabled = "fcitx5";
-  	#   fcitx5.addons = with pkgs; [
-  	#     fcitx5-mozc # isn't detected
-  	#     fcitx5-gtk
-  	#   ];
-  	#   fcitx5.waylandFrontend = true;
+  	i18n.inputMethod = {
+  	  enabled = "fcitx5";
+  	  fcitx5.addons = with pkgs; [
+  	    fcitx5-mozc
+  	    fcitx5-gtk
+  	  ];
+  	  fcitx5.waylandFrontend = true;
+			# this doesn't work, TODO: just do it using home-manager and home.file
 			# fcitx5.settings = {
 			# 	globalOptions = {
 			# 		"Hotkey/TriggerKeys.0" = "Alt+Shift+Z";
@@ -47,6 +48,6 @@
 			# 		"classicui.Theme" = "default-dark";
 			# 	};
 			# };
-  	# };
+  	};
 	};
 }
