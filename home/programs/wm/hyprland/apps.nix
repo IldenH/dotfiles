@@ -6,7 +6,7 @@
 		"$files" = "nemo";
 		"$browser" = "firefox";
 		"$launcher" = "rofi -show drun -show-icons";
-		"$discord" = "vesktop";
+		"$discord" = "vesktop --enable-wayland-ime";
 
 		bind = [
 			"SUPER, SPACE, exec, $launcher"
