@@ -35,19 +35,39 @@
   	    fcitx5-gtk
   	  ];
   	  fcitx5.waylandFrontend = true;
-			# this doesn't work, TODO: just do it using home-manager and home.file
-			# fcitx5.settings = {
-			# 	globalOptions = {
-			# 		"Hotkey/TriggerKeys.0" = "Alt+Shift+Z";
-			# 		"Behavior.ActiveByDefault" = "True";
-			# 		"Behavior.ShareInputState" = "All";
-			# 	};
-			# 	addons = {
-			# 		"classicui.TrayOutlineColor" = "#282828"; # if this was home-manager then nix-colors
-			# 		"classicui.TrayTextColor" = "#fbf1c7";
-			# 		"classicui.Theme" = "default-dark";
-			# 	};
-			# };
+			fcitx5.settings = {
+				globalOptions = {
+					"Hotkey/TriggerKeys"."0" = "Alt+Shift+Z";
+					"Behavior" = {
+						"ActiveByDefault" = "True";
+						"ShareInputState" = "All";
+					};
+				};
+				inputMethod = {
+					"GroupOrder"."0" = "Default";
+          "Groups/0" = {
+						"Name" = "Default";
+            "Default Layout" = "no";
+            "DefaultIM" = "mozc";
+          };
+          "Groups/0/Items/0" = {
+            "Name" = "keyboard-no";
+						"Layout" = "no";
+          };
+          "Groups/0/Items/1" = {
+            "Name" = "mozc";
+						"Layout" = "no";
+          };
+				};
+				addons = {
+					"classicui"."globalSection" = {
+						"TrayOutlineColor" = "#282828"; # if this was home-manager then nix-colors
+						"TrayTextColor" = "#fbf1c7";
+						"PreferTextIcon" = "True";
+						"Theme" = "default-dark";
+					};
+				};
+			};
   	};
 	};
 }
