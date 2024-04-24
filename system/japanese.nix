@@ -62,7 +62,7 @@
 				addons = {
 					"classicui"."globalSection" = {
 						"TrayOutlineColor" = "#282828"; # if this was home-manager then nix-colors
-						"TrayTextColor" = "#fbf1c7";
+						"TrayTextColor" = "#d5c4a1";
 						"PreferTextIcon" = "True";
 						"Theme" = "default-dark";
 					};
