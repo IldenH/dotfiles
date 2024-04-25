@@ -61,9 +61,6 @@
 
 			makkergruppe = ''
 			cat ~/Documents/T1/makkergruppe-nr2 | wl-copy && wl-paste && echo "Copied :)"'';
-
-			".." = "cd ..";
-			"..." = "cd ../..";
 		};
 	};
 }
