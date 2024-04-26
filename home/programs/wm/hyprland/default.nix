@@ -11,7 +11,6 @@
 	imports = [
 		./apps.nix
 		./binds.nix
-		./monitors.nix
 		./rules.nix
 		./settings.nix
 		./screenshots.nix
@@ -20,6 +19,7 @@
 	config = lib.mkIf (config.settings.hyprland.enable) {
 		home.packages = with pkgs; [
 			libnotify
+			nwg-displays
 			rofi-wayland
 			seatd
 			swaybg

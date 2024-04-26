@@ -6,6 +6,11 @@
 			# fallback
 			", preferred, auto, auto"
 		];
+
+    # nwg-displays
+    source = [
+      "~/.config/hypr/monitors.conf"
+    ];
 		
 		exec-once = [
 			"swaybg -i ${config.settings.wallpaper}"
