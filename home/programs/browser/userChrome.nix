@@ -17,7 +17,6 @@ with config.colorScheme.palette; ''
   padding: 0 !important;
   outline: 0 !important;
   border: 0 !important;
-  margin: 0 !important;
 }
 
 /* remove contextmenu things */
