@@ -5,7 +5,6 @@ with config.colorScheme.palette; ''
 	/**
 	* @name ${config.colorScheme.name}
 	* @author ${global.user.description}
-	* @version 1.0.0
 	* @description Base16 color scheme generated from https://github.com/Misterio77/nix-colors
 	**/
 
@@ -47,23 +46,21 @@ with config.colorScheme.palette; ''
 		--scrollbar-auto-track: transparent;
 	}
 
+	* {
+		scrollbar-width: none !important;
+	}
+
   code {
     border-radius: 6px !important;
   }
-
   code.inline {
     padding: 3px !important;
   }
 
-	/* message input */
-	.scrollableContainer_ff917f {
-		padding-right: 0px !important;
+	.scrollableContainer_ff917f, /* message input */
+	.title_d4ba1a {
+		padding: 0 !important;
 	}
-
-  /* name titlebar */
-  .title_d4ba1a {
-    padding: 0 !important;
-  }
 
   /* top-bar separator */
   .searchBar__621ec {
@@ -75,33 +72,23 @@ with config.colorScheme.palette; ''
 		background-image: none !important;
 	}
 
-	.scroller_e412fe {
-		scrollbar-width: none !important;
-	}
-
-  /* message input buttons, locale based */
-  button[aria-label="ギフトを贈る"],
-  button[aria-label="GIFピッカーを開く"],
-  button[aria-label="スタンプピッカーを開く"],
-  .channelTextArea-1FufC0 > .container-1ZA19X,
-
-  /* top-bar buttons, locale based */
-  a[href="https://support.discord.com"],
+  /* buttons, locale based */
+  [aria-label="ギフトを贈る"],
+  [aria-label="GIFピッカーを開く"],
+  [aria-label="スタンプピッカーを開く"],
   [aria-label="ビデオ通話を開始"],
   [aria-label="受信ボックス"],
+  .channelTextArea-1FufC0 > .container-1ZA19X,
+  [href="https://support.discord.com"],
+  [href="/shop"],
+  [href="/store"],
 
-  /* message input square */
+  [class^="profileEffects"],
+  [class^="avatarDecoration"],
+
   .form_d8a4a1::after,
-
-  /* shop and nitro buttons */
-  a[data-list-item-id="private-channels-uid_18___nitro"],
-  a[data-list-item-id="private-channels-uid_18___shop"],
-  a[href="/shop"],
-  a[href="/store"],
-
   .divider_bdb894, .akaBadge__27cd4, .nicknames__12efb,
-
-  /* server list separator */
+  .closeButton__116c3,
   .guildSeparator__75928 {
     display: none !important;
   }
