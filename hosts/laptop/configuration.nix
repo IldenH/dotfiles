@@ -27,7 +27,6 @@
 		};
 
 		japanese.enable = true;
-		optimization.enable = true;
 		sound.enable = true;
 		utils.enable = true;
 

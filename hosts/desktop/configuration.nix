@@ -28,7 +28,6 @@
 
 		japanese.enable = true;
 		nvidia.enable = true;
-		optimization.enable = true;
 		sound.enable = true;
 		steam.enable = true;
 		utils.enable = true;

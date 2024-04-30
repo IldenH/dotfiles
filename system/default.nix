@@ -14,8 +14,7 @@
 	];
 
 	options.settings = {
-		utils.enable = lib.mkEnableOption "utils";
-		optimization.enable = lib.mkEnableOption "optimization";
+		utils.enable = lib.mkEnableOption "utils" // { default = true; };
 		sound.enable = lib.mkEnableOption "sound";
 		shell = lib.mkOption {
 			type = lib.types.package;
@@ -30,6 +29,7 @@
 
 			services = {
 				printing.enable = true;
+				fstrim.enable = true;
 			};
 
 			programs = {
@@ -68,17 +68,6 @@
 				# jack.enable = true;
 				# media-session.enable = true;
 			};
-		})
-		(lib.mkIf (config.settings.optimization.enable) {
-		  nix = {
-		    # gc = {
-		    #   automatic = true;
-		    #   options = "--delete-older-than 30d";
-		    # };
-		    settings.auto-optimise-store = true;
-		    optimise.automatic = true;
-		  };
-			services.fstrim.enable = true;
 		})
 	];
 }
