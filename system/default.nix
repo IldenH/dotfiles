@@ -35,6 +35,7 @@
 			programs = {
 				zsh.enable = true;
 				dconf.enable = true;
+				nano.enable = false;
 			};
 			
 			programs.nh = {
