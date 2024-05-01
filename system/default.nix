@@ -14,7 +14,7 @@
 	];
 
 	options.settings = {
-		utils.enable = lib.mkEnableOption "utils";
+		utils.enable = lib.mkEnableOption "utils" // { default = true; };
 		sound.enable = lib.mkEnableOption "sound";
 		shell = lib.mkOption {
 			type = lib.types.package;
