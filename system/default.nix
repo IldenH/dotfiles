@@ -22,11 +22,14 @@
 		};
 	};
 
+	config = {
+		nix.settings.experimental-features = [ "nix-command" "flakes" ];
+		nixpkgs.config.allowUnfree = true;
+		environment.systemPackages = [ pkgs.home-manager ];
+	};
+
 	config = lib.mkMerge [
 		(lib.mkIf (config.settings.utils.enable) {
-			nix.settings.experimental-features = [ "nix-command" "flakes" ];
-			nixpkgs.config.allowUnfree = true;
-
 			services = {
 				printing.enable = true;
 				fstrim.enable = true;
@@ -51,7 +54,6 @@
 			environment.systemPackages = with pkgs; [
 				curl
 				git
-				home-manager
 				neovim
 				wget
 			];
