@@ -23,11 +23,10 @@
 	};
 
 	config = lib.mkMerge [
-		({
+		(lib.mkIf (config.settings.utils.enable) {
 			nix.settings.experimental-features = [ "nix-command" "flakes" ];
 			nixpkgs.config.allowUnfree = true;
-		})
-		(lib.mkIf (config.settings.utils.enable) {
+
 			services = {
 				printing.enable = true;
 				fstrim.enable = true;
