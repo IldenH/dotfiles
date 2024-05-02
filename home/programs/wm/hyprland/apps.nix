@@ -23,7 +23,7 @@
 
       "SUPER, G, exec, bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'"
 			"SUPER ALT, G, exec, geogebra"
-			"SUPER ALT CTRL, G, exec, gimp"
+			"SUPER ALT CTRL, G, exec, krita"
 
 			# browser 
 			"SUPER, N, exec, $browser -P main"

@@ -23,7 +23,7 @@
 		anki-bin
 		cinnamon.pix
 		geogebra6
-		gimp
+		krita
 		python311
 		qalculate-gtk
   ];
