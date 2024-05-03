@@ -1,8 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
-	options.settings.steam.enable = lib.mkEnableOption "steam";
-	options.settings.games.enable = lib.mkEnableOption "games";
+	options.settings = {
+		games.enable = lib.mkEnableOption "games";
+		steam.enable = lib.mkEnableOption "steam";
+	};
 
 	config = lib.mkMerge [
 		(lib.mkIf (config.settings.steam.enable) {

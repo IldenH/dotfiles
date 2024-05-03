@@ -8,15 +8,14 @@
 	settings = {
 		wallpaper = ../wallpaper.jpg;
 	
-		zathura.enable = true;
-		discord.enable = true;
 		browser.enable = true;
-		files.enable = true;
-		nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
-		qt-gtk-themes.enable = true;
-		steam.enable = true;
-		games.enable = true;
+		discord.enable = true;
 		# espanso.enable = true; # service doesn't run properly
+		games.enable = true;
+		nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
+		other.enable = true;
+		qt-gtk-themes.enable = true;
+		zathura.enable = true;
 
 		screenshots = {
 			enable = true;
@@ -37,11 +36,8 @@
 			};
 		};
 
-		waybar.enable = true;
+		hyprland.enable = true;
 		mako.enable = true;
-
-		hyprland = {
-			enable = true;
-		};
+		waybar.enable = true;
 	};
 }
