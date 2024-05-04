@@ -14,7 +14,7 @@ in
 			# 	package = pkgs.adwaita-qt;
 			# 	name = "adwaita-dark";
 			# };
-      platformTheme = "gtk";
+      platformTheme.name = "gtk";
       style = {
         name = "gtk2";
         package = pkgs.qt6Packages.qt6gtk2;
