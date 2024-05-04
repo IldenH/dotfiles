@@ -7,6 +7,7 @@
 		"$browser" = "firefox";
 		"$launcher" = "rofi -show drun -show-icons";
 		"$discord" = "vesktop --enable-wayland-ime";
+		"$anki" = "QT_IM_MODULE=fcitx anki";
 
 		bind = [
 			"SUPER, SPACE, exec, $launcher"
@@ -16,7 +17,7 @@
 			"SUPER, M, exec, $discord"
 			"SUPER ALT, M, exec, steam"
 
-			"SUPER, B, exec, anki"
+			"SUPER, B, exec, $anki"
 
 			"SUPER, X, exec, heroic"
 			"SUPER ALT, X, exec, prismlauncher"
