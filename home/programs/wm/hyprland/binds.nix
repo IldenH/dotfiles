@@ -15,24 +15,21 @@
 			"SUPER, F11, fullscreen, 2"
 			", F12, fakefullscreen"
 
-			"SUPER, h, movefocus, l"
-			"SUPER, j, movefocus, d"
-			"SUPER, k, movefocus, u"
-			"SUPER, l, movefocus, r"
+			"SUPER, H, movefocus, l"
+			"SUPER, J, movefocus, d"
+			"SUPER, K, movefocus, u"
+			"SUPER, L, movefocus, r"
 
-			"SUPER CONTROL, h, swapwindow, l"
-			"SUPER CONTROL, j, swapwindow, d"
-			"SUPER CONTROL, k, swapwindow, u"
-			"SUPER CONTROL, l, swapwindow, r"
+			"SUPER, U, swapnext"
+			"SUPER, R, swapnext"
 		];
 
-		# l -> works even when locked
 		# e -> repeats when key is held 
 		binde = [
-			"SUPER ALT, h, resizeactive, -10 0"
-			"SUPER ALT, j, resizeactive, 0 -10"
-			"SUPER ALT, k, resizeactive, 0 10"
-			"SUPER ALT, l, resizeactive, 10 0"
+			"SUPER ALT, H, resizeactive, -10 0"
+			"SUPER ALT, J, resizeactive, 0 -10"
+			"SUPER ALT, K, resizeactive, 0 10"
+			"SUPER ALT, L, resizeactive, 10 0"
 		];
 		
 		bindm = [
