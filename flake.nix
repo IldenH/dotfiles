@@ -52,45 +52,47 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
+			lib = nixpkgs.lib // home-manager.lib;
+
 			global = {
 				user = {
 					name = "ildenhnix";
 					description = "IldenH";
 				};
 			};
+
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
+			mkHost = {
+				name,
+      	extraModules ? [],
+			}:
+				nixpkgs.lib.nixosSystem {
+      	  specialArgs = { inherit inputs global; };
+      	  modules = [
+      	    ./hosts/${name}/configuration.nix
+      	    home-manager.nixosModules.home-manager {
+      	      home-manager = {
+      	        extraSpecialArgs = { inherit inputs global; };
+      	        useUserPackages = true;
+      	        useGlobalPkgs = true;
+      	        users."${global.user.name}" = ./home/hosts/${name}.nix;
+      	      };
+      	    }
+      	    (lib.mkAliasOptionModule ["hm"] ["home-manager" "users" global.user.name])
+      	  ]
+      	  ++ extraModules;
+      	};
     in
     {
       nixosConfigurations = {
-				desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs global; };
-          modules = [ 
-            ./hosts/desktop/configuration.nix
-						home-manager.nixosModules.home-manager {
-							home-manager = {
-								extraSpecialArgs = { inherit inputs global; };
-								useUserPackages = true;
-								useGlobalPkgs = true;
-								users."${global.user.name}" = ./home/hosts/desktop.nix;
-							};
-						}
-          ];
-        };
-				laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs global; };
-          modules = [ 
-            ./hosts/laptop/configuration.nix
-						home-manager.nixosModules.home-manager {
-							home-manager = {
-								extraSpecialArgs = { inherit inputs global; };
-								useUserPackages = true;
-								useGlobalPkgs = true;
-								users."${global.user.name}" = ./home/hosts/laptop.nix;
-							};
-						}
-          ];
-        };
+				desktop = mkHost {
+					name = "desktop";
+				};
+				laptop = mkHost {
+					name = "laptop";
+				};
 			};
     };
 }
