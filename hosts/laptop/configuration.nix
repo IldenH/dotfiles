@@ -9,7 +9,6 @@
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	settings = {
-		hyprland.enable = true;
 		sddm.image = ../sddm.jpg;
 
 		locale = {

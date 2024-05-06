@@ -1,9 +1,7 @@
 { pkgs, lib, config, ... }:
 
 {
-	options.settings.hyprland.enable = lib.mkEnableOption "hyprland";
-
-	config = lib.mkIf (config.settings.hyprland.enable) {
+	config = lib.mkIf (config.hm.settings.hyprland.enable) {
 		xdg.portal = {
 			enable = true;
 			wlr.enable = true;

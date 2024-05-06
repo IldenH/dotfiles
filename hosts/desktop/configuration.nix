@@ -9,7 +9,6 @@
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	settings = {
-		hyprland.enable = true;
 		sddm.image = ../sddm.jpg;
 
 		locale = {
@@ -29,7 +28,6 @@
 		japanese.enable = true;
 		nvidia.enable = true;
 		sound.enable = true;
-		steam.enable = true;
 		utils.enable = true;
 
 		shell = pkgs.zsh;
