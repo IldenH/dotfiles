@@ -48,6 +48,7 @@ in
     	  background_color = "#${config.colorScheme.palette.base00}";
     	  outline_color = "#${config.colorScheme.palette.base07}";
     	  accent_color = "#${config.colorScheme.palette.base01}";
+				replace_crosshair = true;
     	};
     	name = "Bibata-Original-Custom";
 			size = 22;
