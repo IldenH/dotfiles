@@ -59,10 +59,10 @@
 						"Layout" = "no";
           };
 				};
-				addons = {
+				addons = with config.hm.colorScheme.palette; {
 					"classicui"."globalSection" = {
-						"TrayOutlineColor" = "#282828"; # if this was home-manager then nix-colors
-						"TrayTextColor" = "#d5c4a1";
+						"TrayOutlineColor" = "#${base00}";
+						"TrayTextColor" = "#${base05}";
 						"PreferTextIcon" = "True";
 						"Theme" = "default-dark";
 					};
