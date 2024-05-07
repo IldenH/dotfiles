@@ -43,7 +43,7 @@
 				package = inputs.nh.packages.${pkgs.system}.nh;
 				flake = "/home/${global.user.name}/dotfiles";
 				clean.enable = true;
-				clean.extraArgs = "--keep-since 4d --keep 5";
+				clean.extraArgs = "--keep-since 4d --keep 5 --nogcroots";
 			};
 
   		environment.shells = [ config.settings.shell ];
