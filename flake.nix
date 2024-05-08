@@ -74,7 +74,10 @@
       	    ./hosts/${name}/configuration.nix
       	    home-manager.nixosModules.home-manager {
       	      home-manager = {
-      	        extraSpecialArgs = { inherit inputs global; };
+      	        extraSpecialArgs = {
+									inherit inputs global;
+									isNixos = true;
+								};
       	        useUserPackages = true;
       	        useGlobalPkgs = true;
       	        users."${global.user.name}" = ./home/hosts/${name}.nix;
