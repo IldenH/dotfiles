@@ -2,6 +2,7 @@
 
 {
 	imports = [
+		./browser.nix
 	  ./grub.nix
 		./hyprland.nix
 		./japanese.nix

@@ -43,3 +43,4 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - [rice-cracker-dev/nixos-config](https://github.com/rice-cracker-dev/nixos-config)
 - [CHN-beta/nixos](https://github.com/CHN-beta/nixos)
 - [stites/configs-mirror](https://github.com/stites/configs-mirror)
+- [Kreyren/nixos-config](https://github.com/Kreyren/nixos-config)
