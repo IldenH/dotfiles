@@ -9,6 +9,7 @@
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
 
+		./programs/anki.nix
 		./programs/browser
 		./programs/discord
 		# ./programs/espanso.nix # service doesn't run properly
