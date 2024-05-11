@@ -3,6 +3,7 @@
 {
 	imports = [
 		./browser.nix
+		./console.nix
 	  ./grub.nix
 		./hyprland.nix
 		./japanese.nix
