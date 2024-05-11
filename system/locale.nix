@@ -41,7 +41,5 @@
   	  layout = keyMap;
   	  variant = "";
   	};
-
-  	console.keyMap = keyMap;
 	};
 }

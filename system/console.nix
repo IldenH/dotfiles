@@ -1,13 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-	options.settings.console.keyMap = lib.mkOption {
-		type = lib.types.str;
-		default = "no";
-	};
-
 	config.console = {
-		keyMap = config.settings.console.keyMap;
+		keyMap = config.settings.locale.keyMap;
 		colors = with config.hm.colorScheme.palette; [
 			"${base00}" # black
     	"${base08}" # red
