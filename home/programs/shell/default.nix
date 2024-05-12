@@ -1,11 +1,9 @@
-{ ... }:
-
-{
-	imports = [
-		./cli.nix
-		./neofetch.nix
+{...}: {
+  imports = [
+    ./cli.nix
+    ./neofetch.nix
     ./neovim.nix
-		./terminal.nix
-		./zsh.nix
-	];
+    ./terminal.nix
+    ./zsh.nix
+  ];
 }
