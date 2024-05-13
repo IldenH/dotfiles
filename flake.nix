@@ -65,8 +65,18 @@
       };
     };
 
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    systems = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
+
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs systems (
+      system:
+        import nixpkgs {
+          inherit system;
+        }
+    );
 
     mkHost = {
       name,
@@ -94,6 +104,8 @@
           ++ extraModules;
       };
   in {
+    devShells = forEachSystem (pkgs: {default = import ./shell.nix {inherit pkgs;};});
+
     nixosConfigurations = {
       desktop = mkHost {
         name = "desktop";
