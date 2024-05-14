@@ -10,10 +10,12 @@
   config = lib.mkIf (config.settings.terminal.neovim.enable) {
     home.packages = [
       inputs.nixvim-config.packages."${pkgs.system}".nvim
+      pkgs.nvimpager
     ];
 
     home.sessionVariables = {
       EDITOR = "nvim";
+      PAGER = "nvimpager";
     };
 
     xdg.desktopEntries.nvim = {
