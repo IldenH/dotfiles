@@ -41,7 +41,7 @@
       "col.inactive_border" = "rgba(${config.colorScheme.palette.base00}aa)";
       layout = "dwindle";
       allow_tearing = true;
-      cursor_inactive_timeout = 4;
+      cursor_inactive_timeout = 1;
     };
 
     decoration = {
