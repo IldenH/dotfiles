@@ -2,31 +2,15 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: {
   options.settings.terminal.neovim.enable = lib.mkEnableOption "neovim";
 
   config = lib.mkIf (config.settings.terminal.neovim.enable) {
-    programs.neovim = {
-      enable = true;
-      defaultEditor = true;
-      withNodeJs = true;
-      withPython3 = true;
-      withRuby = true;
-
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-
-      extraPackages = with pkgs; [
-        wl-clipboard
-
-        nodePackages.neovim
-        python311Packages.pynvim
-
-        gcc
-      ];
-    };
+    home.packages = [
+      inputs.nixvim-config.packages."${pkgs.system}".nvim
+    ];
 
     home.sessionVariables = {
       EDITOR = "nvim";

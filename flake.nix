@@ -48,6 +48,11 @@
       url = "github:LilleAila/nix-cursors";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim-config = {
+      url = "github:IldenH/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
