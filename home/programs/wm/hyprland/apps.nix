@@ -11,6 +11,7 @@
       "SUPER, SPACE, exec, $launcher"
       "SUPER, E, exec, $files"
       "SUPER, T, exec, $terminal"
+      "SUPER, P, exec, hyprlock"
 
       "SUPER, M, exec, $discord"
       "SUPER ALT, M, exec, steam"

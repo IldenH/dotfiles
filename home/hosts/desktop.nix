@@ -9,7 +9,7 @@
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
   settings = {
-    wallpaper = ../wallpaper.jpg;
+    wallpaper = ../wallpaper.png;
 
     browser.enable = true;
     discord.enable = true;
@@ -40,6 +40,7 @@
     };
 
     hyprland.enable = true;
+    hyprlock.enable = true;
     mako.enable = true;
     waybar.enable = true;
   };
