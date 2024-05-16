@@ -12,8 +12,7 @@
 
     ### HYPRLAND ###
     hyprland = {
-      # url = "github:hyprwm/Hyprland";
-      url = "github:hyprwm/Hyprland?ref=v0.39.0&submodules=1"; # pinned to 0.39 as 0.40 barely works
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
