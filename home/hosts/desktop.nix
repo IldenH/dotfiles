@@ -41,6 +41,7 @@
 
     hyprland.enable = true;
     hyprlock.enable = true;
+    hypridle.enable = true;
     mako.enable = true;
     waybar.enable = true;
   };
