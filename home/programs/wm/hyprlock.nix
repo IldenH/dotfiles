@@ -10,9 +10,7 @@
 
   options.settings.hyprlock.enable = lib.mkEnableOption "hyprlock";
 
-  config.programs.hyprlock = with config.colorScheme.palette; let
-    primaryMonitor = "HDMI-A-2"; # TODO: make this an option
-  in
+  config.programs.hyprlock = with config.colorScheme.palette;
     lib.mkIf (config.settings.hyprlock.enable) {
       enable = true;
       general = {
@@ -35,7 +33,6 @@
       ];
       input-fields = [
         {
-          monitor = primaryMonitor;
           size = {
             width = 350;
             height = 30;
@@ -68,14 +65,12 @@
           position.y = 80;
         }
         {
-          monitor = primaryMonitor;
           text = "---------------------------------";
           color = "rgb(${base07})";
           font_size = 16;
           position.y = 60;
         }
         {
-          monitor = primaryMonitor;
           text = "$DESC";
           color = "rgb(${base07})";
           font_size = 16;
