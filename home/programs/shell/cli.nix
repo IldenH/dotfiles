@@ -9,6 +9,7 @@
   config = lib.mkIf (config.settings.terminal.cli.enable) {
     home.packages = with pkgs; [
       tldr
+      sops
     ];
 
     programs.git = {

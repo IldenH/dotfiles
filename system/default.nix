@@ -16,6 +16,7 @@
     ./networking.nix
     ./nvidia.nix
     ./sddm
+    ./sops.nix
     ./steam.nix
     ./user.nix
   ];

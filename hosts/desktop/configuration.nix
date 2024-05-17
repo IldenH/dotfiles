@@ -29,6 +29,7 @@
 
     japanese.enable = true;
     nvidia.enable = true;
+    sops.enable = true;
     sound.enable = true;
     utils.enable = true;
 
