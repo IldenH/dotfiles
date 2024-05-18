@@ -1,3 +1,6 @@
+/*
+css
+*/
 ''
   @-moz-document domain("worldcubeassociation.org") {
     .competitions-table tr.not-past.confirmed {

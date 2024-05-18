@@ -37,36 +37,40 @@
         format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";
       };
     };
-    style = with config.colorScheme.palette; ''
-      * {
-      	font-family: JetBrainsMono Nerd Font;
-      	font-size: 16px;
-      	border: none;
-      	border-radius: 0;
-      }
+    style = with config.colorScheme.palette;
+    /*
+    css
+    */
+      ''
+        * {
+        	font-family: JetBrainsMono Nerd Font;
+        	font-size: 16px;
+        	border: none;
+        	border-radius: 0;
+        }
 
-      window#waybar {
-      	background-color: alpha(#${base00}, 0.6);
-      	color: #${base05};
-      }
+        window#waybar {
+        	background-color: alpha(#${base00}, 0.6);
+        	color: #${base05};
+        }
 
-      #workspaces button {
-      	padding: 0 5px;
-      	background-color: transparent;
-      	color: #${base05};
-      }
+        #workspaces button {
+        	padding: 0 5px;
+        	background-color: transparent;
+        	color: #${base05};
+        }
 
-      #workspaces button:hover {
-      	color: mix(#${base05}, #${base00}, 0.3);
-      }
+        #workspaces button:hover {
+        	color: mix(#${base05}, #${base00}, 0.3);
+        }
 
-      #workspaces button.active {
-      	color: #${base07};
-      }
+        #workspaces button.active {
+        	color: #${base07};
+        }
 
-      #workspaces button.urgent {
-      	color: #${base08};
-      }
-    '';
+        #workspaces button.urgent {
+        	color: #${base08};
+        }
+      '';
   };
 }

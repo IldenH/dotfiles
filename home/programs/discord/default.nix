@@ -13,19 +13,23 @@
       vesktop
     ];
 
-    home.file.".config/vesktop/settings.json".text = ''
-      {
-      	"discordBranch": "stable",
-      	"minimizeToTray": false,
-      	"arRPC": false,
-      	"disableMinSize": true,
-      	"staticTitle": true,
-      	"splashTheming": true,
-      	"checkUpdates": false,
-       		"tray": false,
-       		"hardwareAcceleration": false
-      }
-    '';
+    home.file.".config/vesktop/settings.json".text =
+      /*
+      json
+      */
+      ''
+        {
+        	"discordBranch": "stable",
+        	"minimizeToTray": false,
+        	"arRPC": false,
+        	"disableMinSize": true,
+        	"staticTitle": true,
+        	"splashTheming": true,
+        	"checkUpdates": false,
+         		"tray": false,
+         		"hardwareAcceleration": false
+        }
+      '';
 
     home.file.".config/vesktop/settings/settings.json".source = ./settings.json;
 
