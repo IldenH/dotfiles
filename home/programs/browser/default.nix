@@ -35,14 +35,6 @@
             isDefault = true;
             id = 0;
             bookmarks = [];
-            # TODO: fix this, i don't know how
-            extraConfig = ''
-              browser.windows.getAll((windows) => {
-              	windows.map(window => window.id).forEach(windowId => {
-              		browser.windows.update(windowId, { titlePreface: "main: " });
-              	});
-              });
-            '';
           };
           school = {
             settings =
