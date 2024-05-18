@@ -18,6 +18,26 @@
         prismlauncher
       ];
 
+      home.file.".local/share/PrismLauncher/prismlauncher.cfg".text =
+        /*
+        bash
+        */
+        ''
+          [General]
+          ApplicationTheme=dark
+          ConfigVersion=1.2
+          EnableFeralGamemode=true
+          IconTheme=flat_white
+          IgnoreJavaCompatibility=true
+          IgnoreJavaWizard=true
+          # TODO: figure out which package this is in nixpkgs
+          JavaPath=/nix/store/mrspaijbsp1gi69l45ifnqaa3wigjl6d-openjdk-8u362-ga/bin/java
+          Language=en_US
+          MaxMemAlloc=12544
+          MinMemAlloc=512
+          TheCat=false
+        '';
+
       settings.steam.enable = lib.mkDefault true;
     })
     (lib.mkIf (config.settings.media.enable) {
