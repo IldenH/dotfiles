@@ -15,10 +15,18 @@
       home.packages = with pkgs; [
         heroic
         # lutris
-        prismlauncher
+        (prismlauncher.override {
+          jdks = [
+            temurin-bin-8
+            # temurin-bin-17
+            # temurin-bin-21
+          ];
+        })
       ];
 
-      home.file.".local/share/PrismLauncher/prismlauncher.cfg".text =
+      home.file.".local/share/PrismLauncher/prismlauncher.cfg".text = let
+        java = lib.getExe pkgs.temurin-bin-8;
+      in
         /*
         bash
         */
@@ -30,8 +38,7 @@
           IconTheme=flat_white
           IgnoreJavaCompatibility=true
           IgnoreJavaWizard=true
-          # TODO: figure out which package this is in nixpkgs
-          JavaPath=/nix/store/mrspaijbsp1gi69l45ifnqaa3wigjl6d-openjdk-8u362-ga/bin/java
+          JavaPath=${java}
           Language=en_US
           MaxMemAlloc=12544
           MinMemAlloc=512
