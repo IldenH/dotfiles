@@ -1,5 +1,10 @@
 {...}: {
   wayland.windowManager.hyprland.settings.windowrulev2 = [
+    "workspace 13, class:(vesktop)"
+    "workspace 4, class:(steam)"
+    "workspace 4, class:(heroic)"
+    "workspace 4, class:(org.prismlauncher.PrismLauncher)"
+
     # anki
     "center 1, class:(Anki), title:(Statistics|Preferences|Options)"
     "size 70% 80%, class:(Anki), title:(Statistics|Preferences|Options)"

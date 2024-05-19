@@ -14,13 +14,13 @@
       "SUPER, T, exec, $terminal"
       "SUPER, P, exec, hyprlock"
 
-      "SUPER, M, exec, [workspace 13] $discord"
-      "SUPER ALT, M, exec, [workspace 4] steam"
+      "SUPER, M, exec, $discord"
+      "SUPER ALT, M, exec, steam"
 
       "SUPER, B, exec, [workspace 3] $anki"
 
-      "SUPER, X, exec, [workspace 4] heroic"
-      "SUPER ALT, X, exec, [workspace 4] prismlauncher"
+      "SUPER, X, exec, heroic"
+      "SUPER ALT, X, exec, prismlauncher"
 
       "SUPER, G, exec, $calculator"
       "SUPER ALT, G, exec, geogebra"
