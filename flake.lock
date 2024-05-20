@@ -762,7 +762,23 @@
         "nix-cursors": "nix-cursors",
         "nixpkgs": "nixpkgs",
         "nixvim-config": "nixvim-config",
+        "secrets": "secrets",
         "sops-nix": "sops-nix"
+      }
+    },
+    "secrets": {
+      "locked": {
+        "lastModified": 1716213799,
+        "narHash": "sha256-8CNqcm96EgmSLM5vDPB2g/fl5z08KDvvHUsXKjrXXjA=",
+        "ref": "refs/heads/main",
+        "rev": "d927aea7c786c5003dbf69f7282cea28ea54069f",
+        "revCount": 5,
+        "type": "git",
+        "url": "ssh://git@github.com/IldenH/dotfiles-secrets.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/IldenH/dotfiles-secrets.git"
       }
     },
     "sops-nix": {

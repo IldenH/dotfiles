@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./git.nix
     ./neofetch.nix
     ./neovim.nix
     ./terminal.nix
@@ -17,16 +18,6 @@
       tldr
       sops
     ];
-
-    programs.git = {
-      enable = true;
-      userName = "IldenH";
-      userEmail = "IldenH.1" + "@" + "proton.me";
-      extraConfig = {
-        init.defaultBranch = "main";
-        credential.helper = "store"; # I should probably switch to ssh
-      };
-    };
 
     programs.bat = {
       enable = true;

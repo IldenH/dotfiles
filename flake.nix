@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    secrets = {
+      url = "git+ssh://git@github.com/IldenH/dotfiles-secrets.git";
+    };
+
     ### HYPRLAND ###
     hyprland = {
       url = "github:hyprwm/Hyprland";
