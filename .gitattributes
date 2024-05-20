@@ -1,0 +1,1 @@
+secrets/gpg-key.asc filter=git-crypt diff=git-crypt
