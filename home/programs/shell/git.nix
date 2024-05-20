@@ -18,6 +18,8 @@
       };
     };
 
+    home.packages = [pkgs.git-crypt];
+
     programs.gpg = {
       enable = true;
       publicKeys = [
