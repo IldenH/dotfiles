@@ -9,15 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    secrets = {
-      url = "git+ssh://git@github.com/IldenH/dotfiles-secrets.git";
-    };
-
     ### HYPRLAND ###
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -73,6 +64,8 @@
       };
     };
 
+    secrets = import ./secrets;
+
     systems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -91,7 +84,7 @@
       extraModules ? [],
     }:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs global;};
+        specialArgs = {inherit inputs global secrets;};
         modules =
           [
             ./hosts/${name}/configuration.nix
@@ -99,7 +92,7 @@
             {
               home-manager = {
                 extraSpecialArgs = {
-                  inherit inputs global;
+                  inherit inputs global secrets;
                   isNixos = true;
                 };
                 useUserPackages = true;

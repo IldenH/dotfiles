@@ -1,7 +1,7 @@
 {
   config,
   lib,
-  inputs,
+  secrets,
   pkgs,
   ...
 }: {
@@ -14,7 +14,7 @@
         init.defaultBranch = "main";
         commit.gpgsign = true;
         gpg.program = "${lib.getExe config.programs.gpg.package}";
-        user.signingKey = inputs.secrets.gpg.id;
+        user.signingKey = secrets.gpg.id;
       };
     };
 
@@ -24,7 +24,7 @@
       enable = true;
       publicKeys = [
         {
-          text = inputs.secrets.gpg.public;
+          text = secrets.gpg.public;
           trust = "ultimate";
         }
       ];

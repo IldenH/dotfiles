@@ -639,22 +639,6 @@
         "url": "https://github.com/NixOS/nixpkgs/archive/50eb7ecf4cd0a5756d7275c8ba36790e5bd53e33.tar.gz"
       }
     },
-    "nixpkgs-stable": {
-      "locked": {
-        "lastModified": 1715458492,
-        "narHash": "sha256-q0OFeZqKQaik2U8wwGDsELEkgoZMK7gvfF6tTXkpsqE=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8e47858badee5594292921c2668c11004c3b0142",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "release-23.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1714906307,
@@ -761,45 +745,7 @@
         "nix-colors": "nix-colors",
         "nix-cursors": "nix-cursors",
         "nixpkgs": "nixpkgs",
-        "nixvim-config": "nixvim-config",
-        "secrets": "secrets",
-        "sops-nix": "sops-nix"
-      }
-    },
-    "secrets": {
-      "locked": {
-        "lastModified": 1716222161,
-        "narHash": "sha256-fm+9YLaAIh5ruVFeFwxFa9dbjiE8bxrVBJtkKoXyUX8=",
-        "ref": "refs/heads/main",
-        "rev": "6359209b96c328d1a0eb02ca45233abd85e775ec",
-        "revCount": 6,
-        "type": "git",
-        "url": "ssh://git@github.com/IldenH/dotfiles-secrets.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/IldenH/dotfiles-secrets.git"
-      }
-    },
-    "sops-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nixpkgs-stable": "nixpkgs-stable"
-      },
-      "locked": {
-        "lastModified": 1715482972,
-        "narHash": "sha256-y1uMzXNlrVOWYj1YNcsGYLm4TOC2aJrwoUY1NjQs9fM=",
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "rev": "b6cb5de2ce57acb10ecdaaf9bbd62a5ff24fa02e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "type": "github"
+        "nixvim-config": "nixvim-config"
       }
     },
     "systems": {

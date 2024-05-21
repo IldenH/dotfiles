@@ -1,15 +1,15 @@
 {
-  pkgs,
+  secrets,
   global,
   config,
   ...
 }: {
+  users.mutableUsers = false;
   users.users.${global.user.name} = {
     isNormalUser = true;
     description = global.user.description;
-    initialPassword = "";
+    password = secrets.password;
     extraGroups = ["wheel"];
-    packages = with pkgs; [];
     shell = config.settings.shell;
   };
 }
