@@ -97,6 +97,7 @@
                 };
                 useUserPackages = true;
                 useGlobalPkgs = true;
+                backupFileExtension = "backup";
                 users."${global.user.name}" = ./home/hosts/${name}.nix;
               };
             }
