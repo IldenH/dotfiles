@@ -1,7 +1,6 @@
 {
-  config,
   inputs,
-  lib,
+  secrets,
   ...
 }: {
   imports = [../.];
@@ -45,4 +44,7 @@
     mako.enable = true;
     waybar.enable = true;
   };
+
+  home.file.".ssh/id_ed25519.pub".text = secrets.ssh.desktop.public;
+  home.file.".ssh/id_ed25519".text = secrets.ssh.desktop.private;
 }
