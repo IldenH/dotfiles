@@ -7,16 +7,13 @@
   ...
 }: {
   imports = [
-    ./browser.nix
     ./console.nix
+    ./desktop
     ./grub.nix
-    ./hyprland.nix
-    ./japanese.nix
     ./locale.nix
     ./networking.nix
     ./nvidia.nix
     ./sddm
-    ./steam.nix
     ./user.nix
   ];
 
