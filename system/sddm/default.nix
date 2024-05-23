@@ -12,10 +12,10 @@
   config = lib.mkIf (config.settings.sddm.image != null) {
     services.xserver.enable = true;
 
-    services.displayManager = {
-      sddm.enable = true;
-      sddm.wayland.enable = true;
-      sddm.theme = "${import ./theme.nix {inherit pkgs config;}}";
+    services.displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "${import ./theme.nix {inherit pkgs config;}}";
     };
 
     # sddm-theme

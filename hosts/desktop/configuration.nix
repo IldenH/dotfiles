@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
@@ -31,8 +27,6 @@
     nvidia.enable = true;
     sound.enable = true;
     utils.enable = true;
-
-    shell = pkgs.zsh;
   };
 
   system.stateVersion = "23.11";

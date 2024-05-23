@@ -1,7 +1,6 @@
 {
   secrets,
   global,
-  config,
   ...
 }: {
   users.mutableUsers = false;
@@ -10,6 +9,5 @@
     description = global.user.description;
     password = secrets.password;
     extraGroups = ["wheel"];
-    shell = config.settings.shell;
   };
 }

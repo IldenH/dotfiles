@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  config.console = {
+{config, ...}: {
+  console = {
     keyMap = config.settings.locale.keyMap;
     colors = with config.hm.colorScheme.palette; [
       "${base00}" # black

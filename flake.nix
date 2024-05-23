@@ -66,6 +66,15 @@
 
     secrets = import ./secrets;
 
+    # this feels sort of dumb, might be useful
+    util = {
+      mkStrOption = default:
+        lib.mkOption {
+          type = lib.types.str;
+          inherit default;
+        };
+    };
+
     systems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -84,7 +93,7 @@
       extraModules ? [],
     }:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs global secrets;};
+        specialArgs = {inherit inputs global secrets util;};
         modules =
           [
             ./hosts/${name}/configuration.nix
@@ -92,7 +101,7 @@
             {
               home-manager = {
                 extraSpecialArgs = {
-                  inherit inputs global secrets;
+                  inherit inputs global secrets util;
                   isNixos = true;
                 };
                 useUserPackages = true;

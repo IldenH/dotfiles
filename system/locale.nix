@@ -1,25 +1,13 @@
 {
   config,
-  lib,
+  util,
   ...
 }: {
   options.settings.locale = {
-    main = lib.mkOption {
-      type = lib.types.str;
-      default = "en_US.UTF-8";
-    };
-    extra = lib.mkOption {
-      type = lib.types.str;
-      default = config.settings.locale.main;
-    };
-    timeZone = lib.mkOption {
-      type = lib.types.str;
-      default = "Europe/Oslo";
-    };
-    keyMap = lib.mkOption {
-      type = lib.types.str;
-      default = "no";
-    };
+    main = util.mkStrOption "en_US.UTF-8";
+    extra = util.mkStrOption config.settings.locale.main;
+    timeZone = util.mkStrOption "Europe/Oslo";
+    keyMap = util.mkStrOption "no";
   };
 
   config = with config.settings.locale; {
@@ -39,9 +27,6 @@
       LC_TIME = extra;
     };
 
-    services.xserver.xkb = {
-      layout = keyMap;
-      variant = "";
-    };
+    services.xserver.xkb.layout = keyMap;
   };
 }

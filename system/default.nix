@@ -3,7 +3,6 @@
   pkgs,
   config,
   global,
-  inputs,
   ...
 }: {
   imports = [
@@ -20,10 +19,6 @@
   options.settings = {
     utils.enable = lib.mkEnableOption "utils" // {default = true;};
     sound.enable = lib.mkEnableOption "sound";
-    shell = lib.mkOption {
-      type = lib.types.package;
-      default = pkgs.zsh;
-    };
   };
 
   config = lib.mkMerge [
@@ -42,14 +37,14 @@
         nano.enable = false;
       };
 
+      users.defaultUserShell = pkgs.zsh;
+
       programs.nh = {
         enable = true;
         flake = "/home/${global.user.name}/dotfiles";
         clean.enable = true;
         clean.extraArgs = "--keep-since 4d --keep 5 --nogcroots";
       };
-
-      environment.shells = [config.settings.shell];
 
       environment.systemPackages = with pkgs; [
         curl
