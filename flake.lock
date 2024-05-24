@@ -691,11 +691,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1715891132,
-        "narHash": "sha256-jmLmfjvfpJ1+Y4BKuMv14yS+sxn2oBiNqdXhUIel6mg=",
+        "lastModified": 1716575482,
+        "narHash": "sha256-cVpokcUHBWARCHLVVAeIytHWB1J/lQhCY4OBKsc/H1s=",
         "owner": "IldenH",
         "repo": "nixvim",
-        "rev": "992d55f5c7d46caec26707b043e451a697eb3854",
+        "rev": "b5116da76f17dc2e51e36a75be036b3123d2e769",
         "type": "github"
       },
       "original": {
