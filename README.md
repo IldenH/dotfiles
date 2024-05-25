@@ -10,10 +10,10 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 
 ## Using
 - Window Manager: [Hyprland](https://hyprland.org)
-- Bar: [Waybar](https://github.com/Alexays/Waybar) should switch to [AGS](https://github.com/Aylur/ags)
+- Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal Emulator: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Shell: [Zsh](https://www.zsh.org) with [Oh my Zsh](https://ohmyz.sh)
-- Editor: [Neovim](https://neovim.io) should switch to [Nixvim](https://github.com/nix-community/nixvim)
+- Editor: [Nixvim](https://github.com/nix-community/nixvim)
 - Browser: [Firefox](https://www.mozilla.org/firefox)
 - Discord: [Vesktop](https://github.com/Vencord/Vesktop)
 - Wallpaper: [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
