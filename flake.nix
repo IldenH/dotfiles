@@ -88,10 +88,7 @@
         }
     );
 
-    mkHost = {
-      name,
-      extraModules ? [],
-    }:
+    mkHost = name: extraModules:
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs global secrets util;};
         modules =
@@ -118,12 +115,8 @@
     devShells = forEachSystem (pkgs: {default = import ./shell.nix {inherit pkgs;};});
 
     nixosConfigurations = {
-      desktop = mkHost {
-        name = "desktop";
-      };
-      laptop = mkHost {
-        name = "laptop";
-      };
+      desktop = mkHost "desktop" [];
+      laptop = mkHost "laptop" [];
     };
   };
 }
