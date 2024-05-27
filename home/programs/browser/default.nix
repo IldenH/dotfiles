@@ -19,6 +19,11 @@
           search = {
             default = "DuckDuckGo";
             force = true;
+            engines = {
+              "Bing".metaData.hidden = true;
+              "Google".metaData.hidden = true;
+              "Wikipedia (en)".metaData.hidden = true;
+            };
           };
           settings = import ./settings.nix;
           extensions = import ./extensions {inherit inputs pkgs;};

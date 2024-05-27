@@ -11,6 +11,7 @@
       NoDefaultBookmarks = true;
       PasswordManagerEnabled = false;
       OfferToSaveLogins = false;
+      SearchEngines.PreventInstalls = true;
 
       SanitizeOnShutdown = {
         Locked = true;
@@ -22,17 +23,6 @@
         Sessions = false;
         SiteSettings = false;
         # OfflineApps = true; # I don't know what this is
-      };
-
-      SearchEngines = {
-        PreventInstalls = true;
-        Remove = [
-          "Amazon.com"
-          "Bing"
-          "Google"
-          "Wikipedia"
-          "DuckDuckGo"
-        ];
       };
 
       UserMessaging = {
