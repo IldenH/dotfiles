@@ -1,23 +1,17 @@
-{
-  inputs,
-  secrets,
-  ...
-}: {
-  imports = [../.];
+{inputs, ...}: {
+  imports = [../../home];
 
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
   settings = {
     wallpaper = ../wallpaper.png;
 
-    browser.enable = true;
-    discord.enable = true;
-    # espanso.enable = true; # service doesn't run properly
-    games.enable = true;
-    nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
-    other.enable = true;
-    qt-gtk-themes.enable = true;
     zathura.enable = true;
+    discord.enable = true;
+    browser.enable = true;
+    files.enable = true;
+    nightlight.enable = true;
+    qt-gtk-themes.enable = true;
 
     screenshots = {
       enable = true;
@@ -38,13 +32,11 @@
       };
     };
 
-    hyprland.enable = true;
-    hyprlock.enable = true;
-    hypridle.enable = true;
-    mako.enable = true;
     waybar.enable = true;
-  };
+    mako.enable = true;
 
-  home.file.".ssh/id_ed25519.pub".text = secrets.ssh.desktop.public;
-  home.file.".ssh/id_ed25519".text = secrets.ssh.desktop.private;
+    hyprland = {
+      enable = true;
+    };
+  };
 }

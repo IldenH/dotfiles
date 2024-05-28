@@ -104,7 +104,7 @@
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
-                users."${global.user.name}" = ./home/hosts/${name}.nix;
+                users."${global.user.name}" = ./hosts/${name}/home.nix;
               };
             }
             (lib.mkAliasOptionModule ["hm"] ["home-manager" "users" global.user.name])

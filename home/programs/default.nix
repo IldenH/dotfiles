@@ -4,6 +4,16 @@
   pkgs,
   ...
 }: {
+  imports = [
+    # ./anki.nix
+    ./browser
+    ./discord
+    # ./espanso.nix
+    ./files.nix
+    ./steam.nix
+    ./zathura.nix
+  ];
+
   options.settings = {
     games.enable = lib.mkEnableOption "games";
     media.enable = lib.mkEnableOption "imageviewer and videoviewer";

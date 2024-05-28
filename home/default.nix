@@ -1,6 +1,5 @@
 {
   inputs,
-  pkgs,
   global,
   ...
 }: {
@@ -13,16 +12,9 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
-    ./programs/anki.nix
-    ./programs/browser
-    ./programs/discord
-    # ./programs/espanso.nix # service doesn't run properly
-    ./programs/files.nix
-    ./programs/other.nix
-    ./programs/shell
-    ./programs/steam.nix
-    ./programs/wm
-    ./programs/zathura.nix
+    ./programs
+    ./shell
+    ./wm
   ];
 
   xdg.userDirs = {
