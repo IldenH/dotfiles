@@ -13,7 +13,7 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal Emulator: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Shell: [Zsh](https://www.zsh.org) with [Oh my Zsh](https://ohmyz.sh)
-- Editor: [Nixvim](https://github.com/nix-community/nixvim)
+- Editor: [Nixvim](https://github.com/nix-community/nixvim) ([config](https://github.com/IldenH/nixvim))
 - Browser: [Firefox](https://www.mozilla.org/firefox)
 - Discord: [Vesktop](https://github.com/Vencord/Vesktop)
 - Wallpaper: [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
