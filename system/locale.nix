@@ -3,14 +3,9 @@
   util,
   ...
 }: {
-  options.settings.locale = {
-    main = util.mkStrOption "en_US.UTF-8";
-    extra = util.mkStrOption config.settings.locale.main;
-    timeZone = util.mkStrOption "Europe/Oslo";
-    keyMap = util.mkStrOption "no";
-  };
+  options.settings.keyMap = util.mkStrOption "no";
 
-  config = with config.settings.locale; {
+  config = with config.hm.settings.locale; {
     time.timeZone = timeZone;
 
     i18n.defaultLocale = main;
@@ -27,6 +22,6 @@
       LC_TIME = extra;
     };
 
-    services.xserver.xkb.layout = keyMap;
+    services.xserver.xkb.layout = config.settings.keyMap;
   };
 }

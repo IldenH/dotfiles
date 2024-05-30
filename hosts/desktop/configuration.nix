@@ -9,12 +9,7 @@
   settings = {
     sddm.image = ../sddm.jpg;
 
-    locale = {
-      main = "en_US.UTF-8";
-      extra = "nb_NO.UTF-8";
-      timeZone = "Europe/Oslo";
-      keyMap = "no";
-    };
+    keyMap = "no";
 
     networking = {
       enable = true;

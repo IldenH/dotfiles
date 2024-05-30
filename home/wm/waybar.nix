@@ -1,6 +1,5 @@
 {
   config,
-  pkgs,
   lib,
   ...
 }: {
@@ -29,9 +28,8 @@
         };
       };
 
-      # TODO: make options for this
       clock = {
-        timezone = "Europe/Oslo";
+        timezone = config.settings.locale.timeZone;
         interval = 1;
         format = "{:%d.%m.%Y %H:%M}";
         format-alt = "{:%A %d. %B %Y, Uke %V, %H:%M:%S}";

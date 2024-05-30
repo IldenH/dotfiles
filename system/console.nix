@@ -1,6 +1,6 @@
 {config, ...}: {
   console = {
-    keyMap = config.settings.locale.keyMap;
+    keyMap = config.settings.keyMap;
     colors = with config.hm.colorScheme.palette; [
       "${base00}" # black
       "${base08}" # red

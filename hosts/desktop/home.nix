@@ -19,6 +19,12 @@
     qt-gtk-themes.enable = true;
     zathura.enable = true;
 
+    locale = {
+      main = "en_US.UTF-8";
+      extra = "nb_NO.UTF-8";
+      timeZone = "Europe/Oslo";
+    };
+
     screenshots = {
       enable = true;
       format = "%Y-%m-%d_%H-%M-%S.png";
