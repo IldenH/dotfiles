@@ -1,22 +1,22 @@
 {
   config,
-  util,
+  lib,
   ...
 }: {
   options.settings.locale = {
-    main = util.mkStrOption "en_US.UTF-8";
-    extra = util.mkStrOption config.settings.locale.main;
-    timeZone = util.mkStrOption "Europe/Oslo";
+    main = lib.mkStrOption "en_US.UTF-8";
+    extra = lib.mkStrOption config.settings.locale.main;
+    timeZone = lib.mkStrOption "Europe/Oslo";
   };
 
   config.home.language = with config.settings.locale; {
     base = main;
+    messages = main;
 
     address = extra;
     collate = extra;
     ctype = extra;
     measurement = extra;
-    messages = extra;
     monetary = extra;
     name = extra;
     numeric = extra;

@@ -2,12 +2,11 @@
   lib,
   config,
   pkgs,
-  util,
   ...
 }: {
   options.settings.terminal.zsh = {
     enable = lib.mkEnableOption "zsh";
-    theme = util.mkStrOption "simple";
+    theme = lib.mkStrOption "simple";
   };
   config = lib.mkIf (config.settings.terminal.zsh.enable) {
     programs.zsh = {

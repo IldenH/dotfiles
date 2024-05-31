@@ -1,6 +1,5 @@
 {
   config,
-  util,
   lib,
   global,
   ...
@@ -9,7 +8,7 @@
     enable = lib.mkEnableOption "networking";
     wifi.enable = lib.mkEnableOption "wifi";
     bluetooth.enable = lib.mkEnableOption "bluetooth";
-    hostname = util.mkStrOption "nixos";
+    hostname = lib.mkStrOption "nixos";
   };
 
   config = lib.mkMerge [

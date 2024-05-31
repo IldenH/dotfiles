@@ -1,9 +1,9 @@
 {
   config,
-  util,
+  lib,
   ...
 }: {
-  options.settings.keyMap = util.mkStrOption "no";
+  options.settings.keyMap = lib.mkStrOption "no";
 
   config = with config.hm.settings.locale; {
     time.timeZone = timeZone;

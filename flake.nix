@@ -55,7 +55,8 @@
     home-manager,
     ...
   } @ inputs: let
-    lib = nixpkgs.lib // home-manager.lib;
+    # lib = nixpkgs.lib // home-manager.lib;
+    lib = nixpkgs.lib.extend (final: prev: (import ./lib final) // home-manager.lib);
 
     global = {
       user = {
@@ -65,15 +66,6 @@
     };
 
     secrets = import ./secrets;
-
-    # this feels sort of dumb, might be useful
-    util = {
-      mkStrOption = default:
-        lib.mkOption {
-          type = lib.types.str;
-          inherit default;
-        };
-    };
 
     systems = [
       "x86_64-linux"
@@ -90,7 +82,7 @@
 
     mkHost = name: extraModules:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs global secrets util;};
+        specialArgs = {inherit inputs global secrets lib;};
         modules =
           [
             ./hosts/${name}/configuration.nix
@@ -98,7 +90,7 @@
             {
               home-manager = {
                 extraSpecialArgs = {
-                  inherit inputs global secrets util;
+                  inherit inputs global secrets lib;
                   isNixos = true;
                 };
                 useUserPackages = true;

@@ -1,15 +1,14 @@
 {
   config,
   pkgs,
-  util,
   lib,
   ...
 }: {
   options.settings.screenshots = {
     enable = lib.mkEnableOption "screenshots";
-    format = util.mkStrOption "%Y-%m-%d_%H-%M-%S.png";
-    path.raw = util.mkStrOption "$HOME/Pictures/Screenshots/Raw";
-    path.edited = util.mkStrOption "$HOME/Pictures/Screenshots/Edited";
+    format = lib.mkStrOption "%Y-%m-%d_%H-%M-%S.png";
+    path.raw = lib.mkStrOption "$HOME/Pictures/Screenshots/Raw";
+    path.edited = lib.mkStrOption "$HOME/Pictures/Screenshots/Edited";
   };
 
   config = let
