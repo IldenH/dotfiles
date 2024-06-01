@@ -18,6 +18,24 @@
       };
     };
 
+    programs.scmpuff.enable = true;
+
+    home.shellAliases = {
+      gs = "scmpuff status";
+      ga = "git add";
+      gaa = "git add -A";
+      gc = "git commit";
+      gca = "git commit --amend";
+      gp = "git push";
+      gpu = "git pull";
+      gd = "git diff";
+      gds = "git diff --staged";
+      gl = "git log";
+      gw = "git whatchanged";
+      gr = "git restore";
+      grs = "git restore --staged";
+    };
+
     home.packages = [pkgs.git-crypt];
 
     programs.gpg = {
