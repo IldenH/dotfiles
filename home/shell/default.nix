@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./git.nix
+    ./lf.nix
     ./neofetch.nix
     ./neovim.nix
     ./terminal.nix
