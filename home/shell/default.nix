@@ -60,9 +60,6 @@
       cd = "z";
       cls = "clear && neofetch && ls";
       c = ''cd $(find . -type d -not -path " * /. * " -not -path "." | fzf -m)'';
-
-      makkergruppe = ''
-        cat ~/Documents/T1/makkergruppe-nr2 | wl-copy && wl-paste && echo "Copied :)"'';
     };
   };
 }
