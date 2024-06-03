@@ -50,6 +50,7 @@
     };
 
     programs = {
+      navi.enable = true; # TODO: find good cheatsheets
       ripgrep.enable = true;
       thefuck.enable = true;
       zoxide.enable = true;
