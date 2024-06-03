@@ -21,7 +21,7 @@
     programs.scmpuff.enable = true;
 
     home.shellAliases = {
-      gs = "scmpuff status";
+      gs = "scmpuff_status";
       ga = "git add";
       gaa = "git add -A";
       gc = "git commit";
