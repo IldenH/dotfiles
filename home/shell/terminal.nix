@@ -20,6 +20,7 @@
       };
       settings = with config.colorScheme.palette; {
         scrollback_lines = 1000;
+        scrollback_indicator_opacity = 0;
         enable_audio_bell = false;
         background_opacity = "0.95";
 
