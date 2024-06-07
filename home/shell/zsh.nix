@@ -14,10 +14,15 @@
       enableCompletion = true;
       # enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
+      autocd = true;
+      dotDir = ".config/zsh";
       oh-my-zsh = {
         enable = true;
         theme = config.settings.terminal.zsh.theme;
       };
+      initExtraBeforeCompInit = ''
+        export ZSH_COMPDUMP=$ZSH/cache/.zcompdump
+      '';
       initExtra =
         /*
         bash
