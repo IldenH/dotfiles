@@ -10,6 +10,7 @@
     ./discord
     # ./espanso.nix
     ./files.nix
+    ./qalculate.nix
     ./steam.nix
     ./zathura.nix
   ];
@@ -73,7 +74,6 @@
         geogebra6
         krita
         python311
-        qalculate-gtk
       ];
 
       settings = {
