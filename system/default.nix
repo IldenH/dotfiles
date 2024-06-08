@@ -11,6 +11,7 @@
     ./grub.nix
     ./locale.nix
     ./networking.nix
+    ./nix.nix
     ./nvidia.nix
     ./sddm
     ./user.nix
@@ -23,9 +24,6 @@
 
   config = lib.mkMerge [
     (lib.mkIf (config.settings.utils.enable) {
-      nix.settings.experimental-features = ["nix-command" "flakes"];
-      nixpkgs.config.allowUnfree = true;
-
       services = {
         printing.enable = true;
         fstrim.enable = true;

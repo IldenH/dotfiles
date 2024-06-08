@@ -45,3 +45,4 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - [stites/configs-mirror](https://github.com/stites/configs-mirror)
 - [Kreyren/nixos-config](https://github.com/Kreyren/nixos-config)
 - [arvigeus/nixos-config](https://github.com/arvigeus/nixos-config)
+- [NobbZ/nixos-config](https://github.com/NobbZ/nixos-config)

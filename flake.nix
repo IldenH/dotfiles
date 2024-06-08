@@ -47,6 +47,11 @@
       url = "github:IldenH/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    programsdb = {
+      url = "github:wamserma/flake-programs-sqlite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
