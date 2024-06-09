@@ -19,7 +19,7 @@ in {
 
   options.settings.hypridle.enable = lib.mkEnableOption "hypridle";
 
-  config.services.hypridle = lib.mkIf (config.settings.hypridle.enable) {
+  config.services.hypridle = lib.mkIf config.settings.hypridle.enable {
     enable = true;
     listeners = [
       {

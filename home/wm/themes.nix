@@ -7,7 +7,7 @@
 }: {
   options.settings.qt-gtk-themes.enable = lib.mkEnableOption "qt and gtk themes";
 
-  config = lib.mkIf (config.settings.qt-gtk-themes.enable) {
+  config = lib.mkIf config.settings.qt-gtk-themes.enable {
     qt = {
       enable = true;
       platformTheme.name = "gtk";

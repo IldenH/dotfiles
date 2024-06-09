@@ -22,7 +22,7 @@
   };
 
   config = lib.mkMerge [
-    (lib.mkIf (config.settings.games.enable) {
+    (lib.mkIf config.settings.games.enable {
       home.packages = with pkgs; [
         heroic
         # lutris
@@ -58,7 +58,7 @@
 
       settings.steam.enable = lib.mkDefault true;
     })
-    (lib.mkIf (config.settings.media.enable) {
+    (lib.mkIf config.settings.media.enable {
       home.packages = [pkgs.cinnamon.pix];
 
       programs.mpv.enable = true;
@@ -68,7 +68,7 @@
         "video/*" = "mpv.desktop";
       };
     })
-    (lib.mkIf (config.settings.other.enable) {
+    (lib.mkIf config.settings.other.enable {
       home.packages = with pkgs; [
         anki-bin
         geogebra6

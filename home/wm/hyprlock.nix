@@ -11,7 +11,7 @@
   options.settings.hyprlock.enable = lib.mkEnableOption "hyprlock";
 
   config.programs.hyprlock = with config.colorScheme.palette;
-    lib.mkIf (config.settings.hyprlock.enable) {
+    lib.mkIf config.settings.hyprlock.enable {
       enable = true;
       general = {
         disable_loading_bar = true;

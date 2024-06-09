@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf (config.settings.other.enable) {
+  config = lib.mkIf config.settings.other.enable {
     home.packages = [pkgs.qalculate-gtk];
 
     home.file.".config/qalculate/qalculate-gtk.cfg.home" = {

@@ -6,7 +6,7 @@
 }: {
   options.settings.nvidia.enable = lib.mkEnableOption "nvidia";
 
-  config = lib.mkIf (config.settings.nvidia.enable) {
+  config = lib.mkIf config.settings.nvidia.enable {
     hardware.opengl = {
       enable = true;
       driSupport = true;

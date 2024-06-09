@@ -15,7 +15,7 @@
     args = "--notify --freeze";
     raw = "${config.settings.screenshots.path.raw}/$(date +\"${config.settings.screenshots.format}\")";
   in
-    lib.mkIf (config.settings.screenshots.enable) {
+    lib.mkIf config.settings.screenshots.enable {
       home.packages = with pkgs; [
         grim
         slurp

@@ -6,7 +6,7 @@
 }: {
   options.settings.files.enable = lib.mkEnableOption "files";
 
-  config = lib.mkIf (config.settings.files.enable) {
+  config = lib.mkIf config.settings.files.enable {
     home.packages = with pkgs; [
       (cinnamon.nemo-with-extensions.override {
         extensions = with cinnamon; [

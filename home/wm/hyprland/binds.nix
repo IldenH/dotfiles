@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     "$swapMouse" = ''if [[ $(hyprctl getoption input:left_handed) == *"0"* ]]; then hyprctl keyword input:left_handed 1; else hyprctl keyword input:left_handed 0; fi'';
 

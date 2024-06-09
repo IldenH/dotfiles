@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "kitty";
     "$files" = "nemo";

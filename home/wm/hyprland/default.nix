@@ -20,7 +20,7 @@
     ./screenshots.nix
     ./workspaces.nix
   ];
-  config = lib.mkIf (config.settings.hyprland.enable) {
+  config = lib.mkIf config.settings.hyprland.enable {
     home.packages = with pkgs; [
       libnotify
       nwg-displays

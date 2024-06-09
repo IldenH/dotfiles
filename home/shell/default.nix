@@ -14,7 +14,7 @@
   ];
   options.settings.terminal.cli.enable = lib.mkEnableOption "cli";
 
-  config = lib.mkIf (config.settings.terminal.cli.enable) {
+  config = lib.mkIf config.settings.terminal.cli.enable {
     home.packages = with pkgs; [
       tldr
       sops

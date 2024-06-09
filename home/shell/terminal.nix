@@ -6,7 +6,7 @@
 }: {
   options.settings.terminal.enable = lib.mkEnableOption "terminal";
 
-  config = lib.mkIf (config.settings.terminal.enable) {
+  config = lib.mkIf config.settings.terminal.enable {
     home.packages = [pkgs.nerdfonts];
     programs.kitty = {
       enable = true;

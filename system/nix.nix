@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  config = lib.mkIf (config.settings.utils.enable) {
+  config = lib.mkIf config.settings.utils.enable {
     nixpkgs.config.allowUnfree = true;
 
     programs.command-not-found.dbPath = inputs.programsdb.packages.${pkgs.system}.programs-sqlite;

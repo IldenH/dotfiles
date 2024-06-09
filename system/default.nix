@@ -23,7 +23,7 @@
   };
 
   config = lib.mkMerge [
-    (lib.mkIf (config.settings.utils.enable) {
+    (lib.mkIf config.settings.utils.enable {
       services = {
         printing.enable = true;
         fstrim.enable = true;
@@ -49,7 +49,7 @@
         wget
       ];
     })
-    (lib.mkIf (config.settings.sound.enable) {
+    (lib.mkIf config.settings.sound.enable {
       sound.enable = true;
       hardware.pulseaudio.enable = false;
       security.rtkit.enable = true;
@@ -62,7 +62,7 @@
         # media-session.enable = true;
       };
     })
-    (lib.mkIf (config.hm.settings.terminal.cli.enable) {
+    (lib.mkIf config.hm.settings.terminal.cli.enable {
       programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;

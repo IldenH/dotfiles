@@ -6,7 +6,7 @@
 }: {
   options.settings.japanese.enable = lib.mkEnableOption "japanese";
 
-  config = lib.mkIf (config.settings.japanese.enable) {
+  config = lib.mkIf config.settings.japanese.enable {
     fonts.packages = with pkgs; [
       carlito
       dejavu_fonts

@@ -7,7 +7,7 @@
 }: {
   options.settings.terminal.neovim.enable = lib.mkEnableOption "neovim";
 
-  config = lib.mkIf (config.settings.terminal.neovim.enable) {
+  config = lib.mkIf config.settings.terminal.neovim.enable {
     home.packages = [
       inputs.nixvim-config.packages."${pkgs.system}".nvim
       pkgs.nvimpager

@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf (config.settings.terminal.cli.enable) {
+  config = lib.mkIf config.settings.terminal.cli.enable {
     # TODO: somehow use eza icons instead for consistency
     # https://github.com/eza-community/eza/blob/main/src/output/icons.rs
     home.file.".config/lf/icons".source = ./lf-icons;

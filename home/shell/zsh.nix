@@ -8,7 +8,7 @@
     enable = lib.mkEnableOption "zsh";
     theme = lib.mkStrOption "simple";
   };
-  config = lib.mkIf (config.settings.terminal.zsh.enable) {
+  config = lib.mkIf config.settings.terminal.zsh.enable {
     programs.zsh = {
       enable = true;
       enableCompletion = true;

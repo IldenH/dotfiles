@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  programs.firefox = lib.mkIf (config.hm.settings.browser.enable) {
+  programs.firefox = lib.mkIf config.hm.settings.browser.enable {
     enable = true;
     policies = {
       # Probably things here that can be put in home-manager

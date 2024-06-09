@@ -4,7 +4,7 @@
   config,
   ...
 }: {
-  config = lib.mkIf (config.hm.settings.hyprland.enable) {
+  config = lib.mkIf config.hm.settings.hyprland.enable {
     xdg.portal = {
       enable = true;
       wlr.enable = true;

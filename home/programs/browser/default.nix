@@ -12,7 +12,7 @@
     (lib.mkIf isNixos {
       programs.firefox.package = null; # defined in system/browser.nix
     })
-    (lib.mkIf (config.settings.browser.enable) {
+    (lib.mkIf config.settings.browser.enable {
       programs.firefox = {
         enable = true;
         profiles = let

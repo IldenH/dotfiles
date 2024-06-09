@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings.windowrulev2 = [
     "workspace 13, class:(vesktop)"
     "workspace 4, class:(steam)"

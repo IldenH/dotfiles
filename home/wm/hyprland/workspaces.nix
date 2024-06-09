@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # TODO: Make options for this and if multiple monitors, then many workspaces
   wayland.windowManager.hyprland.settings = {
     workspace = [

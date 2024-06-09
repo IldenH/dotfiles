@@ -6,7 +6,7 @@
 }: {
   options.settings.steam.enable = lib.mkEnableOption "steam";
 
-  config = lib.mkIf (config.settings.steam.enable) {
+  config = lib.mkIf config.settings.steam.enable {
     home.packages = [pkgs.adwsteamgtk];
     home.file.".config/AdwSteamGtk/custom.css".source = with config.colorScheme.palette;
       pkgs.writeText "custom.css"
