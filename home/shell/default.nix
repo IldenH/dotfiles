@@ -18,6 +18,7 @@
     home.packages = with pkgs; [
       tldr
       sops
+      file
     ];
 
     programs.bat = {
