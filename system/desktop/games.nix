@@ -1,6 +1,5 @@
 {
   config,
-  pkgs,
   lib,
   ...
 }: {
@@ -17,6 +16,11 @@
       programs = {
         gamemode.enable = true;
         gamescope.enable = true;
+      };
+
+      environment.sessionVariables = {
+        # https://factorio.com/blog/post/fff-408
+        "SDL_VIDEODRIVER" = "wayland";
       };
     })
   ];
