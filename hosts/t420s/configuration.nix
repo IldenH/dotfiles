@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  name,
   ...
 }: {
   imports = [
@@ -22,7 +22,7 @@
 
     networking = {
       enable = true;
-      hostname = "laptop";
+      hostname = name;
       wifi.enable = true;
       bluetooth.enable = false;
     };

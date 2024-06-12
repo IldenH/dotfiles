@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  name,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
@@ -13,7 +17,7 @@
 
     networking = {
       enable = true;
-      hostname = "desktop";
+      hostname = name;
       wifi.enable = false;
       bluetooth.enable = false;
     };

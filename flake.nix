@@ -87,7 +87,7 @@
 
     mkHost = name: extraModules:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs global secrets lib;};
+        specialArgs = {inherit inputs global secrets lib name;};
         modules =
           [
             ./hosts/${name}/configuration.nix
@@ -113,7 +113,7 @@
 
     nixosConfigurations = {
       desktop = mkHost "desktop" [];
-      laptop = mkHost "laptop" [];
+      t420s = mkHost "t420s" [];
     };
   };
 }
