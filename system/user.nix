@@ -10,4 +10,6 @@
     password = secrets.password;
     extraGroups = ["wheel"];
   };
+
+  nix.settings.trusted-users = [global.user.name];
 }

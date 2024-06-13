@@ -19,12 +19,11 @@
     networking = {
       enable = true;
       hostname = name;
-      wifi.enable = false;
+      wifi.enable = true;
       bluetooth.enable = false;
     };
 
     japanese.enable = true;
-    nvidia.enable = true;
     sound.enable = true;
     utils.enable = true;
   };

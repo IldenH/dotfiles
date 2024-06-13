@@ -114,6 +114,7 @@
     nixosConfigurations = {
       desktop = mkHost "desktop" [];
       t420s = mkHost "t420s" [];
+      e14 = mkHost "e14" []; # TODO: nixos-hardware
     };
   };
 }
