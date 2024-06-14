@@ -2,13 +2,13 @@
   config,
   lib,
   global,
+  hostName,
   ...
 }: {
   options.settings.networking = {
     enable = lib.mkEnableOption "networking";
     wifi.enable = lib.mkEnableOption "wifi";
     bluetooth.enable = lib.mkEnableOption "bluetooth";
-    hostname = lib.mkStrOption "nixos";
   };
 
   config = lib.mkMerge [
@@ -17,7 +17,7 @@
       services.blueman.enable = true;
     })
     (lib.mkIf config.settings.networking.enable {
-      networking.hostName = config.settings.networking.hostname;
+      networking.hostName = hostName;
       networking.networkmanager.enable = true;
       users.users.${global.user.name}.extraGroups = ["networkmanager"];
     })

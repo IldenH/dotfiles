@@ -85,12 +85,12 @@
         }
     );
 
-    mkHost = name: extraModules:
+    mkHost = hostName: extraModules:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs global secrets lib name;};
+        specialArgs = {inherit inputs global secrets lib hostName;};
         modules =
           [
-            ./hosts/${name}/configuration.nix
+            ./hosts/${hostName}/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -101,7 +101,7 @@
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
-                users."${global.user.name}" = ./hosts/${name}/home.nix;
+                users."${global.user.name}" = ./hosts/${hostName}/home.nix;
               };
             }
             (lib.mkAliasOptionModule ["hm"] ["home-manager" "users" global.user.name])
