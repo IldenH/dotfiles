@@ -4,10 +4,8 @@
   pkgs,
   ...
 }: {
-  options.settings.terminal.zsh = {
-    enable = lib.mkEnableOption "zsh";
-    theme = lib.mkStrOption "simple";
-  };
+  options.settings.terminal.zsh.enable = lib.mkEnableOption "zsh";
+
   config = lib.mkIf config.settings.terminal.zsh.enable {
     programs.zsh = {
       enable = true;
@@ -18,7 +16,7 @@
       dotDir = ".config/zsh";
       oh-my-zsh = {
         enable = true;
-        theme = config.settings.terminal.zsh.theme;
+        theme = "simple";
       };
       initExtraBeforeCompInit = ''
         export ZSH_COMPDUMP=$ZSH/cache/.zcompdump

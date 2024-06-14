@@ -12,11 +12,9 @@
 
     browser.enable = true;
     discord.enable = true;
-    # espanso.enable = true; # service doesn't run properly
     games.enable = true;
-    nightlight.enable = false; # doesn't work with Nvida 535, using monitor's builtin nightlight
     other.enable = true;
-    qt-gtk-themes.enable = true;
+    qt-gtk.enable = true;
     zathura.enable = true;
 
     locale = {
@@ -25,23 +23,13 @@
       timeZone = "Europe/Oslo";
     };
 
-    screenshots = {
-      enable = true;
-      format = "%Y-%m-%d_%H-%M-%S.png";
-      path = {
-        raw = "$HOME/Pictures/Screenshots/Raw";
-        edited = "$HOME/Pictures/Screenshots/Edited";
-      };
-    };
+    screenshots.enable = true;
 
     terminal = {
       enable = true;
       neovim.enable = true;
       cli.enable = true;
-      zsh = {
-        enable = true;
-        theme = "simple";
-      };
+      zsh.enable = true;
     };
 
     hyprland.enable = true;

@@ -4,16 +4,14 @@
   lib,
   ...
 }: {
-  options.settings.screenshots = {
-    enable = lib.mkEnableOption "screenshots";
-    format = lib.mkStrOption "%Y-%m-%d_%H-%M-%S.png";
-    path.raw = lib.mkStrOption "$HOME/Pictures/Screenshots/Raw";
-    path.edited = lib.mkStrOption "$HOME/Pictures/Screenshots/Edited";
-  };
+  options.settings.screenshots.enable = lib.mkEnableOption "screenshots";
 
   config = let
     args = "--notify --freeze";
-    raw = "${config.settings.screenshots.path.raw}/$(date +\"${config.settings.screenshots.format}\")";
+    format = "%Y-%m-%d_%H-%M-%S.png";
+    path.raw = "$HOME/Pictures/Screenshots/Raw";
+    path.edited = "$HOME/Pictures/Screenshots/Edited";
+    raw = "${path.raw}/$(date +\"${format}\")";
   in
     lib.mkIf config.settings.screenshots.enable {
       home.packages = with pkgs; [
@@ -24,16 +22,14 @@
         wl-clipboard
       ];
 
-      # Configure swappy (screenshot annotation tool)
       home.file.".config/swappy/config".text = ''
         [Default]
-        save_dir=${config.settings.screenshots.path.edited}
-        save_filename_format=${config.settings.screenshots.format}
+        save_dir=${path.edited}
+        save_filename_format=${format}
         show_panel=true
         # early_exit=true # Exit on export
       '';
 
-      # Configure keybindings
       wayland.windowManager.hyprland.settings.bind = [
         "ALT SHIFT, E, exec, wl-paste | swappy -f -"
         "ALT SHIFT, S, exec, grimblast ${args} copysave area ${raw}"
@@ -42,10 +38,9 @@
         "SUPER SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
       ];
 
-      # Create directories
       xdg.userDirs.extraConfig = {
-        XDG_SCREENSHOTSRAW_DIR = config.settings.screenshots.path.raw;
-        XDG_SCREENSHOTSEDITED_DIR = config.settings.screenshots.path.edited;
+        XDG_SCREENSHOTSRAW_DIR = path.raw;
+        XDG_SCREENSHOTSEDITED_DIR = path.edited;
       };
     };
 }
