@@ -12,6 +12,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
+    ./desktop.nix
     ./locale.nix
     ./programs
     ./shell
