@@ -8,7 +8,7 @@
   services.openssh.enable = true;
 
   settings = {
-    sddm.image = ../sddm.jpg;
+    sddm.image = ../../assets/sddm.jpg;
 
     keyMap = "no";
 
