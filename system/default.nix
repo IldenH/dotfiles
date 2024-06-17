@@ -27,6 +27,7 @@
       services = {
         printing.enable = true;
         fstrim.enable = true;
+        gvfs.enable = true;
       };
 
       programs = {
