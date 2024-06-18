@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     ### HYPRLAND ###
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -114,7 +116,7 @@
     nixosConfigurations = {
       desktop = mkHost "desktop" [];
       t420s = mkHost "t420s" [];
-      e14 = mkHost "e14" []; # TODO: nixos-hardware
+      e14 = mkHost "e14" [inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd];
     };
   };
 }
