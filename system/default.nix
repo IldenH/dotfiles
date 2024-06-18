@@ -28,6 +28,7 @@
         printing.enable = true;
         fstrim.enable = true;
         gvfs.enable = true;
+        upower.enable = true;
       };
 
       programs = {
