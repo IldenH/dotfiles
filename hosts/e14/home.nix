@@ -4,6 +4,7 @@
   settings = {
     desktop.enable = true;
 
+    nightlight.enable = true;
     discord.enable = true;
     other.enable = true;
   };
