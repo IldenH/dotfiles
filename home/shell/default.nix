@@ -19,6 +19,7 @@
       tldr
       sops
       file
+      nurl
     ];
 
     programs.bat = {
