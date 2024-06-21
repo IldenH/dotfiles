@@ -35,26 +35,21 @@
         })
       ];
 
-      home.file.".local/share/PrismLauncher/prismlauncher.cfg".text = let
-        java = lib.getExe pkgs.temurin-bin-8;
-      in
-        /*
-        bash
-        */
-        ''
-          [General]
-          ApplicationTheme=dark
-          ConfigVersion=1.2
-          EnableFeralGamemode=true
-          IconTheme=flat_white
-          IgnoreJavaCompatibility=true
-          IgnoreJavaWizard=true
-          JavaPath=${java}
-          Language=en_US
-          MaxMemAlloc=12544
-          MinMemAlloc=512
-          TheCat=false
-        '';
+      home.file.".local/share/PrismLauncher/prismlauncher.cfg".text = lib.generators.toINI {} {
+        General = {
+          ApplicationTheme = "dark";
+          ConfigVersion = 1.2;
+          EnableFeralGamemode = true;
+          IconTheme = "flat_white";
+          IgnoreJavaCompatibility = true;
+          IgnoreJavaWizard = true;
+          JavaPath = lib.getExe pkgs.temurin-bin-8;
+          Language = "en_US";
+          MaxMemAlloc = 12544;
+          MinMemAlloc = 512;
+          TheCat = false;
+        };
+      };
 
       settings.steam.enable = lib.mkDefault true;
     })

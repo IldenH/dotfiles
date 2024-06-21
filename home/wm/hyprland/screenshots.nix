@@ -22,13 +22,14 @@
         wl-clipboard
       ];
 
-      home.file.".config/swappy/config".text = ''
-        [Default]
-        save_dir=${path.edited}
-        save_filename_format=${format}
-        show_panel=true
-        # early_exit=true # Exit on export
-      '';
+      home.file.".config/swappy/config".text = lib.generators.toINI {} {
+        Default = {
+          save_dir = path.edited;
+          save_filename_format = format;
+          show_panel = true;
+          # early_exit = true; # Exit on export
+        };
+      };
 
       wayland.windowManager.hyprland.settings.bind = [
         "ALT SHIFT, E, exec, wl-paste | swappy -f -"
