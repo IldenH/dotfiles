@@ -4,11 +4,8 @@
   pkgs,
   ...
 }: {
-  options.settings.terminal.zsh.enable = lib.mkEnableOption "zsh";
-
-  config = lib.mkIf config.settings.terminal.zsh.enable {
+  config = lib.mkIf config.programs.zsh.enable {
     programs.zsh = {
-      enable = true;
       enableCompletion = true;
       # enableAutosuggestions = true;
       syntaxHighlighting.enable = true;

@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./browser.nix
+    ./firefox.nix
     ./games.nix
     ./hyprland.nix
     ./japanese.nix

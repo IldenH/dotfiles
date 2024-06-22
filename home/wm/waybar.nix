@@ -1,12 +1,5 @@
-{
-  config,
-  lib,
-  ...
-}: {
-  options.settings.waybar.enable = lib.mkEnableOption "waybar";
-
-  config.programs.waybar = lib.mkIf config.settings.waybar.enable {
-    enable = true;
+{config, ...}: {
+  programs.waybar = {
     settings.bar = {
       layer = "top";
 

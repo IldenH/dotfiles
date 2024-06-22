@@ -64,7 +64,7 @@
         # media-session.enable = true;
       };
     })
-    (lib.mkIf config.hm.settings.terminal.cli.enable {
+    (lib.mkIf config.hm.settings.cli.enable {
       programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;

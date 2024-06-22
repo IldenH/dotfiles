@@ -6,7 +6,7 @@
 }: {
   imports = [
     # ./anki.nix
-    ./browser
+    ./firefox
     ./discord
     # ./espanso.nix
     ./files.nix

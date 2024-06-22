@@ -9,6 +9,20 @@
   config = lib.mkIf config.settings.desktop.enable (lib.mkDefault {
     colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
+    programs = {
+      firefox.enable = true;
+      hyprlock.enable = true;
+      kitty.enable = true;
+      waybar.enable = true;
+      zathura.enable = true;
+      zsh.enable = true;
+    };
+
+    services = {
+      hypridle.enable = true;
+      mako.enable = true;
+    };
+
     settings = {
       wallpaper = ../assets/wallpaper.png;
 
@@ -18,23 +32,13 @@
         timeZone = "Europe/Oslo";
       };
 
-      browser.enable = true;
       screenshots.enable = true;
-      zathura.enable = true;
 
-      terminal = {
-        enable = true;
-        neovim.enable = true;
-        cli.enable = true;
-        zsh.enable = true;
-      };
+      neovim.enable = true;
+      cli.enable = true;
 
       qt-gtk.enable = true;
       hyprland.enable = true;
-      hyprlock.enable = true;
-      hypridle.enable = true;
-      mako.enable = true;
-      waybar.enable = true;
     };
   });
 }

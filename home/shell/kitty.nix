@@ -4,16 +4,10 @@
   pkgs,
   ...
 }: {
-  options.settings.terminal.enable = lib.mkEnableOption "terminal";
-
-  config = lib.mkIf config.settings.terminal.enable {
+  config = lib.mkIf config.programs.kitty.enable {
     home.packages = [pkgs.nerdfonts];
     programs.kitty = {
-      enable = true;
-      shellIntegration = {
-        enableZshIntegration = true;
-        mode = "no-cursor";
-      };
+      shellIntegration.mode = "no-cursor";
       font = {
         name = "JetBrains Mono Nerd Font";
         size = 11.5;

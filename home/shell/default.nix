@@ -9,12 +9,12 @@
     ./lf.nix
     ./neofetch.nix
     ./neovim.nix
-    ./terminal.nix
+    ./kitty.nix
     ./zsh.nix
   ];
-  options.settings.terminal.cli.enable = lib.mkEnableOption "cli";
+  options.settings.cli.enable = lib.mkEnableOption "various terminal utilities";
 
-  config = lib.mkIf config.settings.terminal.cli.enable {
+  config = lib.mkIf config.settings.cli.enable {
     home.packages = with pkgs; [
       tldr
       sops

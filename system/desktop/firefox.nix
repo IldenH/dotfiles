@@ -1,10 +1,6 @@
-{
-  config,
-  lib,
-  ...
-}: {
-  programs.firefox = lib.mkIf config.hm.settings.browser.enable {
-    enable = true;
+{config, ...}: {
+  programs.firefox = {
+    enable = config.hm.programs.firefox.enable;
     policies = {
       # Probably things here that can be put in home-manager
 

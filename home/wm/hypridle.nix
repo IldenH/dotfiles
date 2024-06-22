@@ -1,5 +1,4 @@
 {
-  config,
   inputs,
   lib,
   pkgs,
@@ -17,20 +16,15 @@ in {
     inputs.hypridle.homeManagerModules.default
   ];
 
-  options.settings.hypridle.enable = lib.mkEnableOption "hypridle";
-
-  config.services.hypridle = lib.mkIf config.settings.hypridle.enable {
-    enable = true;
-    listeners = [
-      {
-        timeout = 300;
-        onTimeout = mkTimeout "pidof hyprlock || hyprlock";
-      }
-      {
-        timeout = 330;
-        onTimeout = mkTimeout "hyprctl dispatch dpms off";
-        onResume = "hyprctl dispatch dpms on";
-      }
-    ];
-  };
+  services.hypridle.listeners = [
+    {
+      timeout = 300;
+      onTimeout = mkTimeout "pidof hyprlock || hyprlock";
+    }
+    {
+      timeout = 330;
+      onTimeout = mkTimeout "hyprctl dispatch dpms off";
+      onResume = "hyprctl dispatch dpms on";
+    }
+  ];
 }

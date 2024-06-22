@@ -5,7 +5,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.settings.terminal.cli.enable {
+  config = lib.mkIf config.settings.cli.enable {
     programs.git = {
       enable = true;
       userName = "IldenH";

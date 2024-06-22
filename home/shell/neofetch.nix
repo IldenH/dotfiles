@@ -5,7 +5,7 @@
   global,
   ...
 }: {
-  config = lib.mkIf config.settings.terminal.cli.enable {
+  config = lib.mkIf config.settings.cli.enable {
     home.packages = [pkgs.neofetch];
     programs.zsh.initExtra = "neofetch";
 
