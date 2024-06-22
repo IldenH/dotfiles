@@ -4,12 +4,14 @@
   lib,
   inputs,
   ...
-}: {
+}: let
+  nvim = inputs.nixvim-config.packages."${pkgs.system}".nvim;
+in {
   options.settings.terminal.neovim.enable = lib.mkEnableOption "neovim";
 
   config = lib.mkIf config.settings.terminal.neovim.enable {
     home.packages = [
-      inputs.nixvim-config.packages."${pkgs.system}".nvim
+      nvim
       pkgs.nvimpager
     ];
 
@@ -22,7 +24,7 @@
       name = "Neovim";
       genericName = "Text Editor";
       icon = "nvim";
-      exec = "${lib.getExe config.programs.kitty.package} -e ${lib.getExe config.programs.neovim.package} %f";
+      exec = "${lib.getExe config.programs.kitty.package} -e ${lib.getExe nvim} %f";
     };
 
     xdg.mimeApps.defaultApplications = {
