@@ -22,6 +22,8 @@ _: {
 
       "SUPER, U, swapnext"
       "SUPER, R, swapnext"
+
+      "ALT, C, exec, echo" # disable cstimer bind
     ];
 
     # e -> repeats when key is held
