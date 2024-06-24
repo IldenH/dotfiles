@@ -7,20 +7,9 @@
 }: {
   options.settings.qt-gtk.enable = lib.mkEnableOption "qt and gtk";
 
-  config = lib.mkIf config.settings.qt-gtk.enable {
-    qt = {
-      enable = true;
-      platformTheme.name = "gtk";
-      style = {
-        name = "gtk2";
-        package = pkgs.qt6Packages.qt6gtk2;
-      };
-    };
-    home.packages = with pkgs; [
-      libsForQt5.qt5.qtwayland
-      kdePackages.qtwayland
-    ];
+  imports = [./qt.nix];
 
+  config = lib.mkIf config.settings.qt-gtk.enable {
     gtk = {
       enable = true;
       gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

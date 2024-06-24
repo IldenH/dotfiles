@@ -5,7 +5,7 @@
     ./hyprland
     ./hyprlock.nix
     ./mako.nix
-    ./themes.nix
+    ./themes
     ./waybar.nix
   ];
 }
