@@ -37,14 +37,13 @@
 
       home.file.".local/share/PrismLauncher/prismlauncher.cfg".text = lib.generators.toINI {} {
         General = {
-          ApplicationTheme = "dark";
-          ConfigVersion = 1.2;
+          ApplicationTheme = "system";
           EnableFeralGamemode = true;
           IconTheme = "flat_white";
           IgnoreJavaCompatibility = true;
           IgnoreJavaWizard = true;
           JavaPath = lib.getExe pkgs.temurin-bin-8;
-          Language = "en_US";
+          Language = "ja";
           MaxMemAlloc = 12544;
           MinMemAlloc = 512;
           TheCat = false;
