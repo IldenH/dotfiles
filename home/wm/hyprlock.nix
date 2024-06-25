@@ -59,18 +59,6 @@
         font_size = 16;
         position.y = 80;
       }
-      {
-        text = "---------------------------------";
-        color = "rgb(${base07})";
-        font_size = 16;
-        position.y = 60;
-      }
-      {
-        text = "$DESC";
-        color = "rgb(${base07})";
-        font_size = 16;
-        position.y = 30;
-      }
     ];
   };
 }
