@@ -62,7 +62,6 @@
     home-manager,
     ...
   } @ inputs: let
-    # lib = nixpkgs.lib // home-manager.lib;
     lib = nixpkgs.lib.extend (final: prev: (import ./lib final) // home-manager.lib);
 
     global = {
@@ -74,18 +73,14 @@
 
     secrets = import ./secrets;
 
-    systems = [
-      "x86_64-linux"
-      "aarch64-linux"
-    ];
-
-    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    systems = lib.systems.flakeExposed;
     pkgsFor = lib.genAttrs systems (
       system:
         import nixpkgs {
           inherit system;
         }
     );
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
 
     mkHost = hostName: extraModules:
       nixpkgs.lib.nixosSystem {
