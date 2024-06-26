@@ -7,14 +7,9 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   settings = {
-    sddm.image = ../sddm.jpg;
+    sddm.image = ../../assets/sddm.jpg;
 
-    locale = {
-      main = "en_US.UTF-8";
-      extra = "nb_NO.UTF-8";
-      timeZone = "Europe/Oslo";
-      keyMap = "no";
-    };
+    keyMap = "no";
 
     networking = {
       enable = true;
@@ -25,8 +20,6 @@
     japanese.enable = true;
     sound.enable = true;
     utils.enable = true;
-
-    shell = pkgs.zsh;
   };
 
   system.stateVersion = "23.11";
