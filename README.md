@@ -24,7 +24,6 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 | Lenovo Legion Y520T       | `desktop` | `x86_64`     |                       |
 | Lenovo ThinkPad T420s     | `t420s`   | `x86_64`     |                       |
 | Lenovo ThinkPad E14 Gen 3 | `e14`     | `x86_64`     |                       |
-| Oracle Cloud              | `oci`     | `aarch64`    | Not configured        |
 
 ## Inspiration / Sources
 - [Vimjoyer](https://www.youtube.com/@vimjoyer)
