@@ -5,7 +5,7 @@
   inputs,
   ...
 }: let
-  nvim = inputs.nixvim-config.packages."${pkgs.system}".nvim;
+  nvim = inputs.nixvim-config.packages."${pkgs.system}".default;
 in {
   options.settings.neovim.enable = lib.mkEnableOption "neovim";
 
