@@ -1,11 +1,11 @@
-_: {
+{
   wayland.windowManager.hyprland.settings = {
     "$swapMouse" = ''if [[ $(hyprctl getoption input:left_handed) == *"0"* ]]; then hyprctl keyword input:left_handed 1; else hyprctl keyword input:left_handed 0; fi'';
 
     bind = [
       "SUPER, W, killactive,"
-      "SUPER, V, togglefloating,"
       "SUPER, I, togglesplit,"
+      "SUPER ALT, I, togglefloating,"
 
       # I am weird so i switch between left and right_handed
       "CTRL SHIFT, L, exec, $swapMouse"
