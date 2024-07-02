@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -12,11 +11,7 @@
       fi
     '');
 in {
-  imports = [
-    inputs.hypridle.homeManagerModules.default
-  ];
-
-  services.hypridle.listeners = [
+  services.hypridle.settings.listeners = [
     {
       timeout = 300;
       onTimeout = mkTimeout "pidof hyprlock || hyprlock";

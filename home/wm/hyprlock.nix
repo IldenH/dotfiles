@@ -1,13 +1,5 @@
-{
-  config,
-  inputs,
-  ...
-}: {
-  imports = [
-    inputs.hyprlock.homeManagerModules.default
-  ];
-
-  programs.hyprlock = with config.colorScheme.palette; {
+{config, ...}: {
+  programs.hyprlock.settings = with config.colorScheme.palette; {
     general = {
       disable_loading_bar = true;
       no_fade_in = true;

@@ -33,6 +33,11 @@
       accel_profile = "flat";
     };
 
+    cursor = {
+      hide_on_key_press = true;
+      inactive_timeout = 1;
+    };
+
     general = {
       gaps_in = 0;
       gaps_out = 0;
@@ -41,13 +46,10 @@
       "col.inactive_border" = "rgba(${config.colorScheme.palette.base00}aa)";
       layout = "dwindle";
       allow_tearing = true;
-      cursor_inactive_timeout = 1;
     };
 
     decoration = {
       rounding = 5;
-      # dim_inactive = 1;
-      # dim_strength = 0.05;
       blur.enabled = false;
       drop_shadow = false;
     };
@@ -59,12 +61,6 @@
       preserve_split = true;
     };
 
-    master = {
-      new_is_master = true;
-    };
-
-    misc = {
-      force_default_wallpaper = 1;
-    };
+    misc.force_default_wallpaper = 1;
   };
 }
