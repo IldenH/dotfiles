@@ -4,7 +4,7 @@ _: {
     "$files" = "nemo";
     "$browser" = "firefox";
     "$launcher" = "rofi -show drun -show-icons";
-    "$discord" = "vesktop --enable-wayland-ime";
+    "$discord" = "vesktop";
     "$anki" = "QT_IM_MODULE=fcitx anki";
     "$calculator" = "bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'";
 
