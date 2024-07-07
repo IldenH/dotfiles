@@ -8,12 +8,12 @@
   imports = [
     ./console.nix
     ./desktop
+    ./greeter.nix
     ./grub.nix
     ./locale.nix
     ./networking.nix
     ./nix.nix
     ./nvidia.nix
-    ./sddm
     ./user.nix
   ];
 

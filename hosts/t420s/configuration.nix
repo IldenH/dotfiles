@@ -7,8 +7,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   settings = {
-    sddm.image = ../../assets/sddm.jpg;
-
     keyMap = "no";
 
     networking = {
