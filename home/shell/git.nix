@@ -16,6 +16,7 @@
         gpg.program = "${lib.getExe config.programs.gpg.package}";
         user.signingKey = secrets.gpg.id;
       };
+      ignores = [".direnv"];
     };
 
     programs.scmpuff.enable = true;
