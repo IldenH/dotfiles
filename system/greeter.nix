@@ -13,6 +13,7 @@
       settings.default_session.command = ''
         ${lib.getExe pkgs.greetd.tuigreet} --cmd Hyprland \
           --time \
+          --time-format '%A %d. %B %Y, Uke %V, %H:%M' \
           --user-menu \
           --asterisks \
           --container-padding 2 \
