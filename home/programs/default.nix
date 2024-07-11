@@ -6,6 +6,7 @@
 }: {
   imports = [
     # ./anki.nix
+    ./borgmatic.nix
     ./firefox
     ./discord
     # ./espanso.nix
