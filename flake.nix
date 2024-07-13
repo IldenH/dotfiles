@@ -13,6 +13,8 @@
 
     nix-colors.url = "github:misterio77/nix-colors";
 
+    impermanence.url = "github:nix-community/impermanence";
+
     darkmatter = {
       url = "gitlab:VandalByte/darkmatter-grub-theme";
       inputs.nixpkgs.follows = "nixpkgs";
