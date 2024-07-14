@@ -4,8 +4,9 @@
       disable_loading_bar = true;
       no_fade_in = true;
       no_fade_out = true;
+      ignore_empty_input = true;
     };
-    backgrounds = [
+    background = [
       {
         path = "${config.settings.wallpaper}";
 
@@ -18,12 +19,9 @@
         vibrancy_darkness = 0.0;
       }
     ];
-    input-fields = [
+    input-field = [
       {
-        size = {
-          width = 350;
-          height = 30;
-        };
+        size = "350, 30";
 
         inner_color = "rgb(${base01})";
         font_color = "rgb(${base07})";
@@ -38,18 +36,22 @@
         fail_transition = 50;
       }
     ];
-    labels = [
+    label = [
       {
         text = "$TIME";
         color = "rgb(${base07})";
         font_size = 48;
-        position.y = 160;
+        position = "0, 160";
+        halign = "center";
+        valign = "center";
       }
       {
         text = "cmd[update:1000] date +'%A %d. %B %Y'";
         color = "rgb(${base07})";
         font_size = 16;
-        position.y = 80;
+        position = "0, 80";
+        halign = "center";
+        valign = "center";
       }
     ];
   };
