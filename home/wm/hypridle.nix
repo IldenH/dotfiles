@@ -11,15 +11,15 @@
       fi
     '');
 in {
-  services.hypridle.settings.listeners = [
+  services.hypridle.settings.listener = [
     {
       timeout = 300;
-      onTimeout = mkTimeout "pidof hyprlock || hyprlock";
+      on-timeout = mkTimeout "pidof hyprlock || hyprlock";
     }
     {
       timeout = 330;
-      onTimeout = mkTimeout "hyprctl dispatch dpms off";
-      onResume = "hyprctl dispatch dpms on";
+      on-timeout = mkTimeout "hyprctl dispatch dpms off";
+      on-resume = "hyprctl dispatch dpms on";
     }
   ];
 }
