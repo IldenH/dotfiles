@@ -14,6 +14,7 @@
     ./networking.nix
     ./nix.nix
     ./nvidia.nix
+    ./syncthing.nix
     ./user.nix
   ];
 
