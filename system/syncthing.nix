@@ -17,8 +17,8 @@
         relaysEnabled = true;
       };
       gui = {
-        user = "${global.user.name}";
-        password = "${secrets.password}";
+        user = global.user.name;
+        password = secrets.password;
       };
       devices = {
         desktop.id = secrets.syncthing.desktop;
