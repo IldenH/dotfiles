@@ -24,12 +24,9 @@
         desktop.id = secrets.syncthing.desktop;
       };
       folders = {
-        "Sync" = {
-          path = "~/Sync";
-          devices = [
-            "desktop"
-          ];
-        };
+        "~/Sync".devices = [
+          "desktop"
+        ];
       };
     };
   };
