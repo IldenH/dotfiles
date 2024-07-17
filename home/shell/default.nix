@@ -63,6 +63,8 @@
       cd = "z";
       cls = "clear && neofetch && ls";
       c = ''cd $(find . -type d -not -path " * /. * " -not -path "." | fzf -m)'';
+
+      regen = "sudo /nix/var/nix/gcroots/current-system/activate && ~/.local/state/home-manager/gcroots/current-home/activate";
     };
   };
 }
