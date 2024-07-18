@@ -67,7 +67,7 @@
     forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
 
     mkHost = hostName: extraModules:
-      nixpkgs.lib.nixosSystem {
+      lib.nixosSystem {
         specialArgs = {inherit inputs global secrets lib hostName;};
         modules =
           [
