@@ -34,6 +34,18 @@
           "desktop"
           "e14"
         ];
+        "~/.local/share/Anki2".devices = [
+          "desktop"
+          "e14"
+        ];
+        "~/dev".devices = [
+          "desktop"
+          "e14"
+        ];
+        "~/.config/mozc".devices = [
+          "desktop"
+          "e14"
+        ];
       };
     };
   };
