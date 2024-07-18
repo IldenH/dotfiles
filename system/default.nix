@@ -42,7 +42,7 @@
 
       programs.nh = {
         enable = true;
-        flake = "/home/${global.user.name}/dotfiles";
+        flake = "/home/${global.user.name}/dev/dotfiles";
         clean.enable = true;
         clean.extraArgs = "--keep-since 4d --keep 5 --nogcroots";
       };
