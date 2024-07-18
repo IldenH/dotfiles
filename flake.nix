@@ -96,7 +96,10 @@
       desktop = mkHost "desktop" [];
       t420s = mkHost "t420s" [];
       e14 = mkHost "e14" [inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd];
-      installer = mkHost "installer" [];
+      installer = lib.nixosSystem {
+        specialArgs = {inherit inputs global lib;};
+        modules = [./hosts/installer/configuration.nix];
+      };
     };
   };
 }
