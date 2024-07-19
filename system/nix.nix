@@ -28,8 +28,6 @@
         "nixpkgs=/etc/nixpkgs/channels/nixpkgs"
         "/nix/var/nix/profiles/per-user/root/channels"
       ];
-
-      channel.enable = false;
     };
 
     systemd.tmpfiles.rules = [
