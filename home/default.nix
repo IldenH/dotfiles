@@ -13,6 +13,7 @@
     inputs.nix-colors.homeManagerModules.default
 
     ./desktop.nix
+    ./laptop.nix
     ./locale.nix
     ./programs
     ./shell

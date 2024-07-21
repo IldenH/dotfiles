@@ -3,6 +3,7 @@
 
   settings = {
     desktop.enable = true;
+    laptop.enable = true;
 
     nightlight.enable = true;
     discord.enable = true;
