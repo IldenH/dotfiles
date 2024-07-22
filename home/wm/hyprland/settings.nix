@@ -27,6 +27,8 @@
         # "shift:both_capslock" # doesn't work with multiple options set?
       ];
 
+      touchpad.natural_scroll = true;
+
       follow_mouse = 2;
 
       sensitivity = 0.7;
