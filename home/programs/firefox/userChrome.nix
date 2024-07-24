@@ -40,7 +40,8 @@ css
     #urlbar .search-one-offs, /* "this time search with ..." */
     #tracking-protection-icon-container,
     #identity-box[pageproxystate=invalid] > .identity-box-button,
-    .searchbar-search-button {
+    .searchbar-search-button,
+    .titlebar-buttonbox-container {
     	display: none !important;
     }
 
