@@ -7,6 +7,7 @@
     ./firefox.nix
     ./games.nix
     ./japanese.nix
+    ./searx.nix
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
