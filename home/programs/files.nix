@@ -8,8 +8,8 @@
 
   config = lib.mkIf config.settings.files.enable {
     home.packages = with pkgs; [
-      (cinnamon.nemo-with-extensions.override {
-        extensions = with cinnamon; [
+      (nemo-with-extensions.override {
+        extensions = [
           nemo-fileroller # archives
         ];
       })

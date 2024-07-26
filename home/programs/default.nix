@@ -53,7 +53,7 @@
       settings.steam.enable = lib.mkDefault true;
     })
     (lib.mkIf config.settings.media.enable {
-      home.packages = [pkgs.cinnamon.pix];
+      home.packages = [pkgs.pix];
 
       programs.mpv.enable = true;
 
