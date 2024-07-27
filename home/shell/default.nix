@@ -51,6 +51,19 @@
       nix-direnv.enable = true;
     };
 
+    programs.translate-shell = {
+      enable = true;
+      settings = {
+        interactive = true;
+        indent = "2";
+
+        show-original = false;
+        show-original-dictionary = true;
+        show-prompt-message = false;
+        show-original-phonetics = false;
+      };
+    };
+
     programs = {
       navi.enable = true; # TODO: find good cheatsheets
       ripgrep.enable = true;
