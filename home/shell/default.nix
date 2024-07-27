@@ -63,14 +63,15 @@
       };
     };
 
-    programs = {
-      ripgrep.enable = true;
-      zoxide.enable = true;
+    programs.ripgrep.enable = true;
+
+    programs.zoxide = {
+      enable = true;
+      options = ["--cmd cd"];
     };
 
     home.shellAliases = {
       cat = "bat";
-      cd = "z";
       cls = "clear && neofetch && ls";
       c = ''cd $(find . -type d -not -path " * /. * " -not -path "." | fzf -m)'';
 
