@@ -17,7 +17,6 @@
   config = lib.mkIf config.settings.cli.enable {
     home.packages = with pkgs; [
       tldr
-      sops
       file
       nurl
     ];
@@ -65,9 +64,7 @@
     };
 
     programs = {
-      navi.enable = true; # TODO: find good cheatsheets
       ripgrep.enable = true;
-      thefuck.enable = true;
       zoxide.enable = true;
     };
 
