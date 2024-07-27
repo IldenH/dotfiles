@@ -29,8 +29,8 @@
     # e -> repeats when key is held
     binde = [
       "SUPER ALT, H, resizeactive, -10 0"
-      "SUPER ALT, J, resizeactive, 0 -10"
-      "SUPER ALT, K, resizeactive, 0 10"
+      "SUPER ALT, J, resizeactive, 0 10"
+      "SUPER ALT, K, resizeactive, 0 -10"
       "SUPER ALT, L, resizeactive, 10 0"
     ];
 
