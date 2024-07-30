@@ -1,6 +1,7 @@
 {
   modulesPath,
   inputs,
+  pkgs,
   ...
 }: {
   imports = [
@@ -13,7 +14,13 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  programs.zsh.enable = true;
+  networking.networkmanager.enable = true;
+  users.users.nixos.extraGroups = ["networkmanager"];
+
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+  ];
 
   console = {
     keyMap = "no";
