@@ -2,6 +2,7 @@
   modulesPath,
   inputs,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -15,6 +16,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.networkmanager.enable = true;
+  networking.wireless.enable = lib.mkForce false;
   users.users.nixos.extraGroups = ["networkmanager"];
 
   environment.systemPackages = with pkgs; [
