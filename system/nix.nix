@@ -19,8 +19,6 @@
         keep-going = true;
 
         use-xdg-base-directories = true;
-
-        # pure-eval = true; # TODO: figure out what this does
       };
 
       registry.nixpkgs.flake = inputs.nixpkgs;
