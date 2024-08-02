@@ -32,6 +32,13 @@
         upower.enable = true;
       };
 
+      # printing
+      services.avahi = {
+        enable = true;
+        nssmdns4 = true;
+        openFirewall = true;
+      };
+
       programs = {
         zsh.enable = true;
         dconf.enable = true;
