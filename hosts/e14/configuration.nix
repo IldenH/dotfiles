@@ -5,8 +5,11 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  services.openssh.enable = true;
-  services.syncthing.enable = true;
+  services = {
+    openssh.enable = true;
+    syncthing.enable = true;
+    printing.enable = true;
+  };
 
   settings = {
     keyMap = "no";

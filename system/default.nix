@@ -26,17 +26,9 @@
   config = lib.mkMerge [
     (lib.mkIf config.settings.utils.enable {
       services = {
-        printing.enable = true;
         fstrim.enable = true;
         gvfs.enable = true;
         upower.enable = true;
-      };
-
-      # printing
-      services.avahi = {
-        enable = true;
-        nssmdns4 = true;
-        openFirewall = true;
       };
 
       programs = {
@@ -73,6 +65,21 @@
         enable = true;
         enableSSHSupport = true;
       };
+    })
+    (lib.mkIf config.services.printing.enable {
+      services.avahi = {
+        enable = true;
+        nssmdns4 = true;
+        openFirewall = true;
+      };
+
+      environment.systemPackages = with pkgs; [
+        hplip
+      ];
+
+      services.printing.drivers = with pkgs; [
+        hplipWithPlugin
+      ];
     })
   ];
 }
