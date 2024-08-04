@@ -18,10 +18,7 @@
     ./user.nix
   ];
 
-  options.settings = {
-    utils.enable = lib.mkEnableOption "utils" // {default = true;};
-    sound.enable = lib.mkEnableOption "sound";
-  };
+  options.settings.utils.enable = lib.mkEnableOption "utils" // {default = true;};
 
   config = lib.mkMerge [
     (lib.mkIf config.settings.utils.enable {
@@ -51,35 +48,11 @@
         wget
       ];
     })
-    (lib.mkIf config.settings.sound.enable {
-      security.rtkit.enable = true;
-      services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-      };
-    })
     (lib.mkIf config.hm.settings.cli.enable {
       programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;
       };
-    })
-    (lib.mkIf config.services.printing.enable {
-      services.avahi = {
-        enable = true;
-        nssmdns4 = true;
-        openFirewall = true;
-      };
-
-      environment.systemPackages = with pkgs; [
-        hplip
-      ];
-
-      services.printing.drivers = with pkgs; [
-        hplipWithPlugin
-      ];
     })
   ];
 }

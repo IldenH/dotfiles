@@ -7,6 +7,7 @@
     ./firefox.nix
     ./games.nix
     ./japanese.nix
+    ./media.nix
     ./searx.nix
   ];
 
