@@ -8,10 +8,8 @@
     # ./anki.nix
     ./firefox
     ./discord
-    # ./espanso.nix
     ./files.nix
     ./qalculate.nix
-    ./steam.nix
     ./zathura.nix
   ];
 
@@ -24,6 +22,7 @@
   config = lib.mkMerge [
     (lib.mkIf config.settings.games.enable {
       home.packages = with pkgs; [
+        adwsteamgtk
         heroic
         # lutris
         (prismlauncher.override {
@@ -49,8 +48,6 @@
           TheCat = false;
         };
       };
-
-      settings.steam.enable = lib.mkDefault true;
     })
     (lib.mkIf config.settings.media.enable {
       home.packages = [pkgs.pix];

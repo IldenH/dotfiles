@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.darkmatter.nixosModule
   ];
