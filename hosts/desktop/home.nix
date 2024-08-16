@@ -6,6 +6,7 @@
 
     discord.enable = true;
     games.enable = true;
+    school.enable = true;
     other.enable = true;
   };
 

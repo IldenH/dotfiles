@@ -9,6 +9,7 @@
     ./firefox
     ./discord
     ./files.nix
+    ./school.nix
     ./qalculate.nix
     ./zathura.nix
   ];
@@ -62,7 +63,6 @@
     (lib.mkIf config.settings.other.enable {
       home.packages = with pkgs; [
         anki-bin
-        geogebra6
         krita
         python311
       ];
