@@ -2,7 +2,7 @@ _: {
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "kitty";
     "$files" = "nemo";
-    "$browser" = "firefox";
+    "$browser" = "MOZ_ENABLE_WAYLAND=0 firefox"; # TODO: shouldn't work better in xwayland, remove if fixed
     "$launcher" = "rofi -show drun -show-icons";
     "$discord" = "vesktop";
     "$anki" = "QT_IM_MODULE=fcitx anki";
