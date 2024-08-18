@@ -12,7 +12,7 @@
 
       ", F11, fullscreen, 0"
       "SHIFT, F11, fullscreen, 1"
-      ", F12, fullscreenstate, 0 3"
+      ", F12, fakefullscreen"
 
       "SUPER, H, movefocus, l"
       "SUPER, J, movefocus, d"
