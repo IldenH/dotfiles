@@ -46,6 +46,10 @@
           "desktop"
           "e14"
         ];
+        "~/.spell".devices = [
+          "desktop"
+          "e14"
+        ];
       };
     };
   };
