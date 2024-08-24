@@ -82,5 +82,6 @@ css
     .form_d8a4a1::after,
     .divider_bdb894, .akaBadge__27cd4, .nicknames__12efb,
     .closeButton__116c3,
-    .guildSeparator__75928 {display: none !important;}
+    .guildSeparator__75928,
+    .vc-notification-root {display: none !important;}
   ''
