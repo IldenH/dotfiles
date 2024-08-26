@@ -32,7 +32,10 @@
         zsh.enable = true;
         dconf.enable = true;
         nano.enable = false;
+        adb.enable = true;
       };
+
+      users.users.${global.user.name}.extraGroups = ["adbusers"];
 
       users.defaultUserShell = pkgs.zsh;
 
