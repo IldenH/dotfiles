@@ -13,6 +13,7 @@
       libreoffice
       geogebra6
       obsidian
+      bottles
     ];
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
