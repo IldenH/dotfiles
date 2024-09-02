@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  secrets,
   ...
 }: let
   nvim = inputs.nixvim-config.packages.${pkgs.system}.default;
@@ -18,6 +19,8 @@ in {
     home.sessionVariables = {
       EDITOR = "nvim";
       PAGER = "nvimpager";
+
+      OBSIDIAN_REST_API_KEY = secrets.obsidian;
     };
 
     xdg.desktopEntries.nvim = {
