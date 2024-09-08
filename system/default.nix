@@ -13,7 +13,7 @@
     ./locale.nix
     ./networking.nix
     ./nix.nix
-    ./nvidia.nix
+    ./graphics.nix
     ./syncthing.nix
     ./user.nix
   ];

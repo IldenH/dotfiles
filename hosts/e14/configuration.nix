@@ -20,6 +20,8 @@
       bluetooth.enable = false;
     };
 
+    graphics.enable = true;
+
     japanese.enable = true;
     sound.enable = true;
     utils.enable = true;
