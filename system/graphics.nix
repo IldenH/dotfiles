@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: {
   options.settings.nvidia.enable = lib.mkEnableOption "nvidia";
@@ -12,6 +13,10 @@
       hardware.graphics.enable32Bit = true;
 
       services.xserver.videoDrivers = ["amdgpu"];
+
+      environment.systemPackages = with pkgs; [lact];
+      systemd.packages = with pkgs; [lact];
+      systemd.services.lactd.wantedBy = ["multi-user.target"];
     })
     (lib.mkIf config.settings.nvidia.enable {
       settings.graphics.enable = true;
