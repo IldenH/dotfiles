@@ -9,6 +9,7 @@
     openssh.enable = true;
     syncthing.enable = true;
     printing.enable = true;
+    logind.powerKey = "ignore";
   };
 
   settings = {
