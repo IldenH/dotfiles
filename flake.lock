@@ -569,14 +569,15 @@
           "nixpkgs"
         ],
         "nixvim": "nixvim",
-        "obsidian-bridge": "obsidian-bridge"
+        "obsidian-bridge": "obsidian-bridge",
+        "obsidian-todo": "obsidian-todo"
       },
       "locked": {
-        "lastModified": 1725281334,
-        "narHash": "sha256-gLcqY9O0mARlEIbhMyCIM1bO5o4nzOtayV+jAkM28/c=",
+        "lastModified": 1726468700,
+        "narHash": "sha256-0bWlvvOTVo0V9b4iSLguEfH2h1HVODOAB+c0nQsZ2h8=",
         "owner": "IldenH",
         "repo": "nixvim",
-        "rev": "555377980892109a078bb821bb006f8d9c0cbf4d",
+        "rev": "d1e0ea39e9b447c23e50ecdda780b548f62ec567",
         "type": "github"
       },
       "original": {
@@ -621,6 +622,27 @@
       "original": {
         "owner": "oflisback",
         "repo": "obsidian-bridge.nvim",
+        "type": "github"
+      }
+    },
+    "obsidian-todo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixvim-config",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726216691,
+        "narHash": "sha256-Tdn8+grqPugCG9h8xckEILsNeIcAu37rK178vBbh79c=",
+        "owner": "LilleAila",
+        "repo": "obsidian-todo.nvim",
+        "rev": "c2e616c88af72ec16774469727d167c45a84545c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LilleAila",
+        "repo": "obsidian-todo.nvim",
         "type": "github"
       }
     },
