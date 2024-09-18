@@ -6,6 +6,7 @@ _: {
     "workspace 4, class:(steam)"
     "workspace 4, class:(heroic)"
     "workspace 4, class:(org.prismlauncher.PrismLauncher)"
+    "workspace 4, class:(teams-for-linux)"
 
     "center 1, ${anki}"
     "size 70% 80%, ${anki}"
