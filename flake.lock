@@ -85,6 +85,22 @@
         "type": "gitlab"
       }
     },
+    "data-viewer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699002688,
+        "narHash": "sha256-D5hvLhsYski11H9qiDDL2zlZMtYmbpHgpewiWR6C7rE=",
+        "owner": "VidocqH",
+        "repo": "data-viewer.nvim",
+        "rev": "40ddf37bb7ab6c04ff9e820812d1539afe691668",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VidocqH",
+        "repo": "data-viewer.nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -562,6 +578,7 @@
       "inputs": {
         "cmp-nerdfont": "cmp-nerdfont",
         "cmp-vimtex": "cmp-vimtex",
+        "data-viewer": "data-viewer",
         "flake-parts": "flake-parts",
         "move": "move",
         "nix-colors": "nix-colors_2",
@@ -573,11 +590,11 @@
         "obsidian-todo": "obsidian-todo"
       },
       "locked": {
-        "lastModified": 1726468700,
-        "narHash": "sha256-0bWlvvOTVo0V9b4iSLguEfH2h1HVODOAB+c0nQsZ2h8=",
+        "lastModified": 1726665255,
+        "narHash": "sha256-1FAPhLIPPG15MJiovg6GKRHJ6ekaQ+GGq6FzVTkFIHc=",
         "owner": "IldenH",
         "repo": "nixvim",
-        "rev": "d1e0ea39e9b447c23e50ecdda780b548f62ec567",
+        "rev": "6e04e7ca8bdd65b98a145be297b3e9fad1c0c932",
         "type": "github"
       },
       "original": {
