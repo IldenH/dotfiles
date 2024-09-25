@@ -14,6 +14,7 @@
       geogebra6
       obsidian
       bottles
+      pandoc
     ];
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
