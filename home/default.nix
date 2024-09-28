@@ -1,6 +1,7 @@
 {
   inputs,
   global,
+  pkgs,
   ...
 }: {
   home = {
@@ -27,6 +28,12 @@
     publicShare = null;
     templates = null;
   };
+
+  fonts.fontconfig.enable = true;
+  home.packages = with pkgs; [
+    corefonts
+    vistafonts
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
