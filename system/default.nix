@@ -26,6 +26,7 @@
         fstrim.enable = true;
         gvfs.enable = true;
         upower.enable = true;
+        fwupd.enable = true;
       };
 
       programs = {
