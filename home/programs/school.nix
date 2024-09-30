@@ -11,10 +11,12 @@
     home.packages = with pkgs; [
       teams-for-linux
       libreoffice
+      jre_minimal
       geogebra6
       obsidian
       bottles
       pandoc
+      zotero
     ];
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
