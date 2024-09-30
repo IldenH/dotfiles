@@ -26,10 +26,10 @@
         export ZSH_COMPDUMP=$ZSH/cache/.zcompdump
       '';
       initExtra =
-        /*
-        bash
-        */
+        # bash
         ''
+          export RLWRAP_HOME=$HOME/.local/share/history
+
           mkcdir = () {
             mkdir -p -- "$1" &&
             cd -P -- "$1"
