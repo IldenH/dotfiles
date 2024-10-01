@@ -54,6 +54,10 @@
           "desktop"
           "e14"
         ];
+        "~/Zotero".devices = [
+          "desktop"
+          "e14"
+        ];
       };
     };
   };
