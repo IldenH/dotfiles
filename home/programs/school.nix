@@ -11,7 +11,7 @@
     home.packages = with pkgs; [
       teams-for-linux
       libreoffice
-      jre_minimal
+      temurin-jre-bin-17
       geogebra6
       obsidian
       bottles
