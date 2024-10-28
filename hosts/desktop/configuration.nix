@@ -11,6 +11,8 @@
     printing.enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   settings = {
     keyMap = "no";
 

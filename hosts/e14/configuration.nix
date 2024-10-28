@@ -12,6 +12,8 @@
     logind.powerKey = "ignore";
   };
 
+  virtualisation.docker.enable = true;
+
   settings = {
     keyMap = "no";
 
