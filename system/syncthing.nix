@@ -58,6 +58,10 @@
           "desktop"
           "e14"
         ];
+        "~/.config/libreoffice".devices = [
+          "desktop"
+          "e14"
+        ];
       };
     };
   };
