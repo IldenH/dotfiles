@@ -608,11 +608,11 @@
         "zotcite": "zotcite"
       },
       "locked": {
-        "lastModified": 1727724367,
-        "narHash": "sha256-uo1FjRKmk3je2rPBkpWaqUrbu5m/LnEOCD5SNMyisuA=",
+        "lastModified": 1731150977,
+        "narHash": "sha256-7BpmK8iK62B06g8IcQtMzEaXuNn9u1Yj2tvQ5hkgD7w=",
         "owner": "IldenH",
         "repo": "nixvim",
-        "rev": "6d00e7d93fae795db1370407276d52ca5e1655aa",
+        "rev": "4e48cbc67b3a570806801e73fc4e6df7d65a2504",
         "type": "github"
       },
       "original": {
