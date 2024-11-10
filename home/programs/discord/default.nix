@@ -17,6 +17,8 @@
       disableMinSize = true;
       staticTitle = true;
       splashTheming = true;
+      splashColor = "#${config.colorScheme.palette.base05}";
+      splashBackground = "#${config.colorScheme.palette.base00}";
       checkUpdates = false;
       tray = false;
       hardwareAcceleration = false;
