@@ -17,6 +17,7 @@
       bottles
       pandoc
       zotero
+      xournalpp
     ];
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
