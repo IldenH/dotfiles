@@ -8,6 +8,7 @@
   imports = [
     ./console.nix
     ./desktop
+    ./docker.nix
     ./greeter.nix
     ./grub.nix
     ./locale.nix
