@@ -18,6 +18,7 @@
       pandoc
       zotero
       xournalpp
+      calibre
     ];
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
