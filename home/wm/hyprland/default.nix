@@ -14,6 +14,7 @@
     ./binds.nix
     ./rules.nix
     ./settings.nix
+    ./screenrec.nix
     ./screenshots.nix
     ./workspaces.nix
   ];

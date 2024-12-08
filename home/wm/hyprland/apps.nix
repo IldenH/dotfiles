@@ -7,6 +7,7 @@ _: {
     "$discord" = "vesktop";
     "$anki" = "QT_IM_MODULE=fcitx anki";
     "$calculator" = "bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'";
+    "$screenrec" = "wl-screenrec-daemon --toggle";
 
     bind = [
       "SUPER, SPACE, exec, $launcher"
@@ -25,6 +26,8 @@ _: {
       "SUPER, G, exec, $calculator"
       "SUPER ALT, G, exec, geogebra"
       "SUPER ALT CTRL, G, exec, krita"
+
+      "SUPER ALT, R, exec, $screenrec"
 
       # browser
       "SUPER, N, exec, [workspace 2] $browser -P main --name main"

@@ -713,7 +713,8 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixvim-config": "nixvim-config",
-        "programsdb": "programsdb"
+        "programsdb": "programsdb",
+        "wl-screenrec-daemon": "wl-screenrec-daemon"
       }
     },
     "systems": {
@@ -765,6 +766,44 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "wl-screenrec-daemon": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "wl-screenrec-src": "wl-screenrec-src"
+      },
+      "locked": {
+        "lastModified": 1731395314,
+        "narHash": "sha256-PxJJ5PZQmqhsdqKtEVViXLA4DZeJWoWdVCLQJeyb5gY=",
+        "owner": "LilleAila",
+        "repo": "wl-screenrec-daemon",
+        "rev": "343fa3e2324ad9a3479186a8fbdc6857e0d1cccf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LilleAila",
+        "repo": "wl-screenrec-daemon",
+        "type": "github"
+      }
+    },
+    "wl-screenrec-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731195031,
+        "narHash": "sha256-cEz7Mhpp5dxM96NdOK9gzko5IEw9jgEouozhjE4yRm0=",
+        "owner": "russelltg",
+        "repo": "wl-screenrec",
+        "rev": "76d39d8d0c60f2d3965d1a61c251d735d35da7e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "russelltg",
+        "ref": "russell/reconnect_on_lost_output",
+        "repo": "wl-screenrec",
         "type": "github"
       }
     },
