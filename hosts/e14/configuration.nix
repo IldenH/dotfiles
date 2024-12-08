@@ -4,7 +4,7 @@
     ../../system
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   services = {
     openssh.enable = true;
     syncthing.enable = true;

@@ -5,7 +5,7 @@
   ...
 }: {
   config = lib.mkIf config.programs.kitty.enable {
-    home.packages = [pkgs.nerdfonts];
+    home.packages = [pkgs.nerd-fonts.jetbrains-mono];
     programs.kitty = {
       shellIntegration.mode = "no-cursor";
       font = {

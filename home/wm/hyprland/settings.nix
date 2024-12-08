@@ -53,7 +53,7 @@
     decoration = {
       rounding = 5;
       blur.enabled = false;
-      drop_shadow = false;
+      shadow.enabled = false;
     };
 
     animations.enabled = false;
