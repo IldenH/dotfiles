@@ -11,6 +11,7 @@
     printing.enable = true;
   };
 
+  networking.firewall.allowedTCPPorts = [8765]; # ankiconnect
   virtualisation.docker.enable = true;
 
   settings = {
