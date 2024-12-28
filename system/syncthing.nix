@@ -62,6 +62,14 @@
           "desktop"
           "e14"
         ];
+        "~/Calibre Library".devices = [
+          "desktop"
+          "e14"
+        ];
+        "~/.config/calibre".devices = [
+          "desktop"
+          "e14"
+        ];
       };
     };
   };
