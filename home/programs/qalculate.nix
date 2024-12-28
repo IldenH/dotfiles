@@ -7,7 +7,7 @@
   config = lib.mkIf config.settings.other.enable {
     home.packages = [pkgs.qalculate-gtk];
 
-    home.file.".config/qalculate/qalculate-gtk.cfg.home" = {
+    home.file.".config/qalculate/qalculate-gtk.cfg" = {
       text = lib.generators.toINI {} {
         General = {
           version = "5.0.0";
@@ -133,13 +133,6 @@
           default_assumption_sign = 0;
         };
       };
-      onChange = let
-        cfg = "$HOME/.config/qalculate/qalculate-gtk.cfg";
-      in ''
-        rm -f ${cfg}
-        cp ${cfg}.home ${cfg}
-        chmod u+w ${cfg}
-      '';
     };
   };
 }
