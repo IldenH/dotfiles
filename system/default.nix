@@ -18,6 +18,7 @@
     ./school.nix
     ./syncthing.nix
     ./user.nix
+    ./zfs
   ];
 
   options.settings.utils.enable = lib.mkEnableOption "utils" // {default = true;};
