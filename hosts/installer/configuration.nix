@@ -19,9 +19,17 @@
   networking.wireless.enable = lib.mkForce false;
   users.users.nixos.extraGroups = ["networkmanager"];
 
+  programs.git.enable = true;
+  programs.neovim.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-tty;
+  };
+
   environment.systemPackages = with pkgs; [
-    neovim
-    git
+    fzf
+    jq
   ];
 
   console = {
@@ -45,6 +53,17 @@
       "${base06}" # white
     ];
   };
+
+  environment.etc."installer/gpg-key.asc".source = ../../secrets/gpg-key.asc;
+  environment.etc."installer/install.sh".source = ./install.sh;
+  system.activationScripts.setupInstallerEnvironment = ''
+    gpg --import /etc/installer/gpg-key.asc
+
+    ln -sf /etc/installer/install.sh /home/nixos/install.sh
+    chmod +x /home/nixos/install.sh
+
+    /home/nixos/install.sh
+  '';
 
   nixpkgs.hostPlatform = "x86_64-linux";
 }
