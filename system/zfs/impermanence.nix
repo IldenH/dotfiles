@@ -32,7 +32,7 @@
       "/persist" = {
         hideMounts = true;
         files = [];
-        directories = [];
+        directories = [/etc/lact];
 
         users.${global.user.name} = {
           files = [
