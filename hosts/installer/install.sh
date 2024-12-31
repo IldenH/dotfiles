@@ -80,6 +80,8 @@ if [ -z "$username" ]; then
   username="$default_user"
 fi
 
+info "Importing GPG key"
+gpg --import /etc/installer/gpg-key.asc
 info "Cloning configuration"
 git clone "$repo_url" dotfiles
 cd dotfiles

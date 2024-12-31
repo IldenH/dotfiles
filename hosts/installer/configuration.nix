@@ -57,12 +57,8 @@
   environment.etc."installer/gpg-key.asc".source = ../../secrets/gpg-key.asc;
   environment.etc."installer/install.sh".source = ./install.sh;
   system.activationScripts.setupInstallerEnvironment = ''
-    gpg --import /etc/installer/gpg-key.asc
-
     ln -sf /etc/installer/install.sh /home/nixos/install.sh
     chmod +x /home/nixos/install.sh
-
-    /home/nixos/install.sh
   '';
 
   nixpkgs.hostPlatform = "x86_64-linux";
