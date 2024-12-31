@@ -3,6 +3,7 @@
   inputs,
   pkgs,
   lib,
+  secrets,
   ...
 }: {
   imports = [
@@ -19,7 +20,15 @@
   networking.wireless.enable = lib.mkForce false;
   users.users.nixos.extraGroups = ["networkmanager"];
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    config = {
+      user.name = "IldenH";
+      user.email = secrets.email;
+      commit.gpgSign = true;
+      user.signingKey = secrets.gpg.id;
+    };
+  };
   programs.neovim.enable = true;
   programs.gnupg.agent = {
     enable = true;

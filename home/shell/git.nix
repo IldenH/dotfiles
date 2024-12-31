@@ -9,10 +9,10 @@
     programs.git = {
       enable = true;
       userName = "IldenH";
-      userEmail = "IldenH.1" + "@" + "proton.me";
+      userEmail = secrets.email;
       extraConfig = {
         init.defaultBranch = "main";
-        commit.gpgsign = true;
+        commit.gpgSign = true;
         gpg.program = "${lib.getExe config.programs.gpg.package}";
         user.signingKey = secrets.gpg.id;
       };
