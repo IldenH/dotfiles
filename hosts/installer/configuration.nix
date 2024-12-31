@@ -64,9 +64,14 @@
     ];
   };
 
+  environment.etc."installer/id_ed25519.pub" = secrets.ssh.installer.public;
+  environment.etc."installer/id_ed25519" = secrets.ssh.installer.private;
   environment.etc."installer/gpg-key.asc".source = ../../secrets/gpg-key.asc;
   environment.etc."installer/install.sh".source = ./install.sh;
   system.activationScripts.setupInstallerEnvironment = ''
+    ln -sf /etc/installer/id_ed25519.pub /home/nixos/.ssh/id_ed25519.pub
+    ln -sf /etc/installer/id_ed25519 /home/nixos/.ssh/id_ed25519
+
     ln -sf /etc/installer/install.sh /home/nixos/install.sh
     chmod +x /home/nixos/install.sh
   '';
