@@ -39,6 +39,7 @@
   environment.systemPackages = with pkgs; [
     fzf
     jq
+    git-crypt
   ];
 
   console = {
