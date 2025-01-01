@@ -32,7 +32,7 @@
       "/persist" = {
         hideMounts = true;
         files = [];
-        directories = [/etc/lact];
+        directories = ["/var/lib/nixos" "/etc/lact"];
 
         users.${global.user.name} = {
           files = [
