@@ -108,9 +108,11 @@
             ".local/share/direnv"
             ".local/share/nvim"
             ".local/state/nvim"
+            ".local/share/zoxide"
 
             ".config/hypr"
             ".config/vesktop"
+            ".config/syncthing"
 
             ".steam"
             ".local/share/Steam"
