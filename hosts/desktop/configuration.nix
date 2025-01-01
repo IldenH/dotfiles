@@ -14,6 +14,8 @@
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect
   virtualisation.docker.enable = true;
 
+  networking.hostId = "5c73541f";
+
   settings = {
     keyMap = "no";
 
@@ -28,6 +30,11 @@
     japanese.enable = true;
     sound.enable = true;
     utils.enable = true;
+
+    zfs.enable = true;
+    zfs.encryption = false;
+    zfs.snapshots = true;
+    impermanence.enable = true;
   };
 
   system.stateVersion = "23.11";
