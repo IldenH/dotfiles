@@ -201,9 +201,9 @@ sudo nixos-install --no-root-password --flake .#$HOST_NAME --impure
 info "Copying secrets"
 sudo mkdir -p "/mnt/cache/home/$username"
 sudo cp secrets/gpg-key.asc "/mnt/cache/home/$username/"
-sudo chown -R $username "/mnt/cache/home/$username"
+sudo chown -R 1000:100 "/mnt/cache/home/$username"
 sudo mkdir -p "/mnt/persist/home/$username"
-sudo chown -R $username "/mnt/persist/home/$username"
+sudo chown -R 1000:100 "/mnt/persist/home/$username"
 
 info "Done!"
 cat << Summary

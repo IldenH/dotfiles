@@ -9,7 +9,10 @@
     description = global.user.description;
     password = secrets.password;
     extraGroups = ["wheel"];
+    uid = 1000;
   };
 
   nix.settings.trusted-users = [global.user.name];
+
+  users.groups.users.gid = 100;
 }
