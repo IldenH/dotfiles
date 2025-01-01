@@ -196,7 +196,7 @@ sudo zfs create -o mountpoint=legacy zroot/persist
 sudo mount --mkdir -t zfs zroot/persist /mnt/persist
 
 info "Installing NixOS configuration for host $HOST_NAME"
-sudo nixos-install --no-root-password --flake .#$HOST_NAME
+sudo nixos-install --no-root-password --flake .#$HOST_NAME --impure
 
 info "Copying secrets"
 sudo mkdir -p "/mnt/cache/home/$username"
