@@ -32,7 +32,11 @@
       "/persist" = {
         hideMounts = true;
         files = [];
-        directories = ["/var/lib/nixos" "/etc/lact"];
+        directories = [
+          "/var/log"
+          "/var/lib/nixos"
+          "/etc/lact"
+        ];
 
         users.${global.user.name} = {
           files = [
@@ -80,7 +84,6 @@
         hideMounts = true;
         files = [];
         directories = [
-          "/var/log"
           "/var/lib/systemd/backlight"
           "/var/lib/docker"
           "/etc/NetworkManager/system-connections"
