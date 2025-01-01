@@ -2,7 +2,7 @@
 # heavily inspired by https://github.com/LilleAila/dotfiles/blob/d729f1af37454b3ecfe7e18088ba6b5c663b214a/hosts/installer/install.sh
 set -e
 
-repo_url="git@github.com:IldenH/dotfiles"
+repo_url="git@github.com:IldenH/dotfiles.git"
 default_user="ildenhnix"
 
 function yesno() {

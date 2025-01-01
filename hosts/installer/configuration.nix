@@ -69,6 +69,7 @@
   environment.etc."installer/gpg-key.asc".source = ../../secrets/gpg-key.asc;
   environment.etc."installer/install.sh".source = ./install.sh;
   system.activationScripts.setupInstallerEnvironment = ''
+    mkdir -p /home/nixos/.ssh
     ln -sf /etc/installer/id_ed25519.pub /home/nixos/.ssh/id_ed25519.pub
     ln -sf /etc/installer/id_ed25519 /home/nixos/.ssh/id_ed25519
 
