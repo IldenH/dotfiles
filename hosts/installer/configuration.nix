@@ -64,8 +64,8 @@
     ];
   };
 
-  environment.etc."installer/id_ed25519.pub" = secrets.ssh.installer.public;
-  environment.etc."installer/id_ed25519" = secrets.ssh.installer.private;
+  environment.etc."installer/id_ed25519.pub".text = secrets.ssh.installer.public;
+  environment.etc."installer/id_ed25519".text = secrets.ssh.installer.private;
   environment.etc."installer/gpg-key.asc".source = ../../secrets/gpg-key.asc;
   environment.etc."installer/install.sh".source = ./install.sh;
   system.activationScripts.setupInstallerEnvironment = ''
