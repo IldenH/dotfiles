@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  global,
   ...
 }: {
   options.settings.school.enable = lib.mkEnableOption "school related programs";
@@ -23,7 +22,7 @@
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
       vaults.vault = {
-        path = "/home/${global.user.name}/dev/Vault";
+        path = "${config.home.homeDirectory}/dev/Vault";
         open = true;
       };
       frame = "hidden";
