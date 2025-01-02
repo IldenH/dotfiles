@@ -37,5 +37,27 @@
     impermanence.enable = true;
   };
 
+  environment.etc."lact/config.yaml".text = builtins.toJSON {
+    gpus."1002:67DF-174B:E347-0000:01:00.0" = {
+      fan_control_enabled = true;
+      fan_control_settings = {
+        mode = "curve";
+        temperature_key = "edge";
+        interval_ms = 500;
+        curve = {
+          "40" = 0.15;
+          "50" = 0.35;
+          "60" = 0.5;
+          "70" = 0.75;
+          "80" = 1.0;
+        };
+        spindown_delay_ms = 5000;
+        change_threshold = 2;
+      };
+      power_cap = 145.0;
+      performance_level = "low";
+    };
+  };
+
   system.stateVersion = "23.11";
 }
