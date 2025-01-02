@@ -68,7 +68,6 @@
 
             ".config/calibre"
             ".config/GeoGebra"
-            ".config/heroic"
             ".config/libreoffice"
             ".config/mozc"
             ".config/obs-studio"
@@ -111,6 +110,7 @@
             ".config/hypr"
             ".config/vesktop"
             ".config/syncthing"
+            ".config/heroic"
 
             ".steam"
             ".local/share/Steam"
