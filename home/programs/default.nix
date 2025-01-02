@@ -8,6 +8,7 @@
     # ./anki.nix
     ./firefox
     ./discord
+    ./heroic
     ./files.nix
     ./school.nix
     ./qalculate.nix
@@ -24,7 +25,6 @@
     (lib.mkIf config.settings.games.enable {
       home.packages = with pkgs; [
         adwsteamgtk
-        heroic
         # lutris
         (prismlauncher.override {
           jdks = [

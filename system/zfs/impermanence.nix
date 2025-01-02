@@ -68,7 +68,7 @@
 
             ".config/calibre"
             ".config/GeoGebra"
-            ".config/heroic" # TODO: declerative config
+            ".config/heroic"
             ".config/libreoffice"
             ".config/mozc"
             ".config/obs-studio"
