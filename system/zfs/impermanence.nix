@@ -87,7 +87,6 @@
           "/var/lib/docker"
           "/etc/NetworkManager/system-connections"
           "/var/lib/bluetooth"
-          "/var/cache/tuigreet"
           "/var/lib/alsa"
         ];
 
