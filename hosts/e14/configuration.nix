@@ -14,6 +14,8 @@
 
   virtualisation.docker.enable = true;
 
+  networking.hostId = "17eafcab";
+
   settings = {
     keyMap = "no";
 
@@ -28,7 +30,12 @@
     japanese.enable = true;
     sound.enable = true;
     utils.enable = true;
+
+    zfs.enable = true;
+    zfs.encryption = true;
+    zfs.snapshots = true;
+    impermanence.enable = true;
   };
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 }
