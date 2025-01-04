@@ -74,6 +74,11 @@ info "SWAP Partiton: $SWAPDISK"
 info "ZFS Partiton: $ZFSDISK"
 
 use_encryption=$(yesno "Use encryption?")
+if [[ $use_encryption == "y" ]]; then
+    encryption_options=(-O encryption=aes-256-gcm -O keyformat=passphrase -O keylocation=prompt)
+else
+    encryption_options=()
+fi
 
 read -rp "Username of the main user ($default_user): " username 
 if [ -z "$username" ]; then
@@ -131,6 +136,20 @@ if [[ $do_format == "n" ]]; then
     exit
 fi
 
+# creating here such that encryption passphrase is entered
+info "Creating base zpool"
+sudo zpool create -f \
+    -o ashift=12 \
+    -o autotrim=on \
+    -O compression=zstd \
+    -O acltype=posixacl \
+    -O atime=off \
+    -O xattr=sa \
+    -O normalization=formD \
+    -O mountpoint=none \
+    "${encryption_options[@]}" \
+    zroot "$ZFSDISK"
+
 info "Starting installer... come back once done in a little bit!"
 
 info "Partitioning disk"
@@ -150,26 +169,6 @@ sudo swapon "$SWAPDISK"
 
 info "Creating Boot Disk"
 sudo mkfs.fat -F 32 "$BOOTDISK" -n NIXBOOT
-
-# setup encryption
-if [[ $use_encryption == "y" ]]; then
-    encryption_options=(-O encryption=aes-256-gcm -O keyformat=passphrase -O keylocation=prompt)
-else
-    encryption_options=()
-fi
-
-info "Creating base zpool"
-sudo zpool create -f \
-    -o ashift=12 \
-    -o autotrim=on \
-    -O compression=zstd \
-    -O acltype=posixacl \
-    -O atime=off \
-    -O xattr=sa \
-    -O normalization=formD \
-    -O mountpoint=none \
-    "${encryption_options[@]}" \
-    zroot "$ZFSDISK"
 
 info "Creating /"
 sudo zfs create -o mountpoint=legacy zroot/root
@@ -206,13 +205,7 @@ sudo mkdir -p "/mnt/persist/home/$username"
 sudo chown -R 1000:100 "/mnt/persist/home/$username"
 
 info "Done!"
-cat << Summary
-
-Remember to import the gpg key after reboot!
-`gpg --import gpg-key.asc`
-
-Summary
-
+info "Remember to import the gpg key after reboot!"
 if [ "$HOST" == "Configure a new host" ]; then
-  info "Also modify the generated config and commit (hosts: added $HOST_NAME) before rebooting!"
+  info "Also modify the generated config and commit (Hosts: added $HOST_NAME) before rebooting!"
 fi
