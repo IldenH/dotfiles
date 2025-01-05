@@ -24,7 +24,7 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
-    desktop = null;
+    desktop = "$HOME";
     publicShare = null;
     templates = null;
   };
