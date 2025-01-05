@@ -14,7 +14,8 @@
 
   virtualisation.docker.enable = true;
 
-  networking.hostId = "17eafcab";
+  networking.hostId = "32bb9655";
+  boot.zfs.devNodes = "/dev/disk/by-partuuid";
 
   settings = {
     keyMap = "no";
