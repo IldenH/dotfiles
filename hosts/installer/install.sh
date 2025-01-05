@@ -136,7 +136,17 @@ if [[ $do_format == "n" ]]; then
     exit
 fi
 
-# creating here such that encryption passphrase is entered
+info "Partitioning disk"
+sudo blkdiscard -f "$DISK"
+
+sudo sgdisk -n3:1M:+1G -t3:EF00 "$DISK"
+sudo sgdisk -n2:0:+16G -t2:8200 "$DISK"
+sudo sgdisk -n1:0:0 -t1:BF01 "$DISK"
+
+# notify kernel of partition changes
+sudo sgdisk -p "$DISK" > /dev/null
+sleep 5
+
 info "Creating base zpool"
 sudo zpool create -f \
     -o ashift=12 \
@@ -149,19 +159,6 @@ sudo zpool create -f \
     -O mountpoint=none \
     "${encryption_options[@]}" \
     zroot "$ZFSDISK"
-
-info "Starting installer... come back once done in a little bit!"
-
-info "Partitioning disk"
-sudo blkdiscard -f "$DISK"
-
-sudo sgdisk -n3:1M:+1G -t3:EF00 "$DISK"
-sudo sgdisk -n2:0:+16G -t2:8200 "$DISK"
-sudo sgdisk -n1:0:0 -t1:BF01 "$DISK"
-
-# notify kernel of partition changes
-sudo sgdisk -p "$DISK" > /dev/null
-sleep 5
 
 info "Creating Swap"
 sudo mkswap "$SWAPDISK" --label "SWAP"
