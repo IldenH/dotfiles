@@ -111,6 +111,7 @@
             ".config/vesktop"
             ".config/syncthing"
             ".config/heroic"
+            ".config/gh"
 
             ".steam"
             ".local/share/Steam"
