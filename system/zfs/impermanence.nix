@@ -112,6 +112,7 @@
             ".config/syncthing"
             ".config/heroic"
             ".config/gh"
+            ".config/obsidian"
 
             ".steam"
             ".local/share/Steam"
