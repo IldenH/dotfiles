@@ -139,8 +139,13 @@
         anki-bin
         krita
         python311
-        ungoogled-chromium
       ];
+
+      programs.chromium = {
+        enable = true;
+        package = pkgs.ungoogled-chromium;
+        commandLineArgs = ["--disable-gpu"];
+      };
 
       settings = {
         media.enable = lib.mkDefault true;
