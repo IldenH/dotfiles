@@ -30,7 +30,8 @@
     };
 
     xdg.mimeApps.defaultApplications = {
-      "application/pdf" = ["zathura.desktop"];
+      "application/pdf" = "org.pwmt.zathura.desktop";
+      "image/vnd.djvu" = "org.pwmt.zathura.desktop";
     };
   };
 }

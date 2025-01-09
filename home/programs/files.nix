@@ -15,6 +15,10 @@
       })
     ];
 
+    xdg.mimeApps.defaultApplications = {
+      "inode/directory" = "nemo.desktop";
+    };
+
     dconf.settings = {
       "org/cinnamon/desktop/default-applications/terminal" = {
         exec = "kitty";

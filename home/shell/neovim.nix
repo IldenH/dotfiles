@@ -31,9 +31,12 @@ in {
     };
 
     xdg.mimeApps.defaultApplications = {
-      "text/*" = "nvim.desktop";
       "text/plain" = "nvim.desktop";
       "application/x-shellscript" = "nvim.desktop";
+      "application/x-docbook+xml" = "nvim.desktop";
+      "application/json" = "nvim.desktop";
+      "application/x-yaml" = "nvim.desktop";
+      "application/x-ruby" = "nvim.desktop";
     };
   };
 }
