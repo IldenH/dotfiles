@@ -65,6 +65,7 @@
         anki-bin
         krita
         python311
+        ungoogled-chromium
       ];
 
       settings = {

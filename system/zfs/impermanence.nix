@@ -93,7 +93,10 @@
           files = [];
           directories = [
             ".tldrc/tldr/pages"
+
             ".cache/mozilla"
+            ".cache/chromium"
+            ".config/chromium"
 
             ".gnupg"
             ".ssh"
