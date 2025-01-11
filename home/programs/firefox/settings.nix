@@ -69,6 +69,68 @@
   "browser.toolbars.bookmarks.visibility" = "newtab";
   "widget.gtk.overlay-scrollbars.enabled" = false;
 
-  # needs to be a string like this
-  "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action","jid1-mnnxcxisbpnsxq_jetpack-browser-action","_74145f27-f039-47ce-a470-a662b129930a_-browser-action","_contain-facebook-browser-action","dfyoutube_example_com-browser-action","jid1-kkzogwgsw3ao4q_jetpack-browser-action","addon_simplelogin-browser-action","sponsorblocker_ajay_app-browser-action","_34daeb50-c2d2-4f14-886a-7160b24d66a4_-browser-action","_9a41dee2-b924-4161-a971-7fb35c053a4a_-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","addon_darkreader_org-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","ublock0_raymondhill_net-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","_74145f27-f039-47ce-a470-a662b129930a_-browser-action","addon_darkreader_org-browser-action","dfyoutube_example_com-browser-action","_9a41dee2-b924-4161-a971-7fb35c053a4a_-browser-action","_contain-facebook-browser-action","jid1-kkzogwgsw3ao4q_jetpack-browser-action","jid1-mnnxcxisbpnsxq_jetpack-browser-action","addon_simplelogin-browser-action","sponsorblocker_ajay_app-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action","ublock0_raymondhill_net-browser-action","_34daeb50-c2d2-4f14-886a-7160b24d66a4_-browser-action","_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","unified-extensions-area","TabsToolbar","toolbar-menubar"],"currentVersion":20,"newElementCount":6}'';
+  "browser.uiCustomization.state" = let
+    ublock-origin = "ublock0_raymondhill_net-browser-action";
+    darkreader = "addon_darkreader_org-browser-action";
+    bitwarden = "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action";
+
+    clearurls = "_74145f27-f039-47ce-a470-a662b129930a_-browser-action";
+    facebook-container = "_contain-facebook-browser-action";
+    i-dont-care-about-cookies = "jid1-kkzogwgsw3ao4q_jetpack-browser-action";
+    privacy-badger = "jid1-mnnxcxisbpnsxq_jetpack-browser-action";
+
+    enhanced-h264ify = "_34daeb50-c2d2-4f14-886a-7160b24d66a4_-browser-action";
+    sponsorblock = "sponsorblocker_ajay_app-browser-action";
+    dearrow = "dearrow_ajay_app-browser-action";
+
+    yomitan = "_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action";
+  in
+    builtins.toJSON {
+      placements = {
+        widget-overflow-fixed-list = [];
+        unified-extensions-area = [
+          yomitan
+          privacy-badger
+          clearurls
+          facebook-container
+          i-dont-care-about-cookies
+          sponsorblock
+          dearrow
+          enhanced-h264ify
+        ];
+        nav-bar = [
+          "back-button"
+          "forward-button"
+          "stop-reload-button"
+          "urlbar-container"
+          "downloads-button"
+          darkreader
+          bitwarden
+          ublock-origin
+          "unified-extensions-button"
+          "reset-pbm-toolbar-button"
+        ];
+        toolbar-menubar = [
+          "menubar-items"
+        ];
+        TabsToolbar = [
+          "tabbrowser-tabs"
+          "new-tab-button"
+        ];
+        vertical-tabs = [];
+        PersonalToolbar = [
+          "personal-bookmarks"
+        ];
+      };
+      dirtyAreaCache = [
+        "unified-extensions-area"
+        "nav-bar"
+        "toolbar-menubar"
+        "TabsToolbar"
+        "vertical-tabs"
+        "PersonalToolbar"
+      ];
+      currentVersion = 20;
+      newElementCount = 4;
+    };
 }
