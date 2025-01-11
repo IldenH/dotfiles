@@ -4,19 +4,18 @@
 }:
 # https://gitlab.com/rycee/nur-expressions/-/blob/master/pkgs/firefox-addons/addons.json?ref_type=heads
 with inputs.firefox-addons.packages."${pkgs.system}"; [
-  bitwarden
-  clearurls
+  ublock-origin
   darkreader
-  # df-youtube # ublock filters work better
-  enhanced-h264ify
+  bitwarden
+
+  clearurls
   facebook-container
   i-dont-care-about-cookies
   privacy-badger
-  # simplelogin # don't really use
+
+  enhanced-h264ify
   sponsorblock
-  #	stylus # userContent works better
-  # tampermonkey # unfree might change to grease monkey
-  ublock-origin
+  dearrow
+
   yomitan
-  youtube-shorts-block
 ]
