@@ -13,8 +13,6 @@
 
   config = lib.mkIf config.settings.games.enable {
     home.packages = with pkgs; [
-      adwsteamgtk
-      # lutris
       (prismlauncher.override {
         jdks = [
           temurin-bin-8
