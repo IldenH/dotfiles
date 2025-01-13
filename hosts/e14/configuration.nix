@@ -16,6 +16,7 @@
     '';
   };
 
+  boot.kernelParams = ["amd_pstate=active"];
   environment.variables.LIBSEAT_BACKEND = "logind";
 
   virtualisation.docker.enable = true;
