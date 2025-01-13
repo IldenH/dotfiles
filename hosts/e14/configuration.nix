@@ -9,8 +9,14 @@
     openssh.enable = true;
     syncthing.enable = true;
     printing.enable = true;
-    logind.powerKey = "ignore";
+    logind.extraConfig = ''
+      HandlePowerKey=ignore
+      HandleLidSwitch=suspend
+      HandleLidSwitchDocked=suspend
+    '';
   };
+
+  environment.variables.LIBSEAT_BACKEND = "logind";
 
   virtualisation.docker.enable = true;
 
