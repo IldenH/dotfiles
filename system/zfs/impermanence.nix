@@ -85,6 +85,7 @@
           "/var/lib/systemd/backlight"
           "/var/lib/docker"
           "/etc/NetworkManager/system-connections"
+          "/var/lib/iwd"
           "/var/lib/bluetooth"
           "/var/lib/alsa"
         ];
