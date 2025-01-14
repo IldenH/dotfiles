@@ -29,7 +29,6 @@
 
     networking = {
       enable = true;
-      wifi.enable = true;
       bluetooth.enable = false;
     };
 
@@ -86,7 +85,7 @@
       DEVICES_TO_DISABLE_ON_STARTUP = "nfc wwan";
       DEVICES_TO_ENABLE_ON_STARTUP = "bluetooth wifi";
       DEVICES_TO_DISABLE_ON_SHUTDOWN = "nfc wifi wwan";
-      DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE = "nfc wifi wwan";
+      DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE = "nfc wwan";
     };
   };
 

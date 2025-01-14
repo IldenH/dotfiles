@@ -11,7 +11,6 @@
 
     networking = {
       enable = true;
-      wifi.enable = true;
       bluetooth.enable = false;
     };
 
