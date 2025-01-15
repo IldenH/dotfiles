@@ -11,6 +11,7 @@
     ./files.nix
     ./games
     ./school.nix
+    ./rofi.nix
     ./qalculate.nix
     ./zathura.nix
   ];

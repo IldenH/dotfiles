@@ -23,7 +23,6 @@
     home.packages = with pkgs; [
       libnotify
       nwg-displays
-      rofi-wayland
       seatd
       swaybg
     ];

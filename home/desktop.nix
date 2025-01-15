@@ -13,6 +13,7 @@
       firefox.enable = true;
       hyprlock.enable = true;
       kitty.enable = true;
+      rofi.enable = true;
       waybar.enable = true;
       zathura.enable = true;
       zsh.enable = true;

@@ -3,7 +3,7 @@ _: {
     "$terminal" = "kitty";
     "$files" = "nemo";
     "$browser" = "firefox";
-    "$launcher" = "rofi -show drun -show-icons";
+    "$launcher" = "rofi -show drun";
     "$discord" = "vesktop";
     "$anki" = "QT_IM_MODULE=fcitx anki";
     "$calculator" = "bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'";
