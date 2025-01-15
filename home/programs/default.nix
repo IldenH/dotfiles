@@ -10,6 +10,7 @@
     ./discord
     ./files.nix
     ./games
+    ./obsidian.nix
     ./school.nix
     ./rofi.nix
     ./qalculate.nix

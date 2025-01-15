@@ -12,21 +12,11 @@
       libreoffice
       temurin-jre-bin-17
       geogebra6
-      obsidian
       bottles
       pandoc
       zotero
       xournalpp
       calibre
     ];
-
-    home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
-      vaults.vault = {
-        path = "${config.home.homeDirectory}/dev/Vault";
-        open = true;
-      };
-      frame = "hidden";
-      disableGpu = true;
-    };
   };
 }
