@@ -8,7 +8,7 @@
 }: {
   home = {
     username = "${global.user.name}";
-    homeDirectory = "/home/${global.user.name}";
+    homeDirectory = "/home/${config.home.username}";
     stateVersion = "23.11";
   };
 
