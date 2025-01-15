@@ -2,6 +2,8 @@
   inputs,
   global,
   pkgs,
+  lib,
+  config,
   ...
 }: {
   home = {
@@ -20,6 +22,10 @@
     ./shell
     ./wm
   ];
+
+  home.file."colorscheme.txt".text = lib.concatStringsSep "\n" (
+    lib.mapAttrsToList (name: value: "${name}: #${value}") config.colorScheme.palette
+  );
 
   xdg.mimeApps.enable = true;
   xdg.userDirs = {
