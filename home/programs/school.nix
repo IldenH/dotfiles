@@ -18,5 +18,11 @@
       xournalpp
       calibre
     ];
+
+    xdg.desktopEntries.teams-for-linux = {
+      name = "Microsoft Teams";
+      icon = "teams";
+      exec = "teams-for-linux --disableGpu";
+    };
   };
 }
