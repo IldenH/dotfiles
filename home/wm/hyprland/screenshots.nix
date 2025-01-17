@@ -37,6 +37,9 @@
         # "SUPER, S, exec, grimblast ${args} copysave active ${raw}"
         "SUPER ALT, S, exec, grimblast ${args} copysave output ${raw}"
         "SUPER SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
+
+        # https://github.com/LilleAila/dotfiles/commit/80ecf1847c3407a9931433ddda46736cbb31b2ba
+        ''SUPER, Q, exec, ${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy''
       ];
 
       xdg.userDirs.extraConfig = {
