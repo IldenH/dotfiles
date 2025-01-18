@@ -109,6 +109,7 @@
             ".local/share/nvim"
             ".local/state/nvim"
             ".local/share/zoxide"
+            ".local/share/nvf"
 
             ".config/hypr"
             ".config/vesktop"
