@@ -7,7 +7,7 @@
 }: {
   config = lib.mkIf config.settings.cli.enable {
     home.packages = [pkgs.neofetch];
-    programs.zsh.initExtra = "neofetch";
+    # programs.zsh.initExtra = "neofetch";
 
     home.file.".config/neofetch/config.conf".text =
       /*
