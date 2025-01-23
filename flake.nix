@@ -30,9 +30,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim-config = {
-      url = "github:IldenH/nixvim";
+    nvf-config = {
+      url = "github:IldenH/nvf-config";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nix-colors.follows = "nix-colors";
     };
 
     programsdb = {
