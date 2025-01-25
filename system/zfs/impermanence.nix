@@ -107,6 +107,7 @@
             ".local/state/wireplumber"
             ".local/share/direnv"
             ".local/share/zoxide"
+            ".local/share/bottles"
 
             ".config/hypr"
             ".config/vesktop"
