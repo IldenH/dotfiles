@@ -106,20 +106,26 @@
 
             ".local/state/wireplumber"
             ".local/share/direnv"
-            ".local/share/nvim"
-            ".local/state/nvim"
             ".local/share/zoxide"
-            ".local/share/nvf"
 
             ".config/hypr"
             ".config/vesktop"
-            ".config/syncthing"
             ".config/heroic"
             ".config/gh"
             ".config/obsidian"
 
             ".steam"
             ".local/share/Steam"
+
+            ".config/syncthing"
+            ".cache/syncthing"
+
+            ".cache/nix"
+            ".cache/nvf"
+            ".local/share/nvf"
+            ".local/state/nvf"
+            ".local/share/nvim"
+            ".local/state/nvim"
           ];
         };
       };
