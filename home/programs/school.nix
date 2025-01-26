@@ -24,5 +24,11 @@
       icon = "teams";
       exec = "teams-for-linux --disableGpu";
     };
+
+    xdg.desktopEntries.geogebra = {
+      name = "Geogebra";
+      icon = "geogebra";
+      exec = "geogebra --disable-gpu";
+    };
   };
 }
