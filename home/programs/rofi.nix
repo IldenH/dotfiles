@@ -25,6 +25,8 @@
 
           selected-text = mkLiteral "#${base06}";
           selected-background = mkLiteral "#${base01}";
+
+          background-color = mkLiteral "@background";
         };
 
         window.background-color = mkLiteral "@background";
