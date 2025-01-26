@@ -7,7 +7,7 @@
       show-icons = true;
       disable-history = true;
       steal-focus = true;
-      matching = "fuzzy";
+      matching = "normal";
       replace = true;
       click-to-exit = true;
     };
