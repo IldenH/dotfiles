@@ -75,7 +75,7 @@
     bitwarden = "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action";
 
     facebook-container = "_contain-facebook-browser-action";
-    istilldontcareaboutcookies = "idcac-pub@guus.ninja";
+    istilldontcareaboutcookies = "idcac-pub_guus_ninja-browser-action";
     privacy-badger = "jid1-mnnxcxisbpnsxq_jetpack-browser-action";
 
     enhanced-h264ify = "_34daeb50-c2d2-4f14-886a-7160b24d66a4_-browser-action";
@@ -83,7 +83,7 @@
     dearrow = "dearrow_ajay_app-browser-action";
 
     yomitan = "_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action";
-    zotero-connector = "zotero@chnm.gmu.edu";
+    zotero-connector = "zotero_chnm_gmu_edu-browser-action";
   in
     builtins.toJSON {
       placements = {
