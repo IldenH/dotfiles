@@ -17,4 +17,5 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
   dearrow
 
   yomitan
+  zotero-connector
 ]

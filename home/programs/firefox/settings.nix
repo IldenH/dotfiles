@@ -83,11 +83,13 @@
     dearrow = "dearrow_ajay_app-browser-action";
 
     yomitan = "_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action";
+    zotero-connector = "zotero@chnm.gmu.edu";
   in
     builtins.toJSON {
       placements = {
         widget-overflow-fixed-list = [];
         unified-extensions-area = [
+          zotero-connector
           yomitan
           privacy-badger
           facebook-container
