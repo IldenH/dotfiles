@@ -76,7 +76,7 @@
 
     clearurls = "_74145f27-f039-47ce-a470-a662b129930a_-browser-action";
     facebook-container = "_contain-facebook-browser-action";
-    i-dont-care-about-cookies = "jid1-kkzogwgsw3ao4q_jetpack-browser-action";
+    istilldontcareaboutcookies = "idcac-pub@guus.ninja";
     privacy-badger = "jid1-mnnxcxisbpnsxq_jetpack-browser-action";
 
     enhanced-h264ify = "_34daeb50-c2d2-4f14-886a-7160b24d66a4_-browser-action";
@@ -93,7 +93,7 @@
           privacy-badger
           clearurls
           facebook-container
-          i-dont-care-about-cookies
+          istilldontcareaboutcookies
           sponsorblock
           dearrow
           enhanced-h264ify

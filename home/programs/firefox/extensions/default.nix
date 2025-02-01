@@ -10,7 +10,7 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
 
   clearurls
   facebook-container
-  i-dont-care-about-cookies
+  istilldontcareaboutcookies
   privacy-badger
 
   enhanced-h264ify
