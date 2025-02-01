@@ -8,7 +8,6 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
   darkreader
   bitwarden
 
-  clearurls
   facebook-container
   istilldontcareaboutcookies
   privacy-badger

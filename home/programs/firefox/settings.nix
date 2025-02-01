@@ -74,7 +74,6 @@
     darkreader = "addon_darkreader_org-browser-action";
     bitwarden = "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action";
 
-    clearurls = "_74145f27-f039-47ce-a470-a662b129930a_-browser-action";
     facebook-container = "_contain-facebook-browser-action";
     istilldontcareaboutcookies = "idcac-pub@guus.ninja";
     privacy-badger = "jid1-mnnxcxisbpnsxq_jetpack-browser-action";
@@ -91,7 +90,6 @@
         unified-extensions-area = [
           yomitan
           privacy-badger
-          clearurls
           facebook-container
           istilldontcareaboutcookies
           sponsorblock
