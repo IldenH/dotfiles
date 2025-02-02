@@ -51,7 +51,7 @@
 
         "SUPER ALT, E, exec, wl-paste | swappy -f -"
 
-        "SUPER ALT, S, exec, ${ocr}"
+        "SUPER ALT, S, exec, ${ocr} ${raw}"
 
         # https://github.com/LilleAila/dotfiles/commit/80ecf1847c3407a9931433ddda46736cbb31b2ba
         ''SUPER, Q, exec, ${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy''
