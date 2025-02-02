@@ -45,6 +45,11 @@
       url = "github:LilleAila/wl-screenrec-daemon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    focal = {
+      url = "github:iynaix/focal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
