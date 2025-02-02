@@ -7,7 +7,7 @@
     home = "/home/${global.user.name}";
 
     mkDevice = device: {
-      id = device;
+      id = device.id;
       autoAcceptFolders = true;
     };
   in {

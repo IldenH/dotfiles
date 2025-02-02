@@ -12,4 +12,7 @@
 
   home.file.".ssh/id_ed25519.pub".text = secrets.ssh.desktop.public;
   home.file.".ssh/id_ed25519".text = secrets.ssh.desktop.private;
+
+  home.file.".config/syncthing/cert.pem".text = secrets.syncthing.desktop.cert;
+  home.file.".config/syncthing/key.pem".text = secrets.syncthing.desktop.key;
 }
