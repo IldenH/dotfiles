@@ -41,34 +41,35 @@
       fcitx5.waylandFrontend = true;
       fcitx5.settings = {
         globalOptions = {
-          "Hotkey/TriggerKeys"."0" = "Alt+Shift+Z";
-          "Behavior" = {
-            "ActiveByDefault" = "True";
-            "ShareInputState" = "All";
+          "Hotkey/TriggerKeys"."0" = "Super+F";
+          Behavior = {
+            ActiveByDefault = "True";
+            ShareInputState = "All";
           };
         };
         inputMethod = {
-          "GroupOrder"."0" = "Default";
+          GroupOrder."0" = "Default";
+
           "Groups/0" = {
-            "Name" = "Default";
+            Name = "Default";
             "Default Layout" = "no";
-            "DefaultIM" = "mozc";
+            DefaultIM = "keyboard-no";
           };
           "Groups/0/Items/0" = {
-            "Name" = "keyboard-no";
-            "Layout" = "no";
+            Name = "keyboard-no";
+            Layout = "no";
           };
           "Groups/0/Items/1" = {
-            "Name" = "mozc";
-            "Layout" = "no";
+            Name = "mozc";
+            Layout = "no";
           };
         };
         addons = with config.hm.colorScheme.palette; {
-          "classicui"."globalSection" = {
-            "TrayOutlineColor" = "#${base00}";
-            "TrayTextColor" = "#${base05}";
-            "PreferTextIcon" = "True";
-            "Theme" = "default-dark";
+          classicui.globalSection = {
+            TrayOutlineColor = "#${base00}";
+            TrayTextColor = "#${base05}";
+            PreferTextIcon = "True";
+            Theme = "default-dark";
           };
         };
       };
