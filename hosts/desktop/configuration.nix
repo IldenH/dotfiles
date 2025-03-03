@@ -9,6 +9,7 @@
     openssh.enable = true;
     syncthing.enable = true;
     printing.enable = true;
+    home-assistant.enable = true;
   };
 
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect

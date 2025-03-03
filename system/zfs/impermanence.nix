@@ -35,6 +35,7 @@
         directories = [
           "/var/log"
           "/var/lib/nixos"
+          "/var/lib/hass"
         ];
 
         users.${global.user.name} = {

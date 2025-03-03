@@ -11,6 +11,7 @@
     ./docker.nix
     ./greeter.nix
     ./grub.nix
+    ./home-assistant.nix
     ./locale.nix
     ./networking.nix
     ./nix.nix
