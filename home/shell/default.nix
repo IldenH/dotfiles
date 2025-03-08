@@ -70,6 +70,11 @@
       options = ["--cmd cd"];
     };
 
+    programs.ssh = {
+      enable = true;
+      extraConfig = "SetEnv TERM=xterm-256color";
+    };
+
     home.shellAliases = {
       cat = "bat";
       cls = "clear && ls";
