@@ -17,6 +17,7 @@
       zotero
       xournalpp
       calibre
+      kiwix
     ];
 
     xdg.desktopEntries.teams-for-linux = {

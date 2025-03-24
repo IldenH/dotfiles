@@ -109,6 +109,7 @@
             ".local/share/direnv"
             ".local/share/zoxide"
             ".local/share/bottles"
+            ".local/share/kiwix"
 
             ".config/hypr"
             ".config/vesktop"
