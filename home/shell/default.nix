@@ -19,6 +19,7 @@
       tldr
       file
       nurl
+      pdftk
     ];
 
     programs.bat = {
