@@ -74,6 +74,7 @@
     programs.ssh = {
       enable = true;
       extraConfig = "SetEnv TERM=xterm-256color";
+      matchBlocks = import ../../secrets/ssh-hosts.nix;
     };
 
     home.shellAliases = {
