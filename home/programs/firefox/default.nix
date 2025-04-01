@@ -13,12 +13,12 @@
     (lib.mkIf config.programs.firefox.enable {
       programs.firefox.profiles = let
         search = {
-          default = "DuckDuckGo";
+          default = "ddg";
           force = true;
           engines = {
-            "Bing".metaData.hidden = true;
-            "Google".metaData.hidden = true;
-            "Wikipedia (en)".metaData.hidden = true;
+            "bing".metaData.hidden = true;
+            "google".metaData.hidden = true;
+            "wikipedia".metaData.hidden = true;
           };
         };
         settings = import ./settings.nix;
@@ -32,61 +32,68 @@
             // {
               "identity.fxaccounts.enabled" = true; # shouldn't be using, but it works
             };
-          inherit search extensions userChrome userContent;
+          inherit search userChrome userContent;
+          extensions.packages = extensions;
           isDefault = true;
           id = 0;
-          bookmarks = [];
+          bookmarks = {
+            force = false;
+            settings = [];
+          };
         };
         school = {
           inherit settings search userChrome userContent;
-          extensions = with inputs.firefox-addons.packages."${pkgs.system}"; [
+          extensions.packages = with inputs.firefox-addons.packages."${pkgs.system}"; [
             darkreader
             ublock-origin
           ];
           id = 1;
-          bookmarks = [
-            {
-              name = "Toolbar";
-              toolbar = true;
-              bookmarks = [
-                {
-                  name = "School";
-                  bookmarks = [
-                    {
-                      name = "Classroom";
-                      url = "https://classroom.google.com";
-                      keyword = "class";
-                    }
-                    {
-                      name = "Docs";
-                      url = "https://docs.google.com";
-                      keyword = "docs";
-                    }
-                    {
-                      name = "Slides";
-                      url = "https://slides.google.com";
-                      keyword = "slides";
-                    }
-                    {
-                      name = "Sheets";
-                      url = "https://sheets.google.com";
-                      keyword = "sheets";
-                    }
-                    {
-                      name = "Drive";
-                      url = "https://drive.google.com";
-                      keyword = "drive";
-                    }
-                    {
-                      name = "Office";
-                      url = "https://office.com";
-                      keyword = "office";
-                    }
-                  ];
-                }
-              ];
-            }
-          ];
+          bookmarks = {
+            force = true;
+            settings = [
+              {
+                name = "Toolbar";
+                toolbar = true;
+                bookmarks = [
+                  {
+                    name = "School";
+                    bookmarks = [
+                      {
+                        name = "Classroom";
+                        url = "https://classroom.google.com";
+                        keyword = "class";
+                      }
+                      {
+                        name = "Docs";
+                        url = "https://docs.google.com";
+                        keyword = "docs";
+                      }
+                      {
+                        name = "Slides";
+                        url = "https://slides.google.com";
+                        keyword = "slides";
+                      }
+                      {
+                        name = "Sheets";
+                        url = "https://sheets.google.com";
+                        keyword = "sheets";
+                      }
+                      {
+                        name = "Drive";
+                        url = "https://drive.google.com";
+                        keyword = "drive";
+                      }
+                      {
+                        name = "Office";
+                        url = "https://office.com";
+                        keyword = "office";
+                      }
+                    ];
+                  }
+                ];
+              }
+            ];
+          };
         };
       };
 
