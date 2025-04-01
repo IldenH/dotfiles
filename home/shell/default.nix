@@ -20,6 +20,7 @@
       file
       nurl
       pdftk
+      fd
     ];
 
     programs.bat = {
@@ -83,6 +84,8 @@
       c = ''cd $(find . -type d -not -path " * /. * " -not -path "." | fzf -m)'';
 
       regen = "sudo /nix/var/nix/gcroots/current-system/activate && ~/.local/state/home-manager/gcroots/current-home/activate";
+
+      bigfiles = "sudo fd --one-file-system --base-directory / --type f --exec du -h {} + 2>/dev/null | sort -rh | head -n 10";
     };
   };
 }
