@@ -10,6 +10,12 @@
       # Recommended for fast zlib compression
       # https://www.home-assistant.io/integrations/isal
       "isal"
+
+      "mill"
+      "yale"
+      "syncthing"
+      "google"
+      "brother"
     ];
     config = {
       # Includes dependencies for a basic setup
