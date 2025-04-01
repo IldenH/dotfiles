@@ -110,6 +110,7 @@
             ".local/share/zoxide"
             ".local/share/bottles"
             ".local/share/kiwix"
+            ".local/share/docker"
 
             ".config/hypr"
             ".config/vesktop"
