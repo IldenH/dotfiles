@@ -28,6 +28,7 @@
       devices = with secrets.syncthing; {
         desktop = mkDevice desktop;
         e14 = mkDevice e14;
+        "Nexus 5X" = mkDevice nexus5x;
       };
       folders = {
         "~/Sync".devices = [
@@ -69,6 +70,11 @@
         "~/.config/calibre".devices = [
           "desktop"
           "e14"
+        ];
+        "~/Pictures/DCIM".devices = [
+          "desktop"
+          "e14"
+          "Nexus 5X"
         ];
       };
     };
