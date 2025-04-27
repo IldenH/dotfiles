@@ -19,6 +19,9 @@
       networking.hostName = hostName;
       networking.networkmanager.enable = true;
       users.users.${global.user.name}.extraGroups = ["networkmanager"];
+
+      # speedup boot
+      systemd.services."NetworkManager-wait-online".enable = false;
     })
   ];
 }

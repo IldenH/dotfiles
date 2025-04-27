@@ -7,6 +7,7 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   services = {
     openssh.enable = true;
+    openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
     home-assistant.enable = true;
@@ -14,6 +15,7 @@
 
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect
   virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = false;
 
   networking.hostId = "5c73541f";
 

@@ -7,6 +7,7 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   services = {
     openssh.enable = true;
+    openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
     logind.extraConfig = ''
@@ -20,6 +21,7 @@
   environment.variables.LIBSEAT_BACKEND = "logind";
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = false;
 
   networking.hostId = "32bb9655";
   boot.zfs.devNodes = "/dev/disk/by-partuuid";
