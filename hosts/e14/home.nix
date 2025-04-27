@@ -14,6 +14,7 @@
   home.file.".ssh/id_ed25519.pub".text = secrets.ssh.e14.public;
   home.file.".ssh/id_ed25519".text = secrets.ssh.e14.private;
 
+  services.syncthing.enable = true;
   home.file.".config/syncthing/cert.pem".text = secrets.syncthing.e14.cert;
   home.file.".config/syncthing/key.pem".text = secrets.syncthing.e14.key;
 }

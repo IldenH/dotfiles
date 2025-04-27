@@ -4,18 +4,11 @@
   ...
 }: {
   services.syncthing = let
-    home = "/home/${global.user.name}";
-
     mkDevice = device: {
       id = device.id;
       autoAcceptFolders = true;
     };
   in {
-    user = global.user.name;
-    dataDir = "${home}";
-    configDir = "${home}/.config/syncthing";
-    databaseDir = "${home}/.cache/syncthing";
-    openDefaultPorts = true;
     settings = {
       options = {
         urAccepted = -1;

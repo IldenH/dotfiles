@@ -122,7 +122,7 @@
             ".local/share/Steam"
 
             ".config/syncthing"
-            ".cache/syncthing"
+            ".local/state/syncthing"
 
             ".cache/nix"
             ".cache/nvf"
