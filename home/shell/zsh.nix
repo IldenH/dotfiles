@@ -22,10 +22,16 @@
           file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
         }
       ];
-      initExtraBeforeCompInit = ''
-        export ZSH_COMPDUMP=$ZSH/cache/.zcompdump
-      '';
-      initExtra =
+      initContent = lib.mkMerge [
+        (
+          # before compinit
+          lib.mkOrder 550
+          # bash
+          ''
+            export ZSH_COMPDUMP=$ZSH/cache/.zcompdump
+          ''
+        )
+
         # bash
         ''
           export RLWRAP_HOME=$HOME/.local/share/history
@@ -63,7 +69,8 @@
           Run() {
             NIXPKGS_ALLOW_UNFREE=1 NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nix shell nixpkgs#$1 --impure -c ''${@:2}
           }
-        '';
+        ''
+      ];
     };
   };
 }
