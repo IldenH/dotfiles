@@ -8,6 +8,7 @@
   services = {
     openssh.enable = true;
     openssh.startWhenNeeded = true;
+    syncthing.enable = true;
     printing.enable = true;
     logind.extraConfig = ''
       HandlePowerKey=ignore

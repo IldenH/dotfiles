@@ -17,6 +17,7 @@
     ./nix.nix
     ./graphics.nix
     ./school.nix
+    ./syncthing.nix
     ./user.nix
     ./zfs
   ];
