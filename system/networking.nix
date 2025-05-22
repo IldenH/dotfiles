@@ -20,8 +20,8 @@
       networking.networkmanager.enable = true;
       users.users.${global.user.name}.extraGroups = ["networkmanager"];
 
-      # speedup boot
-      systemd.services."NetworkManager-wait-online".enable = false;
+      # https://wiki.archlinux.org/title/Systemd#Boot_time_increasing_over_time
+      services.journald.extraConfig = "SystemMaxUse=50M";
     })
   ];
 }
