@@ -8,7 +8,7 @@
 
     mkDevice = device: {
       id = device.id;
-      autoAcceptFolders = true;
+      # autoAcceptFolders = true;
     };
   in {
     user = global.user.name;
@@ -24,6 +24,7 @@
       gui = {
         user = global.user.name;
         password = secrets.password;
+        apiKey = secrets.syncthing.api;
       };
       devices = with secrets.syncthing; {
         desktop = mkDevice desktop;
