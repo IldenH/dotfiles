@@ -78,6 +78,9 @@
       matchBlocks = import ../../secrets/ssh-hosts.nix;
     };
 
+    programs.zellij.enable = true;
+    home.file.".config/zellij/config.kdl".text = import ./zellij.nix {inherit config;};
+
     home.shellAliases = {
       cat = "bat";
       cls = "clear && ls";

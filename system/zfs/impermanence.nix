@@ -105,6 +105,7 @@
             ".cargo"
             ".npm"
             ".cache/typst"
+            ".cache/zellij"
 
             ".local/state/wireplumber"
             ".local/share/direnv"
