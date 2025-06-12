@@ -114,6 +114,9 @@
             ".local/share/kiwix"
             ".local/share/docker"
 
+            ".local/share/qutebrowser"
+            ".cache/qutebrowser"
+
             ".config/hypr"
             ".config/vesktop"
             ".config/heroic"

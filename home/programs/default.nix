@@ -14,6 +14,7 @@
     ./school.nix
     ./rofi.nix
     ./qalculate.nix
+    ./qutebrowser
     ./zathura.nix
   ];
 
