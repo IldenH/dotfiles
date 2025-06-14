@@ -84,6 +84,7 @@
 
     yomitan = "_6b733b82-9261-47ee-a595-2dda294a4d08_-browser-action";
     zotero-connector = "zotero_chnm_gmu_edu-browser-action";
+    greasemonkey = "_e4a8a97b-f2ed-450b-b12d-ee082ba24781_-browser-action";
   in
     builtins.toJSON {
       placements = {
@@ -94,6 +95,7 @@
           privacy-badger
           facebook-container
           istilldontcareaboutcookies
+          greasemonkey
           sponsorblock
           dearrow
           enhanced-h264ify

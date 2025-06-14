@@ -18,4 +18,5 @@ with inputs.firefox-addons.packages."${pkgs.system}"; [
 
   yomitan
   zotero-connector
+  greasemonkey
 ]
