@@ -12,6 +12,7 @@
     ./games
     ./obsidian.nix
     ./school.nix
+    ./syncthing.nix
     ./rofi.nix
     ./qalculate.nix
     ./qutebrowser
