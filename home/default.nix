@@ -27,6 +27,8 @@
     lib.mapAttrsToList (name: value: "${name}: #${value}") config.colorScheme.palette
   );
 
+  xdg.enable = true;
+  xdg.portal.enable = true;
   xdg.mimeApps.enable = true;
   xdg.userDirs = {
     enable = true;
