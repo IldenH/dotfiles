@@ -29,7 +29,7 @@
       devices = with secrets.syncthing; {
         desktop = mkDevice desktop;
         e14 = mkDevice e14;
-        "Nexus 5X" = mkDevice nexus5x;
+        "Pixel 8a" = mkDevice pixel8a;
       };
       folders = {
         "~/Sync".devices = [
@@ -72,10 +72,11 @@
           "desktop"
           "e14"
         ];
+        # /storage/emulated/0/DCIM
         "~/Pictures/DCIM".devices = [
           "desktop"
           "e14"
-          "Nexus 5X"
+          "Pixel 8a"
         ];
       };
     };
