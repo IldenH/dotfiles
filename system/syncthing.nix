@@ -44,6 +44,11 @@
           "desktop"
           "e14"
         ];
+        "~/Vault".devices = [
+          "desktop"
+          "e14"
+          "Pixel 8a"
+        ];
         "~/.config/mozc".devices = [
           "desktop"
           "e14"

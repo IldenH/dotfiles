@@ -52,6 +52,7 @@
             "Sync"
             "Games"
             "dev"
+            "Vault"
 
             ".mozilla"
             ".factorio"
