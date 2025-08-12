@@ -1,21 +1,25 @@
 _: {
   # TODO: Make options for this and if multiple monitors, then many workspaces
   wayland.windowManager.hyprland.settings = {
-    workspace = [
-      "1, monitor:HDMI-A-3, default:true"
-      "2, monitor:HDMI-A-3"
-      "3, monitor:HDMI-A-3"
-      "4, monitor:HDMI-A-3"
-      "5, monitor:HDMI-A-3"
+    workspace = let
+      monitors = ["desc:Samsung Electric Company S24F350 H4ZJ701847" "desc:Samsung Electric Company S24F350 H4ZMA03168"];
+    in [
+      "1, monitor:${builtins.elemAt monitors 0}, default:true"
+      "2, monitor:${builtins.elemAt monitors 0}"
+      "3, monitor:${builtins.elemAt monitors 0}"
+      "4, monitor:${builtins.elemAt monitors 0}"
+      "5, monitor:${builtins.elemAt monitors 0}"
 
-      "11, monitor:DP-2, default:true"
-      "12, monitor:DP-2"
-      "13, monitor:DP-2"
-      "14, monitor:DP-2"
-      "15, monitor:DP-2"
+      "11, monitor:${builtins.elemAt monitors 1}, default:true"
+      "12, monitor:${builtins.elemAt monitors 1}"
+      "13, monitor:${builtins.elemAt monitors 1}"
+      "14, monitor:${builtins.elemAt monitors 1}"
+      "15, monitor:${builtins.elemAt monitors 1}"
     ];
 
     bind = [
+      "SUPER, Tab, workspace, previous"
+
       "SUPER, 1, workspace, 1"
       "SUPER, 2, workspace, 2"
       "SUPER, 3, workspace, 3"
