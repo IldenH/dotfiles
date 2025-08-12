@@ -20,17 +20,8 @@
       "SUPER, L, movefocus, r"
 
       "SUPER, U, swapnext"
-      "SUPER, R, swapnext"
 
       "ALT, C, exec, echo" # disable cstimer bind
-    ];
-
-    # e -> repeats when key is held
-    binde = [
-      "SUPER ALT, H, resizeactive, -10 0"
-      "SUPER ALT, J, resizeactive, 0 10"
-      "SUPER ALT, K, resizeactive, 0 -10"
-      "SUPER ALT, L, resizeactive, 10 0"
     ];
 
     bindm = [
@@ -38,4 +29,14 @@
       "SUPER, mouse:273, resizewindow"
     ];
   };
+  wayland.windowManager.hyprland.extraConfig = ''
+    bind = SUPER, R, submap, resize
+    submap = resize
+    binde = , H, resizeactive, -50 0
+    binde = , J, resizeactive, 0 50
+    binde = , K, resizeactive, 0 -50
+    binde = , L, resizeactive, 50 0
+    bind = , catchall, submap, reset
+    submap = reset
+  '';
 }
