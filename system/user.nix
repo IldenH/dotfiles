@@ -8,7 +8,7 @@
     isNormalUser = true;
     description = global.user.description;
     password = secrets.password;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "dialout"];
     uid = 1000;
   };
 

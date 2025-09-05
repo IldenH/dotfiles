@@ -18,6 +18,7 @@
       xournalpp
       calibre
       kiwix
+      arduino
     ];
 
     xdg.desktopEntries.teams-for-linux = {
