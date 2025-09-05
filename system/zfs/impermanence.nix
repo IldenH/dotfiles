@@ -123,6 +123,7 @@
             ".config/heroic"
             ".config/gh"
             ".config/obsidian"
+            ".config/unity3d"
 
             ".steam"
             ".local/share/Steam"
