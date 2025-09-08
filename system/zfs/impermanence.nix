@@ -76,6 +76,7 @@
             ".config/openttd"
             ".config/teams-for-linux"
             ".config/xournalpp"
+            ".config/unity3d"
           ];
         };
       };
@@ -94,6 +95,8 @@
         users.${global.user.name} = {
           files = [];
           directories = [
+            "Arduino"
+
             ".tldrc/tldr/pages"
 
             ".cache/mozilla"
@@ -123,7 +126,6 @@
             ".config/heroic"
             ".config/gh"
             ".config/obsidian"
-            ".config/unity3d"
 
             ".steam"
             ".local/share/Steam"
