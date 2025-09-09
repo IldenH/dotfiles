@@ -19,6 +19,8 @@
       calibre
       kiwix
       arduino
+      freecad
+      kicad
     ];
 
     xdg.desktopEntries.teams-for-linux = {
