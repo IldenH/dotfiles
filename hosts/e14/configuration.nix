@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
@@ -16,6 +20,9 @@
       HandleLidSwitchDocked=suspend
     '';
   };
+
+  boot.loader.grub.enable = lib.mkForce false;
+  boot.loader.systemd-boot.enable = true;
 
   boot.kernelParams = ["amd_pstate=active"];
   environment.variables.LIBSEAT_BACKEND = "logind";

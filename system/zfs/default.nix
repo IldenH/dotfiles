@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   imports = [
@@ -17,6 +18,7 @@
     boot = {
       supportedFilesystems.zfs = true;
       zfs.requestEncryptionCredentials = config.settings.zfs.encryption;
+      zfs.package = pkgs.zfs_unstable;
     };
 
     services.zfs = {
