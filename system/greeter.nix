@@ -7,12 +7,12 @@
 }: {
   config = lib.mkIf config.hm.settings.hyprland.enable {
     boot.kernelParams = ["console=tty1"];
-    environment.systemPackages = [pkgs.greetd.tuigreet];
+    environment.systemPackages = [pkgs.tuigreet];
+    services.greetd.useTextGreeter = true;
     services.greetd = {
       enable = true;
-      vt = 2;
       settings.default_session.command = ''
-        ${lib.getExe pkgs.greetd.tuigreet} --cmd Hyprland \
+        ${lib.getExe pkgs.tuigreet} --cmd Hyprland \
           --time \
           --time-format '%A %d. %B %Y, Uke %V, %H:%M' \
           --user-menu \

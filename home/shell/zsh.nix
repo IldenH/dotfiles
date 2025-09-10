@@ -10,7 +10,7 @@
       # enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
       autocd = true;
-      dotDir = ".config/zsh";
+      dotDir = "${config.xdg.configHome}/zsh";
       oh-my-zsh = {
         enable = true;
         theme = "simple";
