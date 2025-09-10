@@ -14,11 +14,14 @@
     openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
-    logind.extraConfig = ''
-      HandlePowerKey=ignore
-      HandleLidSwitch=suspend
-      HandleLidSwitchDocked=suspend
-    '';
+    logind.settings.Login = {
+      HandlePowerKey = "ignore";
+      HandleLidSwitch = "hybrid-sleep";
+      HandleLidSwitchDocked = "hybrid-sleep";
+      HandleLidSwitchExternalPower = "hybrid-sleep";
+      IdleAction = "hybrid-sleep";
+      IdleActionSec = 600;
+    };
   };
 
   boot.loader.grub.enable = lib.mkForce false;
