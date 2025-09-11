@@ -96,6 +96,7 @@
           files = [];
           directories = [
             "Arduino"
+            ".arduino15"
 
             ".tldrc/tldr/pages"
 
