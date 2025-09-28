@@ -14,8 +14,11 @@
   };
 
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect
+
   virtualisation.docker.enable = true;
   virtualisation.docker.enableOnBoot = false;
+
+  virtualisation.waydroid.enable = true;
 
   networking.hostId = "5c73541f";
 
