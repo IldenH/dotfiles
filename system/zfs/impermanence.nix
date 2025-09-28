@@ -36,6 +36,7 @@
           "/var/log"
           "/var/lib/nixos"
           "/var/lib/hass"
+          "/var/lib/waydroid"
         ];
 
         users.${global.user.name} = {
