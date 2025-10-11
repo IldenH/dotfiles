@@ -14,8 +14,6 @@
 
       services.xserver.videoDrivers = ["amdgpu"];
 
-      environment.variables.MESA_LOADER_DRIVER_OVERRIDE = "zink";
-
       environment.systemPackages = with pkgs; [lact];
       systemd.packages = with pkgs; [lact];
       systemd.services.lactd.wantedBy = ["multi-user.target"];
