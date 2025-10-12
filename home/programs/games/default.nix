@@ -25,15 +25,22 @@
     home.file.".local/share/PrismLauncher/prismlauncher.cfg".text = lib.generators.toINI {} {
       General = {
         ApplicationTheme = "system";
-        EnableFeralGamemode = true;
         IconTheme = "flat_white";
+        Language = "ja";
+        TheCat = false;
+
+        EnableFeralGamemode = true;
+
+        UseNativeGLFW = true;
+        CustomGLFWPath = "/run/opengl-driver/lib/libglfw.so";
+
         IgnoreJavaCompatibility = true;
         IgnoreJavaWizard = true;
         JavaPath = lib.getExe pkgs.temurin-bin-8;
-        Language = "ja";
+        AutomaticJavaSwitch = true;
+
         MaxMemAlloc = 12544;
         MinMemAlloc = 512;
-        TheCat = false;
       };
     };
   };
