@@ -33,6 +33,7 @@
 
         UseNativeGLFW = true;
         CustomGLFWPath = "/run/opengl-driver/lib/libglfw.so";
+        UseZink = true;
 
         IgnoreJavaCompatibility = true;
         IgnoreJavaWizard = true;
