@@ -91,6 +91,7 @@
           "/etc/NetworkManager/system-connections"
           "/var/lib/bluetooth"
           "/var/lib/alsa"
+          "/var/lib/libretranslate"
         ];
 
         users.${global.user.name} = {
@@ -119,6 +120,7 @@
             ".local/share/bottles"
             ".local/share/kiwix"
             ".local/share/docker"
+            ".local/share/argos-translate"
 
             ".local/share/qutebrowser"
             ".cache/qutebrowser"
