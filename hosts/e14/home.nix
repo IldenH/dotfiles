@@ -8,6 +8,7 @@
     nightlight.enable = true;
     discord.enable = true;
     school.enable = true;
+    games.enable = true;
     other.enable = true;
   };
 
