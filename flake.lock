@@ -363,11 +363,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1758871282,
-        "narHash": "sha256-NzPSmUC7nZ3J1o6xzIK0t+/kQ4cJp8ntPU7mTtDRNPc=",
+        "lastModified": 1760989585,
+        "narHash": "sha256-ivl7TZyFa1Eh6LgQhsDShVukWZ+U9NLOdHQvU+ZLwJs=",
         "owner": "IldenH",
         "repo": "nvf-config",
-        "rev": "b3f556dbbffa69a1984b9035fbdb5e6cc64fcf29",
+        "rev": "e16b59e4a98c84b38ca1af8a233ab0efdaa954d2",
         "type": "github"
       },
       "original": {
