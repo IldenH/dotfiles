@@ -78,6 +78,10 @@
             ".config/teams-for-linux"
             ".config/xournalpp"
             ".config/unity3d"
+
+            ".config/FreeCAD"
+            ".local/share/kicad"
+            ".config/kicad"
           ];
         };
       };
@@ -143,6 +147,10 @@
             ".local/state/nvf"
             ".local/share/nvim"
             ".local/state/nvim"
+
+            ".cache/kiced"
+            ".local/share/FreeCAD"
+            ".cache/FreeCAD"
           ];
         };
       };
