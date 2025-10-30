@@ -125,6 +125,7 @@
             ".local/share/kiwix"
             ".local/share/docker"
             ".local/share/argos-translate"
+            ".local/share/endelay"
 
             ".local/share/qutebrowser"
             ".cache/qutebrowser"
@@ -148,7 +149,7 @@
             ".local/share/nvim"
             ".local/state/nvim"
 
-            ".cache/kiced"
+            ".cache/kicad"
             ".local/share/FreeCAD"
             ".cache/FreeCAD"
           ];
