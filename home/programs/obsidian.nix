@@ -9,7 +9,7 @@
 
     home.file.".config/obsidian/obsidian.json".text = builtins.toJSON {
       vaults.vault = {
-        path = "${config.home.homeDirectory}/dev/Vault";
+        path = "${config.home.homeDirectory}/Vault";
         open = true;
       };
       frame = "hidden";
