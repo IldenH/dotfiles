@@ -33,7 +33,7 @@
         grimblast
         swappy
         wl-clipboard
-        inputs.focal.packages.${pkgs.system}.default
+        inputs.focal.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
       home.file.".config/swappy/config".text = lib.generators.toINI {} {

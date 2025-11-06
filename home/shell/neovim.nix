@@ -6,7 +6,7 @@
   secrets,
   ...
 }: let
-  nvim = inputs.nvf-config.packages.${pkgs.system}.default;
+  nvim = inputs.nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
   options.settings.neovim.enable = lib.mkEnableOption "neovim";
 

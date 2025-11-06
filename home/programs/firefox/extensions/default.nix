@@ -3,7 +3,7 @@
   pkgs,
 }:
 # https://gitlab.com/rycee/nur-expressions/-/blob/master/pkgs/firefox-addons/addons.json?ref_type=heads
-with inputs.firefox-addons.packages."${pkgs.system}"; [
+with inputs.firefox-addons.packages."${pkgs.stdenv.hostPlatform.system}"; [
   ublock-origin
   darkreader
   bitwarden

@@ -8,7 +8,7 @@
   config = lib.mkIf config.settings.utils.enable {
     nixpkgs.config.allowUnfree = true;
 
-    programs.command-not-found.dbPath = inputs.programsdb.packages.${pkgs.system}.programs-sqlite;
+    programs.command-not-found.dbPath = inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
 
     nix = {
       settings = {

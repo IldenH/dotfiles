@@ -8,9 +8,10 @@
   config = lib.mkIf config.settings.cli.enable {
     programs.git = {
       enable = true;
-      userName = "IldenH";
-      userEmail = secrets.email;
-      extraConfig = {
+      settings = {
+        user.name = "IldenH";
+        user.email = secrets.email;
+
         init.defaultBranch = "main";
         commit.gpgSign = true;
         gpg.program = "${lib.getExe config.programs.gpg.package}";
