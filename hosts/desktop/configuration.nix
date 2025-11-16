@@ -1,16 +1,16 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
   ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
   services = {
     openssh.enable = true;
     openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
     home-assistant.enable = true;
+    flatpak.enable = true;
   };
 
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect

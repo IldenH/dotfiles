@@ -1,19 +1,15 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
   ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
   services = {
     openssh.enable = true;
     openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
+    flatpak.enable = true;
     logind.settings.Login = {
       HandlePowerKey = "ignore";
       HandleLidSwitch = "hybrid-sleep";

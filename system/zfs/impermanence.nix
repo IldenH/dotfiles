@@ -82,6 +82,8 @@
             ".config/FreeCAD"
             ".local/share/kicad"
             ".config/kicad"
+
+            ".var/app"
           ];
         };
       };
@@ -96,6 +98,7 @@
           "/var/lib/bluetooth"
           "/var/lib/alsa"
           "/var/lib/libretranslate"
+          "/var/lib/flatpak"
         ];
 
         users.${global.user.name} = {
@@ -126,6 +129,7 @@
             ".local/share/docker"
             ".local/share/argos-translate"
             ".local/share/endelay"
+            ".local/share/flatpak"
 
             ".local/share/qutebrowser"
             ".cache/qutebrowser"
