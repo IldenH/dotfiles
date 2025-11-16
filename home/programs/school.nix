@@ -21,6 +21,7 @@
       arduino
       freecad
       kicad
+      jiten
     ];
 
     xdg.desktopEntries.teams-for-linux = {
