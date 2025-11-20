@@ -104,6 +104,9 @@
       regen = "sudo /nix/var/nix/gcroots/current-system/activate && ~/.local/state/home-manager/gcroots/current-home/activate";
 
       bigfiles = "sudo fd --one-file-system --base-directory / --type f --exec du -h {} + 2>/dev/null | sort -rh | head -n 10";
+
+      lastcam = ''\ls ${config.home.homeDirectory}/Pictures/DCIM/Camera --sort=time | head -n 1 | xargs -I {} pix "${config.home.homeDirectory}/Pictures/DCIM/Camera/{}"'';
+      lastscreen = ''\ls ${config.home.homeDirectory}/Pictures/Screenshots/Raw --sort=time | head -n 1 | xargs -I {} pix "${config.home.homeDirectory}/Pictures/Screenshots/Raw/{}"'';
     };
   };
 }
