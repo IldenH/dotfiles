@@ -22,6 +22,7 @@
       freecad
       kicad
       jiten
+      ffmpeg
     ];
 
     xdg.desktopEntries.teams-for-linux = {
