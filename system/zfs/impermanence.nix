@@ -99,6 +99,8 @@
           "/var/lib/alsa"
           "/var/lib/libretranslate"
           "/var/lib/flatpak"
+          "/var/cache/fwupd"
+          "/var/lib/fwupd"
         ];
 
         users.${global.user.name} = {
@@ -129,7 +131,9 @@
             ".local/share/docker"
             ".local/share/argos-translate"
             ".local/share/endelay"
+
             ".local/share/flatpak"
+            ".cache/flatpak"
 
             ".local/share/qutebrowser"
             ".cache/qutebrowser"
