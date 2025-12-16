@@ -122,6 +122,7 @@
             ".npm"
             ".cache/typst"
             ".cache/zellij"
+            ".cache/cabal"
 
             ".local/state/wireplumber"
             ".local/share/direnv"
