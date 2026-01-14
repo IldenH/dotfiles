@@ -29,6 +29,8 @@
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland;
+      systemd.variables = ["--all"];
     };
   };
 }

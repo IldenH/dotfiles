@@ -28,8 +28,13 @@
   );
 
   xdg.enable = true;
-  xdg.portal.enable = true;
   xdg.mimeApps.enable = true;
+  xdg.portal = {
+    enable = true;
+    config.common.default = "*";
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [xdg-desktop-portal-gtk];
+  };
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
