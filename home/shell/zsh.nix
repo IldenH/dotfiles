@@ -57,6 +57,7 @@
                 *.deb)     ar x $1 ;;
                 *.tar.xz)  tar xf $1 ;;
                 *.tar.zst) unzstd $1 ;;
+                *.jar)     ${pkgs.unzip}/bin/unzip $1 -d "$1-meta" && ${pkgs.cfr}/bin/cfr $1 --outputdir "$1-src" ;;
                 *)         echo "Could not extract $1"
               esac
             else
