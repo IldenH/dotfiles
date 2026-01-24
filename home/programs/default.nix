@@ -114,6 +114,7 @@
         anki-bin
         krita
         python311
+        blockbench
       ];
 
       programs.chromium = {
