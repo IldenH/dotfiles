@@ -78,6 +78,7 @@
             ".config/teams-for-linux"
             ".config/xournalpp"
             ".config/unity3d"
+            ".config/Blockbench"
 
             ".config/FreeCAD"
             ".local/share/kicad"
