@@ -19,9 +19,6 @@ _: {
 
       "SUPER, B, exec, [workspace 3] $anki"
 
-      "SUPER, X, exec, heroic"
-      "SUPER ALT, X, exec, prismlauncher"
-
       "SUPER, G, exec, $calculator"
 
       "SUPER ALT, R, exec, $screenrec"

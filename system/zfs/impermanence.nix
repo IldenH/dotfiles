@@ -128,7 +128,6 @@
             ".local/state/wireplumber"
             ".local/share/direnv"
             ".local/share/zoxide"
-            ".local/share/bottles"
             ".local/share/kiwix"
             ".local/share/docker"
             ".local/share/argos-translate"

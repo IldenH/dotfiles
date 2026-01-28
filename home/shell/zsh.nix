@@ -7,7 +7,6 @@
   config = lib.mkIf config.programs.zsh.enable {
     programs.zsh = {
       enableCompletion = true;
-      # enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
       autocd = true;
       dotDir = "${config.xdg.configHome}/zsh";
@@ -36,10 +35,6 @@
         ''
           export RLWRAP_HOME=$HOME/.local/share/history
 
-          mkcdir = () {
-            mkdir -p -- "$1" &&
-            cd -P -- "$1"
-          }
           ex = () {
             if [ -f $1 ] ; then
               case $1 in
@@ -69,6 +64,9 @@
           }
           Run() {
             NIXPKGS_ALLOW_UNFREE=1 NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nix shell nixpkgs#$1 --impure -c ''${@:2}
+          }
+          shell() {
+            NIXPKGS_ALLOW_UNFREE=1 NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nix shell nixpkgs#$1 --impure
           }
         ''
       ];

@@ -115,6 +115,8 @@
         krita
         python311
         blockbench
+        jetbrains.idea
+        ffmpeg
       ];
 
       programs.chromium = {

@@ -18,7 +18,6 @@
     home.packages = with pkgs; [
       tldr
       file
-      nurl
       pdftk
       fd
     ];
@@ -98,8 +97,6 @@
 
     home.shellAliases = {
       cat = "bat";
-      cls = "clear && ls";
-      c = ''cd $(find . -type d -not -path " * /. * " -not -path "." | fzf -m)'';
 
       regen = "sudo /nix/var/nix/gcroots/current-system/activate && ~/.local/state/home-manager/gcroots/current-home/activate";
 

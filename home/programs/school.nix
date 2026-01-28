@@ -10,19 +10,17 @@
     home.packages = with pkgs; [
       teams-for-linux
       libreoffice
-      temurin-jre-bin-17
       geogebra6
-      bottles
       pandoc
+
       zotero
-      xournalpp
+      temurin-jre-bin-17 # needed for zotero
+
       calibre
       kiwix
       arduino
       freecad
       kicad
-      jiten
-      ffmpeg
     ];
 
     xdg.desktopEntries.teams-for-linux = {

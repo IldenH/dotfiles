@@ -9,23 +9,26 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 </div>
 
 ## Using
+
 - Window Manager: [Hyprland](https://hyprland.org)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal Emulator: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Shell: [Zsh](https://www.zsh.org) with [Oh my Zsh](https://ohmyz.sh)
-- Editor: [Nixvim](https://github.com/nix-community/nixvim) ([config](https://github.com/IldenH/nixvim))
+- Editor: [Nvf](https://github.com/NotAShelf/nvf) ([config](https://github.com/IldenH/nvf-config))
 - Browser: [Firefox](https://www.mozilla.org/firefox)
 - Discord: [Vesktop](https://github.com/Vencord/Vesktop)
 - Wallpaper: [AngelJumbo/gruvbox-wallpapers](https://github.com/AngelJumbo/gruvbox-wallpapers)
 
 ## Hardware
-| Type                      | Name      | Architecture | Note                  |
-| ------------------------- | --------- | ------------ | --------------------- |
-| Lenovo Legion Y520T       | `desktop` | `x86_64`     |                       |
-| Lenovo ThinkPad T420s     | `t420s`   | `x86_64`     |                       |
-| Lenovo ThinkPad E14 Gen 3 | `e14`     | `x86_64`     |                       |
+
+| Type                      | Name      | Architecture | Note |
+| ------------------------- | --------- | ------------ | ---- |
+| Lenovo Legion Y520T       | `desktop` | `x86_64`     |      |
+| Lenovo ThinkPad T420s     | `t420s`   | `x86_64`     |      |
+| Lenovo ThinkPad E14 Gen 3 | `e14`     | `x86_64`     |      |
 
 ## Inspiration / Sources
+
 - [Vimjoyer](https://www.youtube.com/@vimjoyer)
 - [danth/stylix](https://github.com/danth/stylix)
 - [sopa0/hyprsome](https://github.com/sopa0/hyprsome)
@@ -35,6 +38,7 @@ Riced with [Nix-Colors](https://github.com/Misterio77/nix-colors), [Gruvbox](htt
 - [fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)
 
 ### Other dotfiles
+
 - [LilleAila/dotfiles](https://github.com/LilleAila/dotfiles)
 - [bddvlpr/nix-dotfiles](https://github.com/bddvlpr/nix-dotfiles)
 - [TLATER/dotfiles](https://github.com/TLATER/dotfiles)
