@@ -117,6 +117,7 @@
         blockbench
         jetbrains.idea
         ffmpeg
+        sqlitestudio
       ];
 
       programs.chromium = {
