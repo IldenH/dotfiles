@@ -12,7 +12,7 @@
     services.greetd = {
       enable = true;
       settings.default_session.command = ''
-        ${lib.getExe pkgs.tuigreet} --cmd Hyprland \
+        ${lib.getExe pkgs.tuigreet} --cmd start-hyprland \
           --time \
           --time-format '%A %d. %B %Y, Uke %V, %H:%M' \
           --user-menu \
