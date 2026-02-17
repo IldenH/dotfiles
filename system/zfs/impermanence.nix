@@ -124,6 +124,7 @@
             ".cache/typst"
             ".cache/zellij"
             ".cache/cabal"
+            ".cache/uv"
 
             ".local/state/wireplumber"
             ".local/share/direnv"
