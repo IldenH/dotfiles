@@ -40,9 +40,7 @@
         ];
 
         users.${global.user.name} = {
-          files = [
-            ".zsh_history"
-          ];
+          files = [];
           directories = [
             "Downloads"
             "Music"
@@ -147,6 +145,7 @@
             ".config/heroic"
             ".config/gh"
             ".config/obsidian"
+            ".config/zsh"
 
             ".steam"
             ".local/share/Steam"
