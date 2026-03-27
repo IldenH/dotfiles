@@ -68,6 +68,8 @@
             ".local/share/openttd"
             ".local/share/osu"
             ".local/share/PrismLauncher"
+            ".local/share/Baba_Is_You"
+            ".local/share/AlexanderBruce"
 
             ".config/calibre"
             ".config/GeoGebra"
