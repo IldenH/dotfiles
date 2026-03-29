@@ -68,6 +68,7 @@
             ".local/share/PrismLauncher"
             ".local/share/Baba_Is_You"
             ".local/share/AlexanderBruce"
+            ".local/share/3909/PapersPlease"
 
             ".config/calibre"
             ".config/GeoGebra"
