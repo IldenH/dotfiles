@@ -7,23 +7,9 @@
 }: {
   options.settings.qt-gtk.enable = lib.mkEnableOption "qt and gtk";
 
-  imports = [./qt.nix];
+  imports = [./qt.nix ./gtk.nix];
 
   config = lib.mkIf config.settings.qt-gtk.enable {
-    gtk = {
-      enable = true;
-      gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
-      theme = {
-        package = import ./gtk.nix {inherit pkgs;} {scheme = config.colorScheme;};
-        name = "${config.colorScheme.slug}";
-      };
-
-      iconTheme = {
-        package = pkgs.tela-circle-icon-theme;
-        name = "Tela-circle";
-      };
-    };
-
     home.pointerCursor = {
       package = inputs.nix-cursors.packages.${pkgs.stdenv.hostPlatform.system}.bibata-original-cursor.override {
         background_color = "#${config.colorScheme.palette.base00}";
@@ -34,6 +20,7 @@
       name = "Bibata-Original-Custom";
       size = 22;
       gtk.enable = true;
+      dotIcons.enable = false;
     };
   };
 }

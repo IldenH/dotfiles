@@ -58,8 +58,8 @@
       ];
 
       xdg.userDirs.extraConfig = {
-        XDG_SCREENSHOTSRAW_DIR = path.raw;
-        XDG_SCREENSHOTSEDITED_DIR = path.edited;
+        SCREENSHOTSRAW = path.raw;
+        SCREENSHOTSEDITED = path.edited;
       };
     };
 }

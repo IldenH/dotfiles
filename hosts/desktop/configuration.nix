@@ -9,7 +9,7 @@
     openssh.startWhenNeeded = true;
     syncthing.enable = true;
     printing.enable = true;
-    home-assistant.enable = true;
+    # home-assistant.enable = true; # broken, too lazy to fix rn
     flatpak.enable = true;
   };
 

@@ -8,6 +8,7 @@
   config = lib.mkIf config.settings.cli.enable {
     programs.git = {
       enable = true;
+      signing.format = "openpgp";
       settings = {
         user.name = "IldenH";
         user.email = secrets.email;

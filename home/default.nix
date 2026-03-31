@@ -38,6 +38,7 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
+    setSessionVariables = true;
     desktop = "$HOME";
     publicShare = null;
     templates = null;

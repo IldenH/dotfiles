@@ -1,60 +1,56 @@
-# https://github.com/Misterio77/nix-colors/blob/main/lib/contrib/gtk-theme.nix modified
-{pkgs}: {scheme}: let
-  rendersvg = pkgs.runCommand "rendersvg" {} ''
-    mkdir -p $out/bin
-    ln -s ${pkgs.resvg}/bin/resvg $out/bin/rendersvg
-  '';
-in
-  pkgs.stdenv.mkDerivation rec {
-    name = "generated-gtk-theme-${scheme.slug}";
-    src = pkgs.fetchFromGitHub {
-      owner = "nana-4";
-      repo = "materia-theme";
-      rev = "76cac96ca7fe45dc9e5b9822b0fbb5f4cad47984";
-      sha256 = "sha256-0eCAfm/MWXv6BbCl2vbVbvgv8DiUH09TAUhoKq7Ow0k=";
+# stolen from https://github.com/nix-community/stylix/blob/9b4a5eb409ceac2dd6ad495c7988e189a418cd30/modules/gtk/hm.nix
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
+  config = let
+    finalCss = pkgs.writeText "gtk.css" (import ./gtk-theme.nix {inherit config lib;});
+  in
+    lib.mkIf config.settings.qt-gtk.enable
+    {
+      gtk = {
+        enable = true;
+        gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+        theme = {
+          package = pkgs.adw-gtk3;
+          name = "adw-gtk3";
+        };
+        gtk4.theme = config.gtk.theme;
+
+        iconTheme = {
+          package = pkgs.tela-circle-icon-theme;
+          name = "Tela-circle";
+        };
+      };
+
+      xdg.configFile = {
+        "gtk-3.0/gtk.css".source = finalCss;
+        "gtk-4.0/gtk.css".source = finalCss;
+      };
+
+      # Flatpak apps apparently don't consume the CSS config. This workaround appends it to the theme directly.
+      home.file.".themes/${config.gtk.theme.name}".source =
+        pkgs.stdenvNoCC.mkDerivation
+        {
+          name = "flattenedGtkTheme";
+          src = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}";
+
+          installPhase = ''
+            cp --recursive . $out
+            cat ${finalCss} | tee --append $out/gtk-{3,4}.0/gtk.css
+          '';
+        };
+
+      # xdg.dataFile."flatpak/overrides/global".text =
+      #   config.xdg.dataFile."flatpak/overrides/global".text
+      #   + ''
+      #     [Context]
+      #     filesystems="${config.home.homeDirectory}/.themes/${config.gtk.theme.name}:ro"
+      #
+      #     [Environment]
+      #     GTK_THEME=${config.gtk.theme.name}
+      #   '';
     };
-    buildInputs = with pkgs; [
-      sassc
-      bc
-      which
-      rendersvg
-      meson
-      ninja
-      nodePackages.sass
-      gtk4.dev
-      optipng
-    ];
-    phases = ["unpackPhase" "installPhase"];
-    installPhase = ''
-      HOME=/build
-      chmod 777 -R .
-      patchShebangs .
-      mkdir -p $out/share/themes
-      mkdir bin
-      sed -e 's/handle-horz-.*//' -e 's/handle-vert-.*//' -i ./src/gtk-2.0/assets.txt
-
-      cat > /build/gtk-colors << EOF
-        BTN_BG=${scheme.palette.base01}
-        BTN_FG=${scheme.palette.base06}
-        FG=${scheme.palette.base06}
-        BG=${scheme.palette.base00}
-        MATERIA_SURFACE=${scheme.palette.base00}
-        MATERIA_VIEW=${scheme.palette.base00}
-        MENU_BG=${scheme.palette.base00}
-        MENU_FG=${scheme.palette.base06}
-        SEL_BG=${scheme.palette.base05}
-        SEL_FG=${scheme.palette.base07}
-        TXT_BG=${scheme.palette.base00}
-        TXT_FG=${scheme.palette.base06}
-        WM_BORDER_FOCUS=${scheme.palette.base05}
-        WM_BORDER_UNFOCUS=${scheme.palette.base02}
-        UNITY_DEFAULT_LAUNCHER_STYLE=False
-        NAME=${scheme.slug}
-        MATERIA_STYLE_COMPACT=True
-      EOF
-
-      echo "Changing colours:"
-      ./change_color.sh -o ${scheme.slug} /build/gtk-colors -i False -t "$out/share/themes"
-      chmod 555 -R .
-    '';
-  }
+}
