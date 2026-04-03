@@ -1,4 +1,4 @@
-{lib, ...}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
@@ -20,8 +20,11 @@
     };
   };
 
-  boot.loader.grub.enable = lib.mkForce false;
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.limine.extraEntries = ''
+    /Windows
+      protocol: efi
+      path: uuid(6101284d-806c-40af-b18a-ff79b300c2ec):/EFI/Microsoft/Boot/bootmgfw.efi
+  '';
 
   boot.kernelParams = ["amd_pstate=active"];
   environment.variables.LIBSEAT_BACKEND = "logind";
