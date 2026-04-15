@@ -164,6 +164,9 @@
             ".cache/kicad"
             ".local/share/FreeCAD"
             ".cache/FreeCAD"
+
+            ".cache/huggingface"
+            ".cache/llama.cpp"
           ];
         };
       };
