@@ -73,6 +73,7 @@
 
     programs.ssh = {
       enable = true;
+      enableDefaultConfig = false;
       extraConfig = "SetEnv TERM=xterm-256color";
       matchBlocks =
         import ../../secrets/ssh-hosts.nix

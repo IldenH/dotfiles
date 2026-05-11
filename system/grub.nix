@@ -16,7 +16,7 @@
         brightColors = lib.lists.sublist half half config.console.colors;
       in {
         wallpapers = [../assets/wallpaper.png];
-        interface.brandingColor = 5;
+        interface.brandingColor = config.hm.colorScheme.palette.base0E;
         interface.branding = global.user.description;
         graphicalTerminal.palette = lib.strings.concatStringsSep ";" colors';
         graphicalTerminal.brightPalette = lib.strings.concatStringsSep ";" brightColors;

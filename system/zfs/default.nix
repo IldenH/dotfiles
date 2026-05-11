@@ -19,6 +19,7 @@
       supportedFilesystems.zfs = true;
       zfs.requestEncryptionCredentials = config.settings.zfs.encryption;
       zfs.package = pkgs.zfs_unstable;
+      zfs.forceImportRoot = false;
     };
 
     services.zfs = {

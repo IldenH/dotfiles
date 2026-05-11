@@ -31,11 +31,6 @@
       inputs.nix-colors.follows = "nix-colors";
     };
 
-    programsdb = {
-      url = "github:wamserma/flake-programs-sqlite";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     wl-screenrec-daemon = {
       url = "github:LilleAila/wl-screenrec-daemon";
       inputs.nixpkgs.follows = "nixpkgs";

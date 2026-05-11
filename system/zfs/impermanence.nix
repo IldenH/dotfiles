@@ -53,7 +53,6 @@
             "dev"
             "Vault"
 
-            ".mozilla"
             ".factorio"
             ".minecraft"
             ".spell"
@@ -80,6 +79,7 @@
             ".config/xournalpp"
             ".config/unity3d"
             ".config/Blockbench"
+            ".config/mozilla"
 
             ".config/FreeCAD"
             ".local/share/kicad"

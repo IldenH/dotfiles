@@ -11,6 +11,7 @@
       programs.firefox.package = null; # defined in system
     })
     (lib.mkIf config.programs.firefox.enable {
+      programs.firefox.configPath = "${config.xdg.configHome}/mozilla/firefox";
       programs.firefox.profiles = let
         search = {
           default = "ddg";
