@@ -80,6 +80,7 @@
             ".config/unity3d"
             ".config/Blockbench"
             ".config/mozilla"
+            ".config/Nitrox"
 
             ".config/FreeCAD"
             ".local/share/kicad"
