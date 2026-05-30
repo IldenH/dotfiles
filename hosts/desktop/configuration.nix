@@ -30,7 +30,7 @@
       bluetooth.enable = false;
     };
 
-    graphics.enable = true;
+    nvidia.enable = true;
 
     japanese.enable = true;
     sound.enable = true;
@@ -42,8 +42,9 @@
     impermanence.enable = true;
   };
 
+  # no longer using amd
   # https://github.com/ilya-zlobintsev/LACT/issues/289
-  environment.etc."lact/config.yaml".source = ./lact.yaml;
+  # environment.etc."lact/config.yaml".source = ./lact.yaml;
   # environment.etc."lact/config.yaml".text = builtins.toJSON {
   #   gpus."1002:67DF-174B:E347-0000:01:00.0" = {
   #     fan_control_enabled = true;
