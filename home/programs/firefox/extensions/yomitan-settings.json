@@ -1,11 +1,13 @@
 {
     "version": 0,
-    "date": "2024-03-27 18:30:42",
-    "url": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/",
+    "date": "2026-05-30 19:58:01",
+    "url": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/",
     "manifest": {
-        "author": "TheMoeWay",
+        "author": "Yomidevs",
         "browser_specific_settings": {
             "gecko": {
+                "admin_install_only": null,
+                "data_collection_permissions": null,
                 "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
                 "strict_max_version": null,
                 "strict_min_version": "115.0",
@@ -16,38 +18,45 @@
                 "strict_min_version": "115.0"
             }
         },
-        "description": "Japanese dictionary with Anki integration",
+        "description": "Popup dictionary for language learning",
         "developer": null,
         "homepage_url": null,
         "install_origins": null,
         "manifest_version": 3,
-        "name": "Yomitan",
+        "name": "Yomitan Popup Dictionary",
         "short_name": null,
-        "version": "23.12.29.0",
+        "version": "26.5.19.0",
         "background": {
-            "page": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/background.html"
+            "page": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/background.html",
+            "preferred_environment": null,
+            "scripts": null,
+            "service_worker": null,
+            "type": null
         },
         "content_scripts": [
             {
                 "all_frames": true,
                 "css": null,
+                "css_origin": "author",
                 "exclude_globs": null,
                 "exclude_matches": null,
                 "include_globs": null,
                 "js": [
-                    "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/js/app/content-script-wrapper.js"
+                    "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/js/app/content-script-wrapper.js"
                 ],
                 "match_about_blank": true,
+                "match_origin_as_fallback": null,
                 "matches": [
                     "http://*/*",
                     "https://*/*",
                     "file://*/*"
                 ],
-                "run_at": "document_idle"
+                "run_at": "document_idle",
+                "world": "ISOLATED"
             }
         ],
         "content_security_policy": {
-            "extension_pages": "default-src 'self'; script-src 'self'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *"
+            "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *"
         },
         "granted_host_permissions": false,
         "hidden": false,
@@ -55,32 +64,35 @@
             "<all_urls>"
         ],
         "icons": {
-            "16": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon16.png",
-            "19": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon19.png",
-            "32": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon32.png",
-            "38": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon38.png",
-            "48": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon48.png",
-            "64": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon64.png",
-            "128": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon128.png"
+            "16": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon16.png",
+            "19": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon19.png",
+            "32": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon32.png",
+            "38": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon38.png",
+            "48": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon48.png",
+            "64": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon64.png",
+            "128": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon128.png"
         },
         "incognito": "spanning",
         "minimum_chrome_version": "102.0.0.0",
         "minimum_opera_version": null,
+        "optional_host_permissions": [],
         "optional_permissions": [
             "clipboardRead",
             "nativeMessaging"
         ],
+        "options_page": null,
         "options_ui": {
             "browser_style": false,
             "open_in_tab": true,
-            "page": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/settings.html"
+            "page": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/settings.html"
         },
         "permissions": [
             "storage",
             "clipboardWrite",
             "unlimitedStorage",
             "declarativeNetRequest",
-            "scripting"
+            "scripting",
+            "contextMenus"
         ],
         "web_accessible_resources": [
             {
@@ -90,7 +102,8 @@
                 ],
                 "resources": [
                     "/popup.html",
-                    "/js/*"
+                    "/js/*",
+                    "/lib/resvg.wasm"
                 ]
             }
         ],
@@ -98,15 +111,15 @@
             "browser_style": false,
             "default_area": null,
             "default_icon": {
-                "16": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon16.png",
-                "19": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon19.png",
-                "32": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon32.png",
-                "38": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon38.png",
-                "48": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon48.png",
-                "64": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon64.png",
-                "128": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/images/icon128.png"
+                "16": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon16.png",
+                "19": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon19.png",
+                "32": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon32.png",
+                "38": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon38.png",
+                "48": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon48.png",
+                "64": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon64.png",
+                "128": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/images/icon128.png"
             },
-            "default_popup": "moz-extension://c54af1d2-c3fd-487d-9750-e112bc0a49b1/action-popup.html",
+            "default_popup": "moz-extension://03ffeed7-2134-4baa-bce5-d34e21cffcdb/action-popup.html",
             "default_title": "Yomitan",
             "theme_icons": null
         },
@@ -134,7 +147,7 @@
                 "suggested_key": null
             },
             "openSearchPage": {
-                "description": "Open the search page",
+                "description": "Open the search page in a new tab",
                 "suggested_key": {
                     "additionalProperties": null,
                     "android": null,
@@ -146,25 +159,32 @@
                     "windows": null
                 }
             },
+            "openSearchPageCurrentTab": {
+                "description": "Open the search page in the current tab",
+                "suggested_key": null
+            },
             "openPopupWindow": {
                 "description": "Open the popup window",
                 "suggested_key": null
             }
         },
         "devtools_page": null,
+        "omnibox": {
+            "keyword": "yomi"
+        },
         "page_action": null,
-        "omnibox": null,
         "sidebar_action": null,
         "chrome_url_overrides": null,
+        "declarative_net_request": null,
         "default_locale": null,
         "l10n_resources": null,
-        "declarative_net_request": null,
         "protocol_handlers": null,
         "theme_experiment": null,
-        "telemetry": null,
         "experiment_apis": null,
         "applications": {
             "gecko": {
+                "admin_install_only": null,
+                "data_collection_permissions": null,
                 "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
                 "strict_max_version": null,
                 "strict_min_version": "115.0",
@@ -182,21 +202,26 @@
             "os": "linux"
         }
     },
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:150.0) Gecko/20100101 Firefox/150.0",
     "permissions": {
         "origins": [
-            "<all_urls>"
+            "<all_urls>",
+            "http://*/*",
+            "https://*/*",
+            "file://*/*"
         ],
+        "data_collection": [],
         "permissions": [
             "storage",
             "clipboardWrite",
             "unlimitedStorage",
             "declarativeNetRequest",
-            "scripting"
+            "scripting",
+            "contextMenus"
         ]
     },
     "options": {
-        "version": 22,
+        "version": 76,
         "profiles": [
             {
                 "name": "Default",
@@ -242,7 +267,19 @@
                         "frequencyDisplayMode": "split-tags-grouped",
                         "termDisplayMode": "ruby",
                         "sortFrequencyDictionary": null,
-                        "sortFrequencyDictionaryOrder": "descending"
+                        "sortFrequencyDictionaryOrder": "descending",
+                        "language": "ja",
+                        "enableContextMenuScanSelected": true,
+                        "stickySearchHeader": false,
+                        "fontFamily": "",
+                        "fontSize": 14,
+                        "lineHeight": "1.5",
+                        "showDebug": false,
+                        "averageFrequency": false,
+                        "enableYomitanApi": false,
+                        "yomitanApiServer": "http://127.0.0.1:19633",
+                        "yomitanApiAllowCssSanitizationBypass": false,
+                        "popupFullWidthPosition": "bottom"
                     },
                     "popupWindow": {
                         "width": 400,
@@ -264,7 +301,9 @@
                                 "url": "",
                                 "voice": ""
                             }
-                        ]
+                        ],
+                        "fallbackSoundType": "click",
+                        "enableDefaultAudioSources": true
                     },
                     "scanning": {
                         "inputs": [
@@ -281,7 +320,7 @@
                                     "searchTerms": true,
                                     "searchKanji": true,
                                     "scanOnTouchMove": true,
-                                    "scanOnTouchPress": true,
+                                    "scanOnTouchPress": false,
                                     "scanOnTouchRelease": false,
                                     "scanOnPenMove": true,
                                     "scanOnPenHover": true,
@@ -289,7 +328,9 @@
                                     "scanOnPenPress": true,
                                     "scanOnPenRelease": false,
                                     "preventTouchScrolling": false,
-                                    "preventPenScrolling": false
+                                    "preventPenScrolling": false,
+                                    "scanOnTouchTap": true,
+                                    "minimumTouchTime": 0
                                 }
                             },
                             {
@@ -305,7 +346,7 @@
                                     "searchTerms": true,
                                     "searchKanji": true,
                                     "scanOnTouchMove": true,
-                                    "scanOnTouchPress": true,
+                                    "scanOnTouchPress": false,
                                     "scanOnTouchRelease": false,
                                     "scanOnPenMove": true,
                                     "scanOnPenHover": true,
@@ -313,7 +354,9 @@
                                     "scanOnPenPress": true,
                                     "scanOnPenRelease": false,
                                     "preventTouchScrolling": true,
-                                    "preventPenScrolling": true
+                                    "preventPenScrolling": true,
+                                    "scanOnTouchTap": true,
+                                    "minimumTouchTime": 0
                                 }
                             }
                         ],
@@ -321,10 +364,9 @@
                             "onWebPages": false,
                             "onPopupPages": false,
                             "onSearchPages": false,
-                            "onSearchQuery": false
+                            "onSearchQuery": false,
+                            "onTextHover": null
                         },
-                        "touchInputEnabled": true,
-                        "pointerEventsEnabled": false,
                         "selectText": true,
                         "alphanumeric": true,
                         "autoHideResults": false,
@@ -341,15 +383,21 @@
                         "matchTypePrefix": false,
                         "hidePopupOnCursorExit": false,
                         "hidePopupOnCursorExitDelay": 0,
-                        "normalizeCssZoom": true
+                        "normalizeCssZoom": true,
+                        "scanWithoutMousemove": true,
+                        "scanResolution": "character",
+                        "preventBackForward": {
+                            "onTextHover": null,
+                            "onWebPages": false,
+                            "onPopupPages": false,
+                            "onSearchPages": false,
+                            "onSearchQuery": false
+                        },
+                        "reducedMotionScrolling": false,
+                        "reducedMotionScrollingScale": 1,
+                        "reducedMotionScrollingSwipeThreshold": 40
                     },
                     "translation": {
-                        "convertHalfWidthCharacters": "false",
-                        "convertNumericCharacters": "false",
-                        "convertAlphabeticCharacters": "false",
-                        "convertHiraganaToKatakana": "false",
-                        "convertKatakanaToHiragana": "variant",
-                        "collapseEmphaticSequences": "false",
                         "textReplacements": {
                             "searchOriginal": true,
                             "groups": []
@@ -359,45 +407,58 @@
                     "dictionaries": [
                         {
                             "name": "KANJIDIC (English)",
-                            "priority": 0,
                             "enabled": true,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "alias": "KANJIDIC (English)"
                         },
                         {
                             "name": "KireiCake",
-                            "priority": 0,
                             "enabled": false,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "alias": "KireiCake"
                         },
                         {
                             "name": "JMnedict",
-                            "priority": 0,
                             "enabled": false,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "alias": "JMnedict"
                         },
                         {
                             "name": "JMdict (English)",
-                            "priority": 0,
                             "enabled": true,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "alias": "JMdict (English)"
                         },
                         {
                             "name": "三省堂　スーパー大辞林",
-                            "priority": 0,
                             "enabled": false,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "alias": "三省堂　スーパー大辞林"
                         },
                         {
-                            "name": "Anime & Jdrama Freq:",
-                            "priority": 0,
+                            "name": "JPDBv2㋕",
+                            "alias": "JPDBv2㋕",
                             "enabled": true,
                             "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible"
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
                         }
                     ],
                     "parsing": {
@@ -415,35 +476,78 @@
                             "format": "png",
                             "quality": 92
                         },
-                        "terms": {
-                            "deck": "日本語::Sentence Mining",
-                            "model": "Sentence Mining Card",
-                            "fields": {
-                                "Word": "{expression}",
-                                "Reading": "{reading}",
-                                "Glossary": "{glossary-brief}",
-                                "Sentence": "{cloze-prefix}<b>{cloze-body}</b>{cloze-suffix}",
-                                "Picture": "",
-                                "Audio": "{audio}",
-                                "Sentence-Audio": "",
-                                "Hint": "",
-                                "Note": ""
-                            }
-                        },
-                        "kanji": {
-                            "deck": "",
-                            "model": "",
-                            "fields": {}
-                        },
                         "duplicateScope": "collection",
                         "duplicateScopeCheckAllModels": false,
                         "checkForDuplicates": true,
-                        "fieldTemplates": "{{#*inline \"glossary-single\"}}\n    {{~#unless brief~}}\n        {{~#scope~}}\n            {{~set \"any\" false~}}\n            {{~#each definitionTags~}}\n                {{~#if (op \"||\" (op \"!\" @root.compactTags) (op \"!\" redundant))~}}\n                    {{~#if (get \"any\")}},AAA {{else}}<i>({{/if~}}\n                    {{name}}\n                    {{~set \"any\" true~}}\n                {{~/if~}}\n            {{~/each~}}\n            {{~#unless noDictionaryTag~}}\n                {{~#if (op \"||\" (op \"!\" @root.compactTags) (op \"!==\" dictionary (get \"previousDictionary\")))~}}\n                    {{~#if (get \"any\")}}AAA {{else}}<i>({{/if~}}\n                    {{dictionary}}\n                    {{~set \"any\" true~}}\n                {{~/if~}}\n            {{~/unless~}}\n            {{~#if (get \"any\")}})</i> {{/if~}}\n        {{~/scope~}}\n        {{~#if only~}}({{#each only}}{{.}}{{#unless @last}}, {{/unless}}{{/each}} only) {{/if~}}\n    {{~/unless~}}\n    {{~#if (op \"<=\" glossary.length 1)~}}\n        {{#each glossary}}{{formatGlossary ../dictionary .}}{{/each}}\n    {{~else if @root.compactGlossaries~}}\n        {{#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}}, {{/unless}}{{/each}}\n    {{~else~}}\n        <ul>{{#each glossary}}{{formatGlossary ../dictionary .}}{{/each}}</ul>\n    {{~/if~}}\n    {{~set \"previousDictionary\" dictionary~}}\n{{/inline}}\n\n{{#*inline \"audio\"}}\n    {{~#if (hasMedia \"audio\")~}}\n        [sound:{{getMedia \"audio\"}}]\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"character\"}}\n    {{~definition.character~}}\n{{/inline}}\n\n{{#*inline \"dictionary\"}}\n    {{~definition.dictionary~}}\n{{/inline}}\n\n{{#*inline \"expression\"}}\n    {{~#if merge~}}\n        {{~#if modeTermKana~}}\n            {{~#each definition.reading~}}\n                {{{.}}}\n                {{~#unless @last}}、{{/unless~}}\n            {{~else~}}\n                {{~#each definition.expression~}}\n                    {{{.}}}\n                    {{~#unless @last}}、{{/unless~}}\n                {{~/each~}}\n            {{~/each~}}\n        {{~else~}}\n            {{~#each definition.expression~}}\n                {{{.}}}\n                {{~#unless @last}}、{{/unless~}}\n            {{~/each~}}\n        {{~/if~}}\n    {{~else~}}\n        {{~#if modeTermKana~}}\n            {{~#if definition.reading~}}\n                {{definition.reading}}\n            {{~else~}}\n                {{definition.expression}}\n            {{~/if~}}\n        {{~else~}}\n            {{definition.expression}}\n        {{~/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"furigana\"}}\n    {{~#if merge~}}\n        {{~#each definition.expressions~}}\n            <span class=\"expression-{{termFrequency}}\">{{~furigana .~}}</span>\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{furigana definition}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"furigana-plain\"}}\n    {{~#if merge~}}\n        {{~#each definition.expressions~}}\n            <span class=\"expression-{{termFrequency}}\">{{~furiganaPlain .~}}</span>\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{furiganaPlain definition}}\n    {{~/if~}}\n{{/inline}}\n\n{{~#*inline \"glossary\"~}}\n    {{~#scope~}}\n        {{~#if (op \"===\" definition.type \"term\")~}}\n            {{~> glossary-single definition brief=brief noDictionaryTag=noDictionaryTag ~}}\n        {{~else if (op \"||\" (op \"===\" definition.type \"termGrouped\") (op \"===\" definition.type \"termMerged\"))~}}\n            {{~#if (op \">\" definition.definitions.length 1)~}}\n                {{~#each definition.definitions~}}{{~> glossary-single . brief=../brief noDictionaryTag=../noDictionaryTag ~}}{{#unless @last}}, {{/unless}}{{~/each~}}\n            {{~else~}}\n                {{~#each definition.definitions~}}{{~> glossary-single . brief=../brief noDictionaryTag=../noDictionaryTag ~}}{{~/each~}}\n            {{~/if~}}\n        {{~else if (op \"===\" definition.type \"kanji\")~}}\n            {{~#if (op \">\" definition.glossary.length 1)~}}\n                {{#each definition.glossary}}, {{.}}{{/each}}\n            {{~else~}}\n                {{~#each definition.glossary~}}{{.}}{{~/each~}}\n            {{~/if~}}\n        {{~/if~}}\n    {{~/scope~}}\n{{~/inline~}}\n\n{{#*inline \"glossary-no-dictionary\"}}\n    {{~> glossary noDictionaryTag=true ~}}\n{{/inline}}\n\n{{#*inline \"glossary-brief\"}}\n    {{~> glossary brief=true ~}}\n{{/inline}}\n\n{{#*inline \"kunyomi\"}}\n    {{~#each definition.kunyomi}}{{.}}{{#unless @last}}, {{/unless}}{{/each~}}\n{{/inline}}\n\n{{#*inline \"onyomi\"}}\n    {{~#each definition.onyomi}}{{.}}{{#unless @last}}, {{/unless}}{{/each~}}\n{{/inline}}\n\n{{#*inline \"reading\"}}\n    {{~#unless modeTermKana~}}\n        {{~#if merge~}}\n            {{~#each definition.reading~}}\n                {{{.}}}\n                {{~#unless @last}}、{{/unless~}}\n            {{~/each~}}\n        {{~else~}}\n            {{~definition.reading~}}\n        {{~/if~}}\n    {{~/unless~}}\n{{/inline}}\n\n{{#*inline \"sentence\"}}\n    {{~#if definition.cloze}}{{definition.cloze.sentence}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-prefix\"}}\n    {{~#if definition.cloze}}{{definition.cloze.prefix}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-body\"}}\n    {{~#if definition.cloze}}{{definition.cloze.body}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-suffix\"}}\n    {{~#if definition.cloze}}{{definition.cloze.suffix}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"tags\"}}\n    {{~#mergeTags definition group merge}}{{this}}{{/mergeTags~}}\n{{/inline}}\n\n{{#*inline \"url\"}}\n    <a href=\"{{definition.url}}\">{{definition.url}}</a>\n{{/inline}}\n\n{{#*inline \"screenshot\"}}\n    {{~#if (hasMedia \"screenshot\")~}}\n        <img src=\"{{getMedia \"screenshot\"}}\" />\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"document-title\"}}\n    {{~context.document.title~}}\n{{/inline}}\n\n{{! Pitch Accents }}\n{{#*inline \"pitch-accent-item\"}}\n    {{~pronunciation format=format reading=reading downstepPosition=position nasalPositions=nasalPositions devoicePositions=devoicePositions~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-item-disambiguation\"}}\n    {{~#scope~}}\n        {{~set \"exclusive\" (spread exclusiveExpressions exclusiveReadings)~}}\n        {{~#if (op \">\" (property (get \"exclusive\") \"length\") 0)~}}\n            {{~set \"separator\" \"\"~}}\n            <em>({{#each (get \"exclusive\")~}}\n                {{~get \"separator\"~}}{{{.}}}\n            {{~/each}} only) </em>\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-list\"}}\n    {{~#if (op \">\" pitchCount 0)~}}\n        {{~#if (op \">\" pitchCount 1)~}}<ol>{{~/if~}}\n        {{~#each pitches~}}\n            {{~#each pitches~}}\n                {{~#if (op \">\" ../../pitchCount 1)~}}<li>{{~/if~}}\n                    {{~> pitch-accent-item-disambiguation~}}\n                    {{~> pitch-accent-item format=../../format~}}\n                {{~#if (op \">\" ../../pitchCount 1)~}}</li>{{~/if~}}\n            {{~/each~}}\n        {{~/each~}}\n        {{~#if (op \">\" pitchCount 1)~}}</ol>{{~/if~}}\n    {{~else~}}\n        No pitch accent data\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"pitch-accents\"}}\n    {{~> pitch-accent-list format='text'~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-graphs\"}}\n    {{~> pitch-accent-list format='graph'~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-positions\"}}\n    {{~> pitch-accent-list format='position'~}}\n{{/inline}}\n{{! End Pitch Accents }}\n\n{{#*inline \"clipboard-image\"}}\n    {{~#if (hasMedia \"clipboardImage\")~}}\n        <img src=\"{{getMedia \"clipboardImage\"}}\" />\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"clipboard-text\"}}\n    {{~#if (hasMedia \"clipboardText\")}}{{getMedia \"clipboardText\"}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"conjugation\"}}\n    {{~#if definition.reasons~}}\n        {{~#each definition.reasons~}}\n            {{~#if (op \">\" @index 0)}} « {{/if~}}\n            {{.}}\n        {{~/each~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"frequencies\"}}\n    {{~#if (op \">\" definition.frequencies.length 0)~}}\n        <ul style=\"text-align: left;\">\n        {{~#each definition.frequencies~}}\n            <li>\n            {{~#if (op \"!==\" ../definition.type \"kanji\")~}}\n                {{~#if (op \"||\" (op \">\" ../uniqueExpressions.length 1) (op \">\" ../uniqueReadings.length 1))~}}(\n                    {{~furigana expression reading~}}\n                ) {{/if~}}\n            {{~/if~}}\n            {{~dictionary}}: {{frequency~}}\n            </li>\n        {{~/each~}}\n        </ul>\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"stroke-count\"}}\n    {{~#scope~}}\n        {{~set \"found\" false~}}\n        {{~#each definition.stats.misc~}}\n            {{~#if (op \"===\" name \"strokes\")~}}\n                {{~set \"found\" true~}}\n                Stroke count: {{value}}\n            {{~/if~}}\n        {{~/each~}}\n        {{~#if (op \"!\" (get \"found\"))~}}\n            Stroke count: Unknown\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"part-of-speech-pretty\"}}\n    {{~#if (op \"===\" . \"v1\")~}}Ichidan verb\n    {{~else if (op \"===\" . \"v5\")~}}Godan verb\n    {{~else if (op \"===\" . \"vk\")~}}Kuru verb\n    {{~else if (op \"===\" . \"vs\")~}}Suru verb\n    {{~else if (op \"===\" . \"vz\")~}}Zuru verb\n    {{~else if (op \"===\" . \"adj-i\")~}}I-adjective\n    {{~else if (op \"===\" . \"n\")~}}Noun\n    {{~else~}}{{.}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"part-of-speech\"}}\n    {{~#scope~}}\n        {{~#if (op \"!==\" definition.type \"kanji\")~}}\n            {{~set \"first\" true~}}\n            {{~#each definition.expressions~}}\n                {{~#each wordClasses~}}\n                    {{~#unless (get (concat \"used_\" .))~}}\n                        {{~> part-of-speech-pretty . ~}}\n                        {{~#unless (get \"first\")}}, {{/unless~}}\n                        {{~set (concat \"used_\" .) true~}}\n                        {{~set \"first\" false~}}\n                    {{~/unless~}}\n                {{~/each~}}\n            {{~/each~}}\n            {{~#if (get \"first\")~}}Unknown{{~/if~}}\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"search-query\"}}\n    {{~#multiLine}}{{context.fullQuery}}{{/multiLine~}}\n{{/inline}}\n\n{{#*inline \"selection-text\"}}\n    {{~#if (hasMedia \"selectionText\")}}{{getMedia \"selectionText\"}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"sentence-furigana\"}}\n    {{~#if definition.cloze~}}\n        {{~#if (hasMedia \"textFurigana\" definition.cloze.sentence)~}}\n            {{getMedia \"textFurigana\" definition.cloze.sentence escape=false}}\n        {{~else~}}\n            {{definition.cloze.sentence}}\n        {{~/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{~> (lookup . \"marker\") ~}}",
+                        "fieldTemplates": "{{#*inline \"glossary-single\"}}\n    {{~#unless brief~}}\n        {{~#scope~}}\n            {{~set \"any\" false~}}\n            {{~#each definitionTags~}}\n                {{~#if (op \"||\" (op \"!\" @root.compactTags) (op \"!\" redundant))~}}\n                    {{~#if (get \"any\")}}, {{else}}<i>({{/if~}}\n                    {{name}}\n                    {{~set \"any\" true~}}\n                {{~/if~}}\n            {{~/each~}}\n            {{~#unless noDictionaryTag~}}\n                {{~#if (op \"||\" (op \"!\" @root.compactTags) (op \"!==\" dictionary (get \"previousDictionary\")))~}}\n                    {{~#if (get \"any\")}}, {{else}}<i>({{/if~}}\n                    {{dictionaryAlias}}\n                    {{~set \"any\" true~}}\n                {{~/if~}}\n            {{~/unless~}}\n            {{~#if (get \"any\")}})</i> {{/if~}}\n        {{~/scope~}}\n        {{~#if only~}}({{#each only}}{{.}}{{#unless @last}}, {{/unless}}{{/each}} only) {{/if~}}\n    {{~/unless~}}\n    {{~#if (op \"<=\" glossary.length 1)~}}\n        {{#each glossary}}{{formatGlossary ../dictionary .}}{{/each}}\n    {{~else if @root.compactGlossaries~}}\n        {{#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}} | {{/unless}}{{/each}}\n    {{~else~}}\n        <ul>{{#each glossary}}<li>{{formatGlossary ../dictionary .}}</li>{{/each}}</ul>\n    {{~/if~}}\n    {{~set \"previousDictionary\" dictionary~}}\n{{/inline}}\n\n{{#*inline \"audio\"}}\n    {{~#if (hasMedia \"audio\")~}}\n        [sound:{{getMedia \"audio\"}}]\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"character\"}}\n    {{~definition.character~}}\n{{/inline}}\n\n{{#*inline \"dictionary\"}}\n    {{~definition.dictionary~}}\n{{/inline}}\n\n{{#*inline \"dictionary-alias\"}}\n    {{~definition.dictionaryAlias~}}\n{{/inline}}\n\n{{#*inline \"expression\"}}\n    {{~#if merge~}}\n        {{~#each definition.expression~}}\n            {{{.}}}\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{definition.expression}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"furigana\"}}\n    {{~#if merge~}}\n        {{~#each definition.expressions~}}\n            <span class=\"expression-{{termFrequency}}\">{{~furigana .~}}</span>\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{furigana definition}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"furigana-plain\"}}\n    {{~#if merge~}}\n        {{~#each definition.expressions~}}\n            <span class=\"expression-{{termFrequency}}\">{{~furiganaPlain .~}}</span>\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{furiganaPlain definition}}\n    {{~/if~}}\n{{/inline}}\n\n{{~#*inline \"glossary\"~}}\n    <div style=\"text-align: left;\" class=\"yomitan-glossary\">\n    {{~#scope~}}\n        {{~#if (op \"===\" definition.type \"term\")~}}\n            {{~#unless (op \"&&\" selectedDictionary (op \"!=\" selectedDictionary definition.dictionary))~}}\n                {{~> glossary-single definition brief=brief noDictionaryTag=noDictionaryTag ~}}\n                {{~#if definition.glossaryScopedStyles~}}\n                    <style>{{{definition.glossaryScopedStyles}}}</style>\n                {{~/if~}}\n            {{~/unless~}}\n        {{~else if (op \"||\" (op \"===\" definition.type \"termGrouped\") (op \"===\" definition.type \"termMerged\"))~}}\n            <ol>\n                {{~#each definition.definitions~}}\n                    {{~#unless (op \"&&\" ../selectedDictionary (op \"!=\" ../selectedDictionary dictionary))~}}\n                        <li data-dictionary=\"{{dictionary}}\">\n                            {{~> glossary-single . brief=../brief noDictionaryTag=../noDictionaryTag ~}}\n                        </li>\n                        {{~#if dictScopedStyles~}}\n                            <style>{{{dictScopedStyles}}}</style>\n                        {{~/if~}}\n                    {{~/unless~}}\n                {{~/each~}}\n            </ol>\n        {{~else if (op \"===\" definition.type \"kanji\")~}}\n            {{~#if (op \">\" definition.glossary.length 1)~}}\n                <ol>{{#each definition.glossary}}<li>{{.}}</li>{{/each}}</ol>\n            {{~else~}}\n                {{~#each definition.glossary~}}{{.}}{{~/each~}}\n            {{~/if~}}\n        {{~/if~}}\n    {{~/scope~}}\n    </div>\n{{~/inline~}}\n\n{{#*inline \"glossary-no-dictionary\"}}\n    {{~> glossary noDictionaryTag=true ~}}\n{{/inline}}\n\n{{#*inline \"glossary-brief\"}}\n    {{~#if (op \"===\" definition.type \"term\")~}}\n        {{~#each definition.glossary~}}\n            {{formatGlossary ../definition.dictionary .}}\n            {{~#unless @last}}, {{/unless~}}\n        {{~/each~}}\n    {{~else if (op \"||\" (op \"===\" definition.type \"termGrouped\") (op \"===\" definition.type \"termMerged\"))~}}\n        {{~#each definition.definitions~}}\n            {{~#each glossary~}}\n                {{formatGlossary ../dictionary .}}\n                {{~#unless @last}}, {{/unless~}}\n            {{~/each~}}\n            {{~#unless @last}}, {{/unless~}}\n        {{~/each~}}\n    {{~/if~}}\n{{/inline}}\n\n{{~#*inline \"glossary-plain\"~}}\n    {{~#scope~}}\n        {{~#if (op \"||\" (op \"===\" definition.type \"termGrouped\") (op \"===\" definition.type \"termMerged\"))~}}\n            {{~#each definition.definitions~}}\n                {{~#unless (op \"&&\" ../selectedDictionary (op \"!=\" ../selectedDictionary dictionary))~}}\n                    {{~#unless ../noDictionaryTag~}}\n                        ({{dictionaryAlias}})<br>\n                    {{~/unless~}}\n                    {{#each glossary}}{{{formatGlossaryPlain ../dictionary .}}}{{#unless @last}}<br>{{/unless}}{{/each}}{{#unless @last}}<br>{{/unless}}\n                {{~/unless~}}\n            {{~/each~}}\n        {{~else~}}\n            {{~#unless (op \"&&\" selectedDictionary (op \"!=\" selectedDictionary definition.dictionary))~}}\n                {{~#unless noDictionaryTag~}}\n                    ({{definition.dictionaryAlias}})<br>\n                {{~/unless~}}\n                {{#each definition.glossary}}{{{formatGlossaryPlain ../definition.dictionary .}}}{{/each}}\n            {{~/unless~}}\n        {{~/if~}}\n    {{~/scope~}}\n{{~/inline~}}\n\n{{#*inline \"glossary-plain-no-dictionary\"~}}\n    {{~> glossary-plain noDictionaryTag=true ~}}\n{{/inline}}\n\n{{~#*inline \"glossary-first\"~}}\n    <div style=\"text-align: left;\" class=\"yomitan-glossary\">\n    {{~#scope~}}\n        {{~#if (op \"===\" definition.type \"term\")~}}\n            {{~> glossary-single definition brief=brief noDictionaryTag=noDictionaryTag ~}}\n            {{~#if definition.glossaryScopedStyles~}}\n                <style>{{{definition.glossaryScopedStyles}}}</style>\n            {{~/if~}}\n        {{~else if (op \"||\" (op \"===\" definition.type \"termGrouped\") (op \"===\" definition.type \"termMerged\"))~}}\n            {{~#if (op \">\" definition.definitions.length 1)~}}\n                {{~#with definition.definitions.[0]~}}\n                    {{~> glossary-single . brief=../brief noDictionaryTag=../noDictionaryTag ~}}\n                    {{~#if glossaryScopedStyles~}}\n                        <style>{{{glossaryScopedStyles}}}</style>\n                    {{~/if~}}\n                {{~/with~}}\n            {{~else~}}\n                {{~#with definition.definitions.[0]~}}\n                    {{~> glossary-single . brief=../brief noDictionaryTag=../noDictionaryTag ~}}\n                    {{~#if glossaryScopedStyles~}}\n                        <style>{{{glossaryScopedStyles}}}</style>\n                    {{~/if~}}\n                {{~/with~}}\n            {{~/if~}}\n        {{~/if~}}\n    {{~/scope~}}\n    </div>\n{{~/inline~}}\n\n{{#*inline \"glossary-first-no-dictionary\"}}\n    {{~> glossary-first noDictionaryTag=true ~}}\n{{/inline}}\n\n{{#*inline \"glossary-first-brief\"}}\n    {{~> glossary-first brief=true ~}}\n{{/inline}}\n\n{{#*inline \"kunyomi\"}}\n    {{~#each definition.kunyomi}}{{.}}{{#unless @last}}, {{/unless}}{{/each~}}\n{{/inline}}\n\n{{#*inline \"onyomi\"}}\n    {{~#each definition.onyomi}}{{.}}{{#unless @last}}, {{/unless}}{{/each~}}\n{{/inline}}\n\n{{#*inline \"onyomi-hiragana\"}}\n    {{~#each definition.onyomi}}{{hiragana .}}{{#unless @last}}, {{/unless}}{{/each~}}\n{{/inline}}\n\n{{#*inline \"reading\"}}\n    {{~#if merge~}}\n        {{~#each definition.reading~}}\n            {{{.}}}\n            {{~#unless @last}}、{{/unless~}}\n        {{~/each~}}\n    {{~else~}}\n        {{~definition.reading~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"sentence\"}}\n    {{~#if definition.cloze}}{{{definition.cloze.sentence}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-prefix\"}}\n    {{~#if definition.cloze}}{{{definition.cloze.prefix}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-body\"}}\n    {{~#if definition.cloze}}{{{definition.cloze.body}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-body-kana\"}}\n    {{~#if definition.cloze}}{{{definition.cloze.bodyKana}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"cloze-suffix\"}}\n    {{~#if definition.cloze}}{{{definition.cloze.suffix}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"tags\"}}\n    {{~#mergeTags definition group merge}}{{this}}{{/mergeTags~}}\n{{/inline}}\n\n{{~#*inline \"url\"~}}\n    <a href=\"{{definition.url}}\">{{definition.url}}</a>\n{{~/inline~}}\n\n{{#*inline \"screenshot\"}}\n    {{~#if (hasMedia \"screenshot\")~}}\n        <img src=\"{{getMedia \"screenshot\"}}\" />\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"document-title\"}}\n    {{~context.document.title~}}\n{{/inline}}\n\n{{! Pitch Accents }}\n{{#*inline \"pitch-accent-item\"}}\n    {{~pronunciation format=format reading=reading pitchPositions=positions nasalPositions=nasalPositions devoicePositions=devoicePositions~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-item-disambiguation\"}}\n    {{~#scope~}}\n        {{~set \"exclusive\" (spread exclusiveExpressions exclusiveReadings)~}}\n        {{~#if (op \">\" (property (get \"exclusive\") \"length\") 0)~}}\n            {{~set \"separator\" \"\"~}}\n            <em>({{#each (get \"exclusive\")~}}\n                {{~get \"separator\"~}}{{{.}}}\n            {{~/each}} only) </em>\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-list\"}}\n    {{~#if (op \">\" pitchCount 0)~}}\n        {{~#if (op \">\" pitchCount 1)~}}<ol>{{~/if~}}\n        {{~#each pitches~}}\n            {{~#each pitches~}}\n                {{~#if (op \">\" ../../pitchCount 1)~}}<li>{{~/if~}}\n                    {{~> pitch-accent-item-disambiguation~}}\n                    {{~> pitch-accent-item format=../../format~}}\n                {{~#if (op \">\" ../../pitchCount 1)~}}</li>{{~/if~}}\n            {{~/each~}}\n        {{~/each~}}\n        {{~#if (op \">\" pitchCount 1)~}}</ol>{{~/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"pitch-accents\"}}\n    {{~> pitch-accent-list format='text'~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-graphs\"}}\n    {{~> pitch-accent-list format='graph'~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-graphs-jj\"}}\n    {{~> pitch-accent-list format='graph-jj'~}}\n{{/inline}}\n\n{{#*inline \"pitch-accent-positions\"}}\n    {{~> pitch-accent-list format='position'~}}\n{{/inline}}\n\n{{~#*inline \"pitch-accent-categories\"~}}\n    {{~#each (pitchCategories @root)~}}{{~.~}}{{~#unless @last~}},{{~/unless~}}{{~/each~}}\n{{~/inline~}}\n{{! End Pitch Accents }}\n\n{{#*inline \"phonetic-transcriptions\"}}\n    {{~#if (op \">\" definition.phoneticTranscriptions.length 0)~}}\n        <ul>\n            {{~#each definition.phoneticTranscriptions~}}\n                {{~#each phoneticTranscriptions~}}\n                    <li class=\"pronunciation\" data-pronunciation-type=\"phonetic-transcription\">\n                        {{~set \"any\" false~}}\n                        {{~#each tags~}}\n                            {{~#if (get \"any\")}}, {{else}}<i>({{/if~}}\n                            <span class=\"tag\" data-details=\"{{name}}\">{{name}}</span>\n                            {{~set \"any\" true~}}\n                        {{~/each~}}\n                        {{~#if (get \"any\")}})</i> {{/if~}}\n                        {{ipa~}}\n                    </li>\n                {{~/each~}}\n            {{~/each~}}\n        </ul>\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"clipboard-image\"}}\n    {{~#if (hasMedia \"clipboardImage\")~}}\n        <img src=\"{{getMedia \"clipboardImage\"}}\" />\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"clipboard-text\"}}\n    {{~#if (hasMedia \"clipboardText\")}}{{{getMedia \"clipboardText\"}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"conjugation\"}}\n    {{~#if (op \">\" definition.inflectionRuleChainCandidates.length 0)~}}\n        {{~set \"multiple\" false~}}\n        {{~#if (op \">\" definition.inflectionRuleChainCandidates.length 1)~}}\n            {{~set \"multiple\" true~}}\n        {{~/if~}}\n        {{~#if (get \"multiple\")~}}<ul>{{/if~}}\n            {{~#each definition.inflectionRuleChainCandidates~}}\n                {{~#if (op \">\" inflectionRules.length 0)~}}\n                    {{~#if (get \"multiple\")~}}<li>{{/if~}}\n                    {{~#each inflectionRules~}}\n                        {{~#if (op \">\" @index 0)}} « {{/if~}}\n                        {{name}}\n                    {{~/each~}}\n                    {{~#if (get \"multiple\")~}}</li>{{/if~}}\n                {{~/if~}}\n            {{~/each~}}\n        {{~#if (get \"multiple\")~}}</ul>{{/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"frequencies\"}}\n    {{~#if (op \">\" definition.frequencies.length 0)~}}\n        <ul style=\"text-align: left;\">\n        {{~#each definition.frequencies~}}\n            {{~#unless (op \"&&\" ../selectedDictionary (op \"!=\" ../selectedDictionary dictionary))~}}\n                <li>\n                {{~#if (op \"!==\" ../definition.type \"kanji\")~}}\n                    {{~#if (op \"||\" (op \">\" ../uniqueExpressions.length 1) (op \">\" ../uniqueReadings.length 1))~}}(\n                        {{~furigana expression reading~}}\n                    ) {{/if~}}\n                {{~/if~}}\n                {{~dictionaryAlias}}: {{frequency~}}\n                </li>\n            {{~/unless~}}\n        {{~/each~}}\n        </ul>\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"single-frequency-number\"}}\n    {{~#if (op \">\" definition.frequencyNumbers.length 0)~}}\n        {{~#each definition.frequencyNumbers~}}\n            {{~#unless (op \"&&\" ../selectedDictionary (op \"!=\" ../selectedDictionary dictionary))~}}\n                    {{frequency~}}\n            {{~/unless~}}\n        {{~/each~}}\n    {{/if}}\n{{/inline}}\n\n{{#*inline \"frequency-harmonic-rank\"}}\n    {{~#if (op \"===\" definition.frequencyHarmonicRank -1) ~}}\n        9999999\n    {{~else ~}}\n        {{definition.frequencyHarmonicRank}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"frequency-harmonic-occurrence\"}}\n    {{~#if (op \"===\" definition.frequencyHarmonicOccurrence -1) ~}}\n        0\n    {{~else ~}}\n        {{definition.frequencyHarmonicOccurrence}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"frequency-average-rank\"}}\n    {{~#if (op \"===\" definition.frequencyAverageRank -1) ~}}\n        9999999\n    {{~else ~}}\n        {{definition.frequencyAverageRank}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"frequency-average-occurrence\"}}\n    {{~#if (op \"===\" definition.frequencyAverageOccurrence -1) ~}}\n        0\n    {{~else ~}}\n        {{definition.frequencyAverageOccurrence}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"stroke-count\"}}\n    {{~#scope~}}\n        {{~set \"found\" false~}}\n        {{~#each definition.stats.misc~}}\n            {{~#if (op \"===\" name \"strokes\")~}}\n                {{~set \"found\" true~}}\n                Stroke count: {{value}}\n            {{~/if~}}\n        {{~/each~}}\n        {{~#if (op \"!\" (get \"found\"))~}}\n            Stroke count: Unknown\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"part-of-speech-pretty\"}}\n    {{~#if (op \"===\" . \"v1\")~}}Ichidan verb\n    {{~else if (op \"===\" . \"v5\")~}}Godan verb\n    {{~else if (op \"===\" . \"vk\")~}}Kuru verb\n    {{~else if (op \"===\" . \"vs\")~}}Suru verb\n    {{~else if (op \"===\" . \"vz\")~}}Zuru verb\n    {{~else if (op \"===\" . \"adj-i\")~}}I-adjective\n    {{~else if (op \"===\" . \"n\")~}}Noun\n    {{~else~}}{{.}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"part-of-speech\"}}\n    {{~#scope~}}\n        {{~#if (op \"!==\" definition.type \"kanji\")~}}\n            {{~set \"first\" true~}}\n            {{~#each definition.expressions~}}\n                {{~#each wordClasses~}}\n                    {{~#unless (get (concat \"used_\" .))~}}\n                        {{~> part-of-speech-pretty . ~}}\n                        {{~#unless (get \"first\")}}, {{/unless~}}\n                        {{~set (concat \"used_\" .) true~}}\n                        {{~set \"first\" false~}}\n                    {{~/unless~}}\n                {{~/each~}}\n            {{~/each~}}\n            {{~#if (get \"first\")~}}Unknown{{~/if~}}\n        {{~/if~}}\n    {{~/scope~}}\n{{/inline}}\n\n{{#*inline \"search-query\"}}\n    {{~#multiLine}}{{context.fullQuery}}{{/multiLine~}}\n{{/inline}}\n\n{{#*inline \"popup-selection-text\"}}\n    {{~#if (hasMedia \"popupSelectionText\")}}{{{getMedia \"popupSelectionText\"}}}{{/if~}}\n{{/inline}}\n\n{{#*inline \"sentence-furigana\"}}\n    {{~#if definition.cloze~}}\n        {{~#if (hasMedia \"textFurigana\" definition.cloze.sentence)~}}\n            {{{getMedia \"textFurigana\" definition.cloze.sentence escape=false}}}\n        {{~else~}}\n            {{{definition.cloze.sentence}}}\n        {{~/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{#*inline \"sentence-furigana-plain\"}}\n    {{~#if definition.cloze~}}\n        {{~#if (hasMedia \"textFuriganaPlain\" definition.cloze.sentence)~}}\n            {{{getMedia \"textFuriganaPlain\" definition.cloze.sentence escape=false}}}\n        {{~else~}}\n            {{{definition.cloze.sentence}}}\n        {{~/if~}}\n    {{~/if~}}\n{{/inline}}\n\n{{~> (lookup . \"marker\") ~}}",
                         "suspendNewCards": false,
-                        "displayTags": "never",
                         "noteGuiMode": "browse",
                         "apiKey": "",
-                        "downloadTimeout": 0
+                        "downloadTimeout": 0,
+                        "duplicateBehavior": "new",
+                        "displayTagsAndFlags": "never",
+                        "cardFormats": [
+                            {
+                                "name": "Expression",
+                                "icon": "big-circle",
+                                "deck": "日本語::Sentence Mining",
+                                "model": "Sentence Mining Card",
+                                "fields": {
+                                    "Word": {
+                                        "value": "{expression}",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Reading": {
+                                        "value": "{reading}",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Pitch": {
+                                        "value": "",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Glossary": {
+                                        "value": "{glossary-brief}",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Sentence": {
+                                        "value": "{cloze-prefix}<b>{cloze-body}</b>{cloze-suffix}",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Picture": {
+                                        "value": "",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Audio": {
+                                        "value": "{audio}",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Sentence-Audio": {
+                                        "value": "",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Hint": {
+                                        "value": "",
+                                        "overwriteMode": "coalesce"
+                                    },
+                                    "Note": {
+                                        "value": "",
+                                        "overwriteMode": "coalesce"
+                                    }
+                                },
+                                "type": "term"
+                            },
+                            {
+                                "name": "Kanji",
+                                "icon": "big-circle",
+                                "deck": "",
+                                "model": "",
+                                "fields": {},
+                                "type": "kanji"
+                            }
+                        ],
+                        "targetTags": [],
+                        "forceSync": false,
+                        "noteDupeCheckFirst": false
                     },
                     "sentenceParsing": {
                         "scanExtent": 200,
@@ -690,8 +794,8 @@
                                 "enabled": true
                             },
                             {
-                                "action": "addNoteKanji",
-                                "argument": "",
+                                "action": "addNote",
+                                "argument": "2",
                                 "key": "KeyK",
                                 "modifiers": [
                                     "alt"
@@ -703,8 +807,8 @@
                                 "enabled": true
                             },
                             {
-                                "action": "addNoteTermKanji",
-                                "argument": "",
+                                "action": "addNote",
+                                "argument": "0",
                                 "key": "KeyE",
                                 "modifiers": [
                                     "alt"
@@ -716,8 +820,8 @@
                                 "enabled": true
                             },
                             {
-                                "action": "addNoteTermKana",
-                                "argument": "",
+                                "action": "addNote",
+                                "argument": "1",
                                 "key": "KeyR",
                                 "modifiers": [
                                     "alt"
@@ -742,8 +846,8 @@
                                 "enabled": true
                             },
                             {
-                                "action": "viewNote",
-                                "argument": "",
+                                "action": "viewNotes",
+                                "argument": "0",
                                 "key": "KeyV",
                                 "modifiers": [
                                     "alt"
@@ -765,6 +869,34 @@
                                     "popup"
                                 ],
                                 "enabled": true
+                            },
+                            {
+                                "action": "profilePrevious",
+                                "key": "Minus",
+                                "modifiers": [
+                                    "alt"
+                                ],
+                                "scopes": [
+                                    "popup",
+                                    "search",
+                                    "web"
+                                ],
+                                "enabled": true,
+                                "argument": ""
+                            },
+                            {
+                                "action": "profileNext",
+                                "key": "Equal",
+                                "modifiers": [
+                                    "alt"
+                                ],
+                                "scopes": [
+                                    "popup",
+                                    "search",
+                                    "web"
+                                ],
+                                "enabled": true,
+                                "argument": ""
                             }
                         ]
                     },
@@ -777,14 +909,16 @@
                     "accessibility": {
                         "forceGoogleDocsHtmlRendering": false
                     }
-                }
+                },
+                "id": "profile-0"
             }
         ],
         "profileCurrent": 0,
         "global": {
             "database": {
                 "prefixWildcardsSupported": false
-            }
+            },
+            "dataTransmissionConsentShown": false
         }
     }
 }
