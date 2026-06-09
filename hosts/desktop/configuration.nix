@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
@@ -15,8 +15,16 @@
 
   networking.firewall.allowedTCPPorts = [8765]; # ankiconnect
 
-  virtualisation.docker.enable = true;
-  virtualisation.docker.enableOnBoot = false;
+  hardware.nvidia-container-toolkit.enable = true;
+  environment.systemPackages = [pkgs.nvidia-container-toolkit];
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = false;
+    daemon.settings = {
+      features.cdi = true;
+      runtimes.nvidia.path = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-toolkit";
+    };
+  };
 
   virtualisation.waydroid.enable = true;
 
