@@ -75,11 +75,9 @@
             ".config/mozc"
             ".config/obs-studio"
             ".config/openttd"
-            ".config/teams-for-linux"
             ".config/xournalpp"
             ".config/unity3d"
             ".config/Blockbench"
-            ".config/mozilla"
             ".config/Nitrox"
 
             ".config/FreeCAD"
@@ -115,6 +113,7 @@
             ".tldrc/tldr/pages"
 
             ".cache/mozilla"
+            ".config/mozilla"
             ".cache/chromium"
             ".config/chromium"
 
@@ -148,6 +147,7 @@
             ".config/gh"
             ".config/obsidian"
             ".config/zsh"
+            ".config/teams-for-linux"
 
             ".steam"
             ".local/share/Steam"

@@ -17,13 +17,4 @@ css
       color: lightgray !important;
     }
   }
-
-  @-moz-document domain("docs.google.com"), domain("translate.google.com") {
-  	html {
-  		filter: invert(0.20) hue-rotate(0deg) brightness(0.80) contrast(1.6) !important;
-  	}
-  	html img{
-  		filter: invert(0) hue-rotate(0deg) brightness(1.1) contrast(1.1) !important;
-  	}
-  }
 ''

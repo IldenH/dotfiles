@@ -4,7 +4,7 @@
 
     bind = [
       "SUPER, W, killactive,"
-      "SUPER, I, togglesplit,"
+      "SUPER, I, layoutmsg, togglesplit"
       "SUPER ALT, I, togglefloating,"
 
       # I am weird so i switch between left and right_handed

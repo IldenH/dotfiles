@@ -11,7 +11,7 @@
     services.greetd.useTextGreeter = true;
     services.greetd = {
       enable = true;
-      settings.default_session.command = ''
+      settings.default_session.command = pkgs.writeShellScript "tuigreet-session" ''
         ${lib.getExe pkgs.tuigreet} --cmd start-hyprland \
           --time \
           --time-format '%A %d. %B %Y, Uke %V, %H:%M' \
