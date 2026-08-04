@@ -11,6 +11,7 @@
 
   config = lib.mkIf config.settings.qt-gtk.enable {
     home.pointerCursor = {
+      enable = true;
       package = inputs.nix-cursors.packages.${pkgs.stdenv.hostPlatform.system}.bibata-original-cursor.override {
         background_color = "#${config.colorScheme.palette.base00}";
         outline_color = "#${config.colorScheme.palette.base07}";
