@@ -5,7 +5,6 @@ _: {
     "$browser" = "firefox";
     "$launcher" = "rofi -show drun";
     "$discord" = "vesktop";
-    "$anki" = "QT_IM_MODULE=fcitx anki";
     "$calculator" = "bash -c 'pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &'";
     "$screenrec" = "wl-screenrec-daemon --toggle";
 
@@ -17,7 +16,7 @@ _: {
 
       "SUPER, M, exec, $discord"
 
-      "SUPER, B, exec, [workspace 3] $anki"
+      "SUPER, B, exec, [workspace 3] anki"
 
       "SUPER, G, exec, $calculator"
 
