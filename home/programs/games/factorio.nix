@@ -1,4 +1,16 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  secrets,
+  ...
+}: {
+  home.packages = [
+    (pkgs.factorio.override {
+      inherit (secrets.factorio) username token;
+      releaseType = "expansion";
+    })
+  ];
+
   # https://wiki.factorio.com/Application_directory
   home.file.".factorio/config/config.ini.home" = {
     onChange = ''
