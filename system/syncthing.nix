@@ -83,6 +83,18 @@
           "e14"
           "Pixel 8a"
         ];
+        # /storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media
+        "~/Pictures/WhatsApp".devices = [
+          "desktop"
+          "e14"
+          "Pixel 8a"
+        ];
+        # /storage/emulated/0/Pictures
+        "~/Pictures/Phone".devices = [
+          "desktop"
+          "e14"
+          "Pixel 8a"
+        ];
       };
     };
   };
