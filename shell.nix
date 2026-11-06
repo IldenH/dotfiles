@@ -4,5 +4,7 @@ pkgs.mkShell {
     nixd
     alejandra
     statix
+    lua-language-server
+    stylua
   ];
 }

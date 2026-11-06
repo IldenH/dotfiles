@@ -43,13 +43,6 @@
 
       users.defaultUserShell = pkgs.zsh;
 
-      programs.nh = {
-        enable = true;
-        flake = "/home/${global.user.name}/dev/dotfiles";
-        clean.enable = true;
-        clean.extraArgs = "--keep-since 4d --keep 5 --nogcroots";
-      };
-
       environment.systemPackages = with pkgs; [
         curl
         wget
@@ -62,5 +55,12 @@
         enableSSHSupport = true;
       };
     })
+    {
+      # needed for zotero https://github.com/NixOS/nixpkgs/issues/568692
+      # TODO: remove when zotero 11
+      nixpkgs.config.permittedInsecurePackages = [
+        "firefox-esr-140-bin-unwrapped-140.17.0esr"
+      ];
+    }
   ];
 }

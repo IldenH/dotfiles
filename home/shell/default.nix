@@ -20,6 +20,7 @@
       file
       pdftk
       fd
+      jq
     ];
 
     programs.bat = {

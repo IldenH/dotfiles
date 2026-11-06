@@ -23,7 +23,7 @@
       "Danish:dan"
       "Swedish:swe"
     ];
-    language = ''echo -e "${languages}" | rofi -dmenu -window-title "" | cut -d ':' -f2'';
+    language = ''echo -e "${languages}" | rofi -dmenu -window-title "" | cut -d ":" -f2'';
     ocr = ''focal image --selection --ocr $(${language})'';
   in
     lib.mkIf config.settings.screenshots.enable {
@@ -45,17 +45,17 @@
         };
       };
 
-      wayland.windowManager.hyprland.settings.bind = [
-        "SUPER, S, exec, grimblast ${args} copysave area ${raw}"
-        "SUPER SHIFT, S, exec, grimblast ${args} copysave screen ${raw}"
+      home.file.".config/hypr/screenshots.lua".text =
+        # lua
+        ''
+          hl.bind("SUPER + S",         hl.dsp.exec_cmd('grimblast ${args} copysave area ${raw}"'))
+          hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd('grimblast ${args} copysave screen ${raw}"'))
+          hl.bind("SUPER + ALT + E",   hl.dsp.exec_cmd("wl-paste | swappy -f -"))
+          hl.bind("SUPER + ALT + S",   hl.dsp.exec_cmd('${ocr} ${raw}'))
 
-        "SUPER ALT, E, exec, wl-paste | swappy -f -"
-
-        "SUPER ALT, S, exec, ${ocr} ${raw}"
-
-        # https://github.com/LilleAila/dotfiles/commit/80ecf1847c3407a9931433ddda46736cbb31b2ba
-        ''SUPER, Q, exec, ${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy''
-      ];
+          -- https://github.com/LilleAila/dotfiles/commit/80ecf1847c3407a9931433ddda46736cbb31b2ba
+          hl.bind("SUPER + Q", hl.dsp.exec_cmd('${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy'))
+        '';
 
       xdg.userDirs.extraConfig = {
         SCREENSHOTSRAW = path.raw;

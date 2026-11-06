@@ -1,8 +1,8 @@
 # Stolen from https://github.com/danth/stylix/blob/2985ee9b2836a725b04628d24f934212b96eacbe/modules/rofi/hm.nix
 {config, ...}: {
   programs.rofi = {
-    font = "JetBrainsMono Nerd Font 18";
-    extraConfig = {
+    settings = {
+      font = "JetBrainsMono Nerd Font 18";
       display-drun = "";
       show-icons = true;
       disable-history = true;

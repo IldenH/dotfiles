@@ -28,7 +28,9 @@
       ];
 
       # https://wiki.archlinux.org/title/Systemd#Boot_time_increasing_over_time
-      services.journald.extraConfig = "SystemMaxUse=50M";
+      services.journald.settings.Journal = {
+        SystemMaxUse = "50M";
+      };
     })
   ];
 }

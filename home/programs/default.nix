@@ -113,11 +113,9 @@
       home.packages = with pkgs; [
         anki-bin
         krita
-        python311
         blockbench
         jetbrains.idea
         ffmpeg
-        sqlitestudio
       ];
 
       programs.chromium = {
