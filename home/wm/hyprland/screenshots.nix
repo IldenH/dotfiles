@@ -48,13 +48,13 @@
       home.file.".config/hypr/screenshots.lua".text =
         # lua
         ''
-          hl.bind("SUPER + S",         hl.dsp.exec_cmd('grimblast ${args} copysave area ${raw}"'))
-          hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd('grimblast ${args} copysave screen ${raw}"'))
+          hl.bind("SUPER + S",         hl.dsp.exec_cmd('grimblast ${args} copysave area ${raw}'))
+          hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd('grimblast ${args} copysave screen ${raw}'))
           hl.bind("SUPER + ALT + E",   hl.dsp.exec_cmd("wl-paste | swappy -f -"))
           hl.bind("SUPER + ALT + S",   hl.dsp.exec_cmd('${ocr} ${raw}'))
 
           -- https://github.com/LilleAila/dotfiles/commit/80ecf1847c3407a9931433ddda46736cbb31b2ba
-          hl.bind("SUPER + Q", hl.dsp.exec_cmd('${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy'))
+          hl.bind("SUPER + Q", hl.dsp.exec_cmd('${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe' pkgs.zbar "zbarimg"} - -q --raw | wl-copy && notify-send "$(wl-paste)"'))
         '';
 
       xdg.userDirs.extraConfig = {
